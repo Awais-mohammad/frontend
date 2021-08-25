@@ -1,0 +1,79 @@
+.img {
+    background-image: url("../../assets/headerImages/Luxury-You-can-Afford-desktop.jpg");
+    /* Required Height */
+    height: 557px;
+    width: 100%;
+    /* Center and scale the image nicely */
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.shipfree {
+    background-color: black;
+    text-align: center;
+    height: 4em;
+    width: 100%;
+    color: white;
+    p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+    }
+}
+
+.imgbest {
+    background-image: url("../../assets/headerImages/A-Token-of-Everlasting-Love-Fjackets.jpg");
+    /* Required Height */
+    height: 557px;
+    width: 100%;
+    /* Center and scale the image nicely */
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.cont {
+    color: white;
+    position: relative;
+    top: 40%;
+    margin-left: 15em;
+    h1 {
+        color: white;
+        font-family: "Mulish", sans-serif;
+        font-size: 32px;
+    }
+}
+
+.cont2 {
+    color: white;
+    position: relative;
+    // top: 40%;
+    // left: 16em;
+    h1 {
+        color: white;
+        font-family: "Mulish", sans-serif;
+        font-size: 32px;
+    }
+}
+.form-control:focus {
+    box-shadow: none;
+}
+.icons {
+    margin-left: 11em;
+    margin-top: 8px;
+    img {
+        padding: 6px;
+    }
+}
+.form-control-underlined {
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-radius: 1px;
+    padding-left: 0;
+}
+
+///////////////fonts
+
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap");
