@@ -1,0 +1,150 @@
+.img {
+    background-image: url("../../assets/headerImages/headermain.jpg");
+    /* Required Height */
+    height: 457px;
+    width: 100%;
+    /* Center and scale the image nicely */
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+.mul {
+    font-family: "Mulish", sans-serif;
+}
+.imgtxt {
+    // position: relative;
+    color: white;
+    z-index: 100;
+    // max-height: 3em;
+}
+.txtfnt {
+    font-size: 8px;
+}
+/* Bootstrap 4 text input with search icon */
+
+.form-control {
+    font-size: 12px;
+}
+.txtwrapper {
+    background: rgba(255, 0, 0, 0.212);
+    padding: 32px;
+    border-top-left-radius: 73px;
+    border-top-right-radius: 73px;
+    border-bottom-right-radius: 73px;
+    border-bottom-left-radius: 73px;
+}
+.headin {
+    font-family: "Mulish", sans-serif;
+    color: white;
+    line-height: 35px;
+    font-size: 32px;
+}
+.mediaIcons {
+    position: relative;
+    top: 10px;
+    img {
+        object-fit: contain;
+        padding-right: 10px;
+    }
+}
+
+.freeship {
+    height: 4em;
+    width: 100%;
+    background-color: black;
+}
+.container {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    img {
+        width: 100%;
+    }
+}
+.r-2 {
+    position: relative;
+    top: -18px;
+}
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+    padding: 2px;
+    width: 40%;
+    margin: 20px;
+    border-radius: 25px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.041), 0 3px 6px rgba(0, 0, 0, 0.034);
+}
+.cardsnipet {
+    position: relative;
+    top: 0.5em;
+    height: 80%;
+    object-fit: contain;
+}
+.card:hover {
+    cursor: pointer;
+}
+.catswrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.catcard {
+    margin: 1em;
+    position: relative;
+
+    img {
+        height: 12em;
+        background-color: rgba(221, 3, 3, 0.705);
+        border-bottom: 0;
+        border-top-right-radius: 14px;
+        border-top-left-radius: 14px;
+    }
+    .textcont {
+        padding: 8px;
+        text-align: center;
+        color: white;
+        background-color: rgba(221, 3, 3, 0.705);
+        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 12px;
+        font-family: "Mulish", sans-serif;
+    }
+}
+
+.cats {
+    background-color: rgba(192, 187, 187, 0.103);
+}
+
+@media screen and (max-width: 800px) {
+    .wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        height: 6em;
+        width: 100%;
+        padding: 0;
+        margin: 5px;
+    }
+    .container {
+        width: 98%;
+    }
+    .cardsnipet {
+        position: relative;
+        top: 1.5em;
+        height: 50%;
+    }
+
+    .catcard {
+        margin: 1em;
+        position: relative;
+
+        img {
+            height: 8em;
+        }
+    }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap");
