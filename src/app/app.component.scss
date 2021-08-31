@@ -161,18 +161,26 @@
 @keyframes navShort {
     from {
         height: 120px;
+        background: white;
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.438);
     }
     to {
         height: 90px;
+        background: rgba(255, 255, 255, 0.726);
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.438);
     }
 }
 
 @keyframes navBig {
     from {
         height: 90px;
+        background: rgba(255, 255, 255, 0.726);
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.438);
     }
     to {
         height: 120px;
+        background: white;
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.438);
     }
 }
 
@@ -307,18 +315,26 @@
 @keyframes navShort2 {
     from {
         padding: 30px;
+        background: white;
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.438);
     }
     to {
         padding: 10px;
+        background: rgba(255, 255, 255, 0.726);
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.438);
     }
 }
 
 @keyframes navBig2 {
     from {
         padding: 10px;
+        background: rgba(255, 255, 255, 0.726);
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.438);
     }
     to {
         padding: 30px;
+        background: white;
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.438);
     }
 }
 

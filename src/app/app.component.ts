@@ -26,10 +26,14 @@ export class AppComponent {
             let nav = document.getElementById("navMob");
             nav.style.animation = "navShort2 0.3s linear";
             nav.style.padding = "10px";
+            nav.style.background = "rgba(255, 255, 255, 0.726)";
+            nav.style.boxShadow = "0px 0px 5px 1px rgba(0, 0, 0, 0.438)";
           } else if (window.scrollY < 150) {
             let nav = document.getElementById("navMob");
             nav.style.animation = "navBig2 0.3s linear";
             nav.style.padding = "30px";
+            nav.style.background = "rgba(255, 255, 255)";
+            nav.style.boxShadow = "0px 0px 0px 0px rgba(0, 0, 0, 0.438)";
           }
         }
       }, 100)
@@ -46,6 +50,8 @@ export class AppComponent {
       let navBar = document.getElementById("navBar");
       navBar.style.animation = "navShort 0.3s linear";
       navBar.style.height = "90px";
+      navBar.style.background = "rgba(255, 255, 255, 0.726)";
+      navBar.style.boxShadow = "0px 0px 5px 1px rgba(0, 0, 0, 0.438)";
 
       let home = document.getElementById("guid_d9c80f04_d190_44b6_ac8d_3c0811afc983");
       home.style.animation = "pageShort 0.3s linear";
@@ -86,6 +92,8 @@ export class AppComponent {
       let navBar = document.getElementById("navBar");
       navBar.style.animation = "navBig 0.3s linear";
       navBar.style.height = "120px";
+      navBar.style.background = "rgba(255, 255, 255)";
+      navBar.style.boxShadow = "0px 0px 0px 0px rgba(0, 0, 0, 0.438)";
 
       let home = document.getElementById("guid_d9c80f04_d190_44b6_ac8d_3c0811afc983");
       home.style.animation = "pageBig 0.3s linear";
