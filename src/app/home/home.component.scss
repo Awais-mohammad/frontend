@@ -1,7 +1,7 @@
 .img {
     background-image: url("../../assets/headerImages/headermain.jpg");
     /* Required Height */
-    height: 457px;
+    height: 657px;
     width: 100%;
     /* Center and scale the image nicely */
     background-position: center !important;
@@ -54,7 +54,7 @@
     background-color: black;
 }
 .container {
-    width: 70%;
+    width: 100%;
     display: flex;
     justify-content: center;
     img {
@@ -144,6 +144,12 @@
         img {
             height: 8em;
         }
+    }
+
+    .catswrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
