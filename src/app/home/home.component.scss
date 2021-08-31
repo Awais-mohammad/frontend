@@ -30,9 +30,18 @@
     font-size: 18px;
 }
 .input {
+    position: relative;
+
+    z-index: 10;
     height: 70px;
 }
 .btns {
+    position: absolute;
+    top: 24px;
+    right: -2px;
+    width: 70px;
+
+    z-index: 20;
     height: 70px;
 }
 .txtwrapper {
@@ -58,10 +67,11 @@
 }
 .mediaIcons {
     position: relative;
+    height: 2em;
     top: 25px;
     img {
         height: 100%;
-        object-fit: contain;
+        object-fit: fill;
         padding-right: 10px;
     }
 }
@@ -231,11 +241,11 @@
     }
 }
 
-    .oswald {
-        color: black;
-        line-height: 50px;
-        font-size: 40px;
-    }
+.oswald {
+    color: black;
+    line-height: 50px;
+    font-size: 40px;
+}
 
 .oswald {
     font-family: "Oswald", sans-serif;
@@ -348,6 +358,28 @@
         justify-content: center;
     }
 
+    .catcard {
+        margin: 1em;
+        position: relative;
+        width: 20%;
+        img {
+            width: 100%;
+            background-color: rgba(221, 3, 3, 0.705);
+            border-bottom: 0;
+            border-top-right-radius: 14px;
+            border-top-left-radius: 14px;
+        }
+        .textcont {
+            padding: 8px;
+            text-align: center;
+            color: white;
+            background-color: rgba(221, 3, 3, 0.705);
+            border-bottom-right-radius: 12px;
+            border-bottom-left-radius: 12px;
+            font-family: "Mulish", sans-serif;
+        }
+    }
+
     .prodwrapper {
         display: flex;
         flex-wrap: wrap;
@@ -411,7 +443,7 @@
         justify-content: center;
         .prodcard {
             margin-top: 50px;
-            width: 30%;
+            width: 40%;
             border-radius: 12px;
             padding: 10px;
             background-color: white;
@@ -516,6 +548,7 @@
         }
     }
 }
+
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
