@@ -1,4 +1,7 @@
 <div>
+    <!--//////////////////////////////
+    ///////////header//////////////
+    ////////////////////////////////-->
 
     <div class="img d-flex justify-content-center flex-column text-center">
 
@@ -14,9 +17,9 @@
                     </div>
 
                     <div class="input-group pt-4">
-                        <input type="text" class="form-control" placeholder="What are you looking for?">
+                        <input type="text" class="form-control input" placeholder="What are you looking for?">
                         <div class="input-group-append">
-                            <button class="btn btn-danger" type="button">
+                            <button class="btn btns btn-danger" type="button">
                                 <mat-icon style="color: white;position: relative;top: 4px;">
                                     search
                                 </mat-icon>
@@ -36,9 +39,18 @@
 
         </div>
     </div>
+
+    <!--//////////////////////////////
+    ///////////lalal dummy black box//////////////
+    ////////////////////////////////-->
+
     <div class="freeship">
 
     </div>
+
+    <!--//////////////////////////////
+    ///////////fazuul mn image//////////////
+    ////////////////////////////////-->
 
     <div class="container pt-5">
         <img src="../../assets/headerImages/m0851-YQVZpQXKWg8-unsplash.jpg" alt="">
@@ -47,6 +59,10 @@
     <div class="pt-5 text-center">
         <h2 class="headin text-dark">FIND THE BEST EXPERIENCE</h2>
     </div>
+
+    <!--//////////////////////////////
+    ///////////four cards//////////////
+    ////////////////////////////////-->
 
     <div class="container wrap">
 
@@ -120,9 +136,11 @@
 
     </div>
 
-
+    <!--//////////////////////////////
+    ///////////categories//////////////
+    ////////////////////////////////-->
     <div class="cats">
-        <div class="container d-flex flex-column">
+        <div class=" d-flex flex-column">
             <div class="pt-5 text-center">
                 <h2 class="headin text-dark">All Categories</h2>
             </div>
@@ -241,17 +259,139 @@
 
     </div>
 
-    <div class="prods">
-        <div class="container d-flex flex-column">
+    <!--//////////////////////////////
+    ///////////PRODUCTS//////////////
+    ////////////////////////////////-->
+    <div class="prods text-center">
+        <div class="d-flex flex-column">
             <div class="pt-5 text-center">
                 <h2 class="headin text-dark">Our Products</h2>
             </div>
 
-            <div class="prodcard">
+            <div class="prodwrapper">
 
-                <img src="../../assets/icons/product3.png" alt="">
+
+
+                <div *ngFor="let item of [].constructor(10)" class="prodcard showhim text-center">
+
+
+
+                    <img src="https://www.exportportal.site/vendors/Boys Hoodies.PNG" alt="">
+
+
+                    <div class="addcart d-flex flex-column text-center">
+
+                        <div class="pt-2" style="display: flex;justify-content: center;height: 30%;">
+
+                            <mat-icon>
+                                favorite_border
+
+                            </mat-icon>
+
+                        </div>
+
+                        <button class="btn btn-outline-light" style="height: 40%;">
+                            <p class="mul">
+                                View
+                            </p>
+                        </button>
+
+                        <div class="pt-5" style="display: flex;justify-content: center;height: 30%;">
+
+                            <mat-icon>
+                                shopping_cart
+
+                            </mat-icon>
+
+                        </div>
+
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class="dwrap">
+                            <div class="details">
+                                <h2 class="mul">
+                                    Lorem, ipsum
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p style="color: black;font-family: Arial, Helvetica, sans-serif;">
+                                    <b>
+                                        $30
+                                    </b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="pt-5">
+            <button class="btn btn-danger btn-lg btnmore">
+
+                Learn More
+
+            </button>
+        </div>
+
+    </div>
+
+    <!--//////////////////////////////
+    ///////////PRODUCTS//////////////
+    ////////////////////////////////-->
+
+    <div class="ht p-5 p-5">
+
+
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6  col-xl-6 wrapperlast">
+                <img class="imggirl" src="../../assets/images/Mask Group 44.jpg" alt="">
+            </div>
+
+            <div
+                class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex justify-content-center flex-column text-center pt-5 pl-5">
+                <div style="text-align: center;">
+                    <h1 class="oswald">CONTACT US ON <span style="color: red;">
+                            INSTAGRAM
+                        </span></h1>
+                    <img class="pt-5" style="height: 15em;object-fit: contain;width: 50%   ;"
+                        src="../../assets/images/insta.jpg" alt="">
+
+                    <div class="pt-3">
+                        <button class="btn btn-danger btn-lg btninsta">
+                            FOLLOW
+                        </button>
+                    </div>
+                </div>
 
             </div>
         </div>
 
+
     </div>
+
+
+    <section class="footeremail">
+        <div>
+            <h1>Newsletter</h1>
+            <img src="../../assets/images/Group158.png" width="" height="" alt="" />
+            <p>Keep up with our latest news and events. Subscribe to our newsletter</p>
+        </div>
+
+        <div class="d-flex justify-content-end pt-3">
+            <div class="col-12 col-sm-10 col-md-6 col-lg-6 col-xl-4">
+                <div class="mailinput">
+                    <input type="email" name="email" placeholder="Email Address" />
+                    <button class="btn">SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+<app-footer></app-footer>

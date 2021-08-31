@@ -1,0 +1,106 @@
+ /* =-=-=-=-=-=-=--=-=footer=-=-=-=-=-=-=-=-=-= */
+ footer {
+    position: relative;
+    background: #071138;
+    padding: 25px;
+  }
+
+  footer .leftfooter img.logo {
+    width: 210px;
+    /* height: 68px; */
+    margin-bottom: 5px;
+  }
+  footer .leftfooter p {
+    color: #fff;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 15px;
+    font-style: normal;
+    margin: 0px;
+  }
+  footer .flexicons {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 10px;
+  }
+  footer .flexicons a img {
+    width: 29px;
+    height: 29px;
+    margin-right: 15px;
+  }
+  footer .rightfooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 25px 0px 40px 0px;
+  }
+  footer .rightfooter h1 {
+    color: #fff;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    font-style: normal;
+    margin: 0px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fff;
+  }
+  footer .rightfooter ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+  }
+  footer .rightfooter li {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  footer .rightfooter li a {
+    color: #fff;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    font-style: normal;
+    text-decoration: none;
+  }
+  footer .rightfooter li a:hover {
+    border-bottom: 1px solid #fff;
+  }
+  footer .rightfooter li img.map {
+    width: 13px;
+    height: 17.95px;
+    margin-right: 10px;
+  }
+  footer .rightfooter li img.emial {
+    width: 15.36px;
+    height: 11.52px;
+    margin-right: 10px;
+  }
+  footer .rightfooter li img.phone {
+    width: 16.51px;
+    height: 16.55px;
+    margin-right: 10px;
+  }
+  footer .copyright {
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    /* height: 66px; */
+    background: #000;
+    padding: 10px;
+  }
+  footer .copyright h6 {
+    color: #fff;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 400;
+    /* line-height: 24px; */
+    font-style: normal;
+    margin: 0px;
+  }

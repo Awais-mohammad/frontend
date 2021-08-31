@@ -11,6 +11,9 @@
 .mul {
     font-family: "Mulish", sans-serif;
 }
+.opn {
+    font-family: "Open Sans", sans-serif;
+}
 .imgtxt {
     // position: relative;
     color: white;
@@ -25,6 +28,12 @@
 .form-control {
     padding: 5px;
     font-size: 18px;
+}
+.input {
+    height: 3em;
+}
+.btns {
+    height: 3.5em;
 }
 .txtwrapper {
     position: relative;
@@ -102,9 +111,9 @@
 .catcard {
     margin: 1em;
     position: relative;
-
+    width: 10%;
     img {
-        height: 12em;
+        width: 100%;
         background-color: rgba(221, 3, 3, 0.705);
         border-bottom: 0;
         border-top-right-radius: 14px;
@@ -124,7 +133,185 @@
 .cats {
     background-color: rgba(192, 187, 187, 0.103);
 }
+.prodcard:hover .addcart {
+    display: block;
+}
 
+.prodcard:hover {
+    cursor: pointer;
+}
+
+.showhim:hover .addcart {
+    display: block;
+}
+
+.prods {
+    width: 100%;
+    background-color: rgba(76, 71, 71, 0.055);
+    padding: 25px;
+    .container {
+        width: 100%;
+    }
+}
+
+.prodwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .prodcard {
+        margin-left: 20px;
+        margin-top: 50px;
+        width: 20%;
+        max-height: 20em;
+        border-radius: 12px;
+        padding: 5px;
+        background-color: white;
+        position: relative;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+        img {
+            object-fit: contain;
+            height: 50%;
+            width: 100%;
+            z-index: 10;
+        }
+        .addcart {
+            float: left;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            height: 100%;
+            border-bottom-right-radius: 12px;
+            border-top-right-radius: 12px;
+            width: 20%;
+            z-index: 1000;
+            background-color: #ff0000e1;
+            padding: 5px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .dwrap {
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            .details {
+                text-align: center;
+                font-family: "Mulish", sans-serif;
+                padding-bottom: 50px;
+                p {
+                    color: rgba(0, 0, 0, 0.596);
+                }
+            }
+        }
+    }
+}
+
+.btnmore {
+    width: 20%;
+    height: 3em;
+    border-radius: 12px;
+    background-color: rgba(255, 0, 0, 0.87);
+}
+
+.btninsta {
+    width: 30%;
+    height: 3em;
+    border-radius: 12px;
+    background-color: rgba(255, 0, 0, 0.87);
+}
+.wrapperlast {
+    height: 40em;
+    .imggirl {
+        object-fit: cover;
+        object-position: top;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+    .oswald {
+        color: black;
+        line-height: 50px;
+        font-size: 40px;
+    }
+
+.oswald {
+    font-family: "Oswald", sans-serif;
+}
+
+/* =-=-=-=-=-=-=--=-=footeremail=-=-=-=-=-=-=-=-=-= */
+.footeremail {
+    width: 100%;
+    /* height: 178px; */
+    background: url("../../assets/images/Newsletter.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 30px;
+}
+.footeremail h1 {
+    color: #fff;
+    font-family: "Work Sans", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 16px;
+    font-style: normal;
+    margin: 0px;
+}
+.footeremail img {
+    width: 95.46px;
+}
+.footeremail p {
+    color: #fff;
+    font-family: "Work Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    font-style: normal;
+    margin: 0px;
+}
+.footeremail .mailinput {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.footeremail .mailinput input {
+    width: 100%;
+    height: 60px;
+    color: #878787;
+    background: #fff;
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    padding: 10px 135px 10px 15px;
+    margin: 0px;
+    font-style: normal;
+    border: none;
+    border-radius: 5px;
+}
+.footeremail .mailinput button {
+    position: absolute;
+    top: 50%;
+    right: -1px;
+    transform: translate(-0.5%, -50%);
+    width: 129px;
+    height: 60px;
+    color: #fff;
+    background: #4576bb;
+    font-family: "Work Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px;
+    margin: 0px;
+    font-style: normal;
+    border: none;
+    border-radius: 5px;
+}
+
+//////////media querries/////////////////
 @media screen and (max-width: 800px) {
     .wrap {
         display: flex;
@@ -160,6 +347,175 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    .prodwrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .prodcard {
+            margin-top: 50px;
+            width: 80%;
+            border-radius: 12px;
+            padding: 10px;
+            background-color: white;
+
+            position: relative;
+            box-shadow: 0 3px 6px rgba(156, 152, 152, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+            img {
+                object-fit: fill;
+                height: 50%;
+                width: auto;
+                z-index: 10;
+            }
+            .addcart {
+                float: left;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                height: 100%;
+                border-bottom-right-radius: 12px;
+                border-top-right-radius: 12px;
+                width: 20%;
+                z-index: 1000;
+                background-color: #ff0000e1;
+                padding: 5px;
+                color: #ffffff;
+                font-weight: bold;
+            }
+
+            .dwrap {
+                width: 50%;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                .details {
+                    text-align: center;
+                    height: 30%;
+                    font-family: "Mulish", sans-serif;
+                    padding-bottom: 50px;
+                    p {
+                        color: rgba(0, 0, 0, 0.596);
+                    }
+                }
+            }
+        }
+    }
 }
 
+@media screen and (min-width: 800px) {
+    .prodwrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .prodcard {
+            margin-top: 50px;
+            width: 30%;
+            border-radius: 12px;
+            padding: 10px;
+            background-color: white;
+
+            position: relative;
+            box-shadow: 0 3px 6px rgba(156, 152, 152, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+            img {
+                object-fit: fill;
+                height: 50%;
+                width: auto;
+                z-index: 10;
+            }
+            .addcart {
+                float: left;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                height: 100%;
+                border-bottom-right-radius: 12px;
+                border-top-right-radius: 12px;
+                width: 20%;
+                z-index: 1000;
+                background-color: #ff0000e1;
+                padding: 5px;
+                color: #ffffff;
+                font-weight: bold;
+            }
+
+            .dwrap {
+                width: 50%;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                .details {
+                    text-align: center;
+                    height: 30%;
+                    font-family: "Mulish", sans-serif;
+                    padding-bottom: 50px;
+                    p {
+                        color: rgba(0, 0, 0, 0.596);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .prodwrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .prodcard {
+            margin-left: 20px;
+            margin-top: 50px;
+            width: 20%;
+            max-height: 20em;
+            border-radius: 12px;
+            padding: 5px;
+            background-color: white;
+            position: relative;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+            img {
+                object-fit: contain;
+                height: 50%;
+                width: 100%;
+                z-index: 10;
+            }
+            .addcart {
+                float: left;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                height: 100%;
+                border-bottom-right-radius: 12px;
+                border-top-right-radius: 12px;
+                width: 20%;
+                z-index: 1000;
+                background-color: #ff0000e1;
+                padding: 5px;
+                color: #ffffff;
+                font-weight: bold;
+            }
+
+            .dwrap {
+                width: 50%;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                .details {
+                    text-align: center;
+                    font-family: "Mulish", sans-serif;
+                    padding-bottom: 50px;
+                    p {
+                        color: rgba(0, 0, 0, 0.596);
+                    }
+                }
+            }
+        }
+    }
+}
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
