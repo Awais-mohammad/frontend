@@ -1,10 +1,10 @@
 .img {
     background-image: url("../../assets/headerImages/headermain.jpg");
     /* Required Height */
-    height: 657px;
+    height: 800px;
     width: 100%;
     /* Center and scale the image nicely */
-    background-position: center !important;
+    background-position: top !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
 }
@@ -18,31 +18,40 @@
     // max-height: 3em;
 }
 .txtfnt {
-    font-size: 8px;
+    font-size: 12px;
 }
 /* Bootstrap 4 text input with search icon */
 
 .form-control {
-    font-size: 12px;
+    padding: 5px;
+    font-size: 18px;
 }
 .txtwrapper {
+    position: relative;
+    top: 2em;
     background: rgba(255, 0, 0, 0.212);
     padding: 32px;
+    min-height: 20em;
     border-top-left-radius: 73px;
     border-top-right-radius: 73px;
     border-bottom-right-radius: 73px;
     border-bottom-left-radius: 73px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .headin {
     font-family: "Mulish", sans-serif;
     color: white;
-    line-height: 35px;
-    font-size: 32px;
+    line-height: 50px;
+    font-size: 42px;
 }
 .mediaIcons {
     position: relative;
-    top: 10px;
+    top: 25px;
     img {
+        height: 100%;
         object-fit: contain;
         padding-right: 10px;
     }
@@ -63,7 +72,7 @@
 }
 .r-2 {
     position: relative;
-    top: -18px;
+    top: -4px;
 }
 .wrap {
     display: flex;
