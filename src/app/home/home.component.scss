@@ -15,7 +15,8 @@
     font-family: "Open Sans", sans-serif;
 }
 .imgtxt {
-    // position: relative;
+    top: 7em;
+    position: relative;
     color: white;
     z-index: 100;
     // max-height: 3em;
@@ -31,7 +32,6 @@
 }
 .input {
     position: relative;
-
     z-index: 10;
     height: 70px;
 }
@@ -40,7 +40,6 @@
     top: 24px;
     right: -2px;
     width: 70px;
-
     z-index: 20;
     height: 70px;
 }
@@ -77,152 +76,113 @@
 }
 
 .freeship {
-    height: 4em;
+    height: 5em;
     width: 100%;
     background-color: black;
-}
-.container {
-    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.containermy {
     img {
         width: 100%;
     }
 }
-.r-2 {
-    position: relative;
-    top: -4px;
+
+.box {
+    box-sizing: border-box;
+    margin: 5px;
 }
-.wrap {
+
+.box .card {
+    padding: 20px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    border-radius: 12px;
+    min-height: 100px;
+    box-shadow: 5px 3px 1px 0px #13121248;
+    height: auto;
 }
-.card {
-    padding: 2px;
-    width: 40%;
-    margin: 20px;
-    border-radius: 25px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.041), 0 3px 6px rgba(0, 0, 0, 0.034);
-}
-.cardsnipet {
-    position: relative;
-    top: 0.5em;
-    height: 80%;
+
+.sinppets {
+    height: 80px;
     object-fit: contain;
 }
-.card:hover {
-    cursor: pointer;
+.sniptxt {
+    width: 100%;
+    text-align: center;
+    padding-left: 5em;
 }
-.catswrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+
+.head {
+    font-size: 20px;
+}
+.card:hover {
+    border-left: 5px solid rgb(223, 12, 47);
+    transition: 0.2s;
+    cursor: pointer;
+    box-shadow: 5px 3px 1px 0px rgb(223, 12, 47);
+}
+.catimg {
+    position: relative;
+    width: 100%;
+    z-index: 10;
 }
 .catcard {
-    margin: 1em;
     position: relative;
-    width: 10%;
-    img {
-        width: 100%;
-        background-color: rgba(221, 3, 3, 0.705);
-        border-bottom: 0;
-        border-top-right-radius: 14px;
-        border-top-left-radius: 14px;
-    }
-    .textcont {
-        padding: 8px;
-        text-align: center;
-        color: white;
-        background-color: rgba(221, 3, 3, 0.705);
-        border-bottom-right-radius: 12px;
-        border-bottom-left-radius: 12px;
-        font-family: "Mulish", sans-serif;
+}
+.cattext {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.486);
+    z-index: 2000;
+    border-bottom-left-radius: 12px;
+    text-align: center;
+    border-bottom-right-radius: 12px;
+    h3 {
+        position: relative;
+        top: 5px;
     }
 }
 
-.cats {
-    background-color: rgba(192, 187, 187, 0.103);
-}
-.prodcard:hover .addcart {
-    display: block;
-}
-
-.prodcard:hover {
+.catcard:hover {
     cursor: pointer;
 }
-
-.showhim:hover .addcart {
-    display: block;
+.allcats {
+    background-color: rgba(59, 58, 58, 0.048);
 }
-
-.prods {
+.allprods {
+    position: relative;
+    padding: 5px;
+}
+.prodcard {
+    position: relative;
+    z-index: 10;
+}
+.prodimg {
     width: 100%;
-    background-color: rgba(76, 71, 71, 0.055);
-    padding: 25px;
-    .container {
-        width: 100%;
-    }
+    position: relative;
 }
 
-.prodwrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    .prodcard {
-        margin-left: 20px;
-        margin-top: 50px;
-        width: 20%;
-        max-height: 20em;
-        border-radius: 12px;
-        padding: 5px;
-        background-color: white;
-        position: relative;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-
-        img {
-            object-fit: contain;
-            height: 50%;
-            width: 100%;
-            z-index: 10;
-        }
-        .addcart {
-            float: left;
-            position: absolute;
-            right: 0px;
-            top: 0px;
-            height: 100%;
-            border-bottom-right-radius: 12px;
-            border-top-right-radius: 12px;
-            width: 20%;
-            z-index: 1000;
-            background-color: #ff0000e1;
-            padding: 5px;
-            color: #ffffff;
-            font-weight: bold;
-        }
-
-        .dwrap {
-            width: 50%;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            .details {
-                text-align: center;
-                font-family: "Mulish", sans-serif;
-                padding-bottom: 50px;
-                p {
-                    color: rgba(0, 0, 0, 0.596);
-                }
-            }
-        }
-    }
+.lalpati {
+    position: absolute;
+    z-index: 100;
+    width: 30%;
+    height: 70.1%;
+    right: 3.2px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    top: 1px;
+    background-color: rgba(255, 0, 0, 0.664);
 }
-
-.btnmore {
-    
-    height: 3em;
-    border-radius: 12px;
-    background-color: rgba(255, 0, 0, 0.87);
+.lmbtn {
+    background-color: red;
+    font-family: Mulish;
+    padding: 10px;
+    width: 8em;
 }
 
 .btninsta {
@@ -319,234 +279,6 @@
     font-style: normal;
     border: none;
     border-radius: 5px;
-}
-
-//////////media querries/////////////////
-@media screen and (max-width: 800px) {
-    .wrap {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .card {
-        height: 6em;
-        width: 100%;
-        padding: 0;
-        margin: 5px;
-    }
-    .container {
-        width: 98%;
-    }
-    .cardsnipet {
-        position: relative;
-        top: 1.5em;
-        height: 50%;
-    }
-
-    .catcard {
-        margin: 1em;
-        position: relative;
-
-        img {
-            height: 8em;
-        }
-    }
-
-    .catswrap {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .catcard {
-        margin: 1em;
-        position: relative;
-        width: 30%;
-        img {
-            width: 100%;
-            background-color: rgba(221, 3, 3, 0.705);
-            border-bottom: 0;
-            border-top-right-radius: 14px;
-            border-top-left-radius: 14px;
-        }
-        .textcont {
-            padding: 8px;
-            text-align: center;
-            color: white;
-            background-color: rgba(221, 3, 3, 0.705);
-            border-bottom-right-radius: 12px;
-            border-bottom-left-radius: 12px;
-            font-family: "Mulish", sans-serif;
-        }
-    }
-
-    .prodwrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        .prodcard {
-            margin-top: 50px;
-            width: 80%;
-            border-radius: 12px;
-            padding: 10px;
-            background-color: white;
-
-            position: relative;
-            box-shadow: 0 3px 6px rgba(156, 152, 152, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-
-            img {
-                object-fit: fill;
-                height: 50%;
-                width: auto;
-                z-index: 10;
-            }
-            .addcart {
-                float: left;
-                position: absolute;
-                right: 0px;
-                top: 0px;
-                height: 100%;
-                border-bottom-right-radius: 12px;
-                border-top-right-radius: 12px;
-                width: 20%;
-                z-index: 1000;
-                background-color: #ff0000e1;
-                padding: 5px;
-                color: #ffffff;
-                font-weight: bold;
-            }
-
-            .dwrap {
-                width: 50%;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-
-                .details {
-                    text-align: center;
-                    height: 30%;
-                    font-family: "Mulish", sans-serif;
-                    padding-bottom: 50px;
-                    p {
-                        color: rgba(0, 0, 0, 0.596);
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 800px) {
-    .prodwrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        .prodcard {
-            margin-top: 50px;
-            width: 40%;
-            border-radius: 12px;
-            padding: 10px;
-            background-color: white;
-
-            position: relative;
-            box-shadow: 0 3px 6px rgba(156, 152, 152, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-
-            img {
-                object-fit: fill;
-                height: 50%;
-                width: auto;
-                z-index: 10;
-            }
-            .addcart {
-                float: left;
-                position: absolute;
-                right: 0px;
-                top: 0px;
-                height: 100%;
-                border-bottom-right-radius: 12px;
-                border-top-right-radius: 12px;
-                width: 20%;
-                z-index: 1000;
-                background-color: #ff0000e1;
-                padding: 5px;
-                color: #ffffff;
-                font-weight: bold;
-            }
-
-            .dwrap {
-                width: 50%;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-
-                .details {
-                    text-align: center;
-                    height: 30%;
-                    font-family: "Mulish", sans-serif;
-                    padding-bottom: 50px;
-                    p {
-                        color: rgba(0, 0, 0, 0.596);
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1600px) {
-    .prodwrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        .prodcard {
-            margin-left: 20px;
-            margin-top: 50px;
-            width: 20%;
-            max-height: 20em;
-            border-radius: 12px;
-            padding: 5px;
-            background-color: white;
-            position: relative;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-
-            img {
-                object-fit: contain;
-                height: 50%;
-                width: 100%;
-                z-index: 10;
-            }
-            .addcart {
-                float: left;
-                position: absolute;
-                right: 0px;
-                top: 0px;
-                height: 100%;
-                border-bottom-right-radius: 12px;
-                border-top-right-radius: 12px;
-                width: 20%;
-                z-index: 1000;
-                background-color: #ff0000e1;
-                padding: 5px;
-                color: #ffffff;
-                font-weight: bold;
-            }
-
-            .dwrap {
-                width: 50%;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                .details {
-                    text-align: center;
-                    font-family: "Mulish", sans-serif;
-                    padding-bottom: 50px;
-                    p {
-                        color: rgba(0, 0, 0, 0.596);
-                    }
-                }
-            }
-        }
-    }
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap");
