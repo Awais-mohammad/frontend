@@ -294,6 +294,20 @@
     border-radius: 12px;
 }
 
+.icons {
+    font-size: 32px;
+    color: white;
+    padding: 15px;
+}
+@media screen and (max-width: 900px) {
+    .slick-slide img {
+        width: 100%;
+        height: 12em;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
