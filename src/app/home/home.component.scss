@@ -157,6 +157,7 @@
 .allprods {
     position: relative;
     padding: 5px;
+    background-color: rgba(224, 204, 204, 0.082);
 }
 .prodcard {
     z-index: 10;
@@ -212,76 +213,6 @@
     font-family: "Oswald", sans-serif;
 }
 
-/* =-=-=-=-=-=-=--=-=footeremail=-=-=-=-=-=-=-=-=-= */
-.footeremail {
-    width: 100%;
-    /* height: 178px; */
-    background: url("../../assets/images/Newsletter.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 30px;
-}
-.footeremail h1 {
-    color: #fff;
-    font-family: "Work Sans", sans-serif;
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 16px;
-    font-style: normal;
-    margin: 0px;
-}
-.footeremail img {
-    width: 95.46px;
-}
-.footeremail p {
-    color: #fff;
-    font-family: "Work Sans", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-    font-style: normal;
-    margin: 0px;
-}
-.footeremail .mailinput {
-    position: relative;
-    width: 100%;
-    margin-top: 10px;
-}
-.footeremail .mailinput input {
-    width: 100%;
-    height: 60px;
-    color: #878787;
-    background: #fff;
-    font-family: "Work Sans", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16px;
-    padding: 10px 135px 10px 15px;
-    margin: 0px;
-    font-style: normal;
-    border: none;
-    border-radius: 5px;
-}
-.footeremail .mailinput button {
-    position: absolute;
-    top: 50%;
-    right: -1px;
-    transform: translate(-0.5%, -50%);
-    width: 129px;
-    height: 60px;
-    color: #fff;
-    background: #4576bb;
-    font-family: "Work Sans", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    padding: 5px;
-    margin: 0px;
-    font-style: normal;
-    border: none;
-    border-radius: 5px;
-}
-
 .carousel {
     width: 85%;
     margin: 10px auto;
@@ -292,6 +223,8 @@
 .slick-slide img {
     width: 100%;
     border-radius: 12px;
+    height: 20em;
+    object-fit: cover;
 }
 
 .icons {
