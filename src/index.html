@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Frontend</title>
@@ -9,19 +10,32 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--SLICK STYLING!!!-->
+  <link href="http://kenwheeler.github.io/slick/slick/slick.css" rel="stylesheet" />
+  <link href="http://kenwheeler.github.io/slick/slick/slick-theme.css" rel="stylesheet" />
+
 </head>
+
 <body class="mat-typography">
   <app-root></app-root>
-  
-<script>
-  function myFunction() {
-    var x = document.getElementById("myLinks");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "block";
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="http://kenwheeler.github.io/slick/slick/slick.js"></script>
+
+  <script src="./assets/javascript/sliderconfig.js"></script>
+
+  <script>
+
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
     }
-  }
   </script>
 </body>
+
 </html>

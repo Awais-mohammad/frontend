@@ -159,19 +159,20 @@
     padding: 5px;
 }
 .prodcard {
-    position: relative;
     z-index: 10;
 }
 .prodimg {
     width: 100%;
     position: relative;
 }
-
+.lalpatiadjust {
+    position: relative;
+}
 .lalpati {
     position: absolute;
     z-index: 100;
     width: 30%;
-    height: 70.1%;
+    height: 98%;
     right: 3.2px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -279,6 +280,18 @@
     font-style: normal;
     border: none;
     border-radius: 5px;
+}
+
+.carousel {
+    width: 85%;
+    margin: 10px auto;
+}
+.slick-slide {
+    margin: 4px;
+}
+.slick-slide img {
+    width: 100%;
+    border-radius: 12px;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap");

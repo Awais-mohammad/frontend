@@ -10,3 +10,9 @@ html {
   margin: 0;
   padding: 0;
 }
+
+.slick-prev:before,
+.slick-next:before {
+  color: rgb(236, 51, 4);
+  font-size: 26px;
+}
