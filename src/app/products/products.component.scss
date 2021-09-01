@@ -1,2 +1,191 @@
+.banner {
+    background: url("../../assets/headerImages/Mask\ Group\ 27.png");
+    height: 460px;
+    width: 100%;
+    /* Center and scale the image nicely */
+    background-position: top !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.oswald {
+    font-family: oswald;
+}
+
+.form-control {
+    padding: 10px;
+    font-size: 18px;
+}
+.input {
+    position: relative;
+    z-index: 10;
+    height: 50px;
+}
+.btns {
+    position: absolute;
+    top: 24px;
+    right: -2px;
+    width: 70px;
+    z-index: 20;
+    height: 50px;
+}
+
+body {
+    color: #000000;
+    font-family: Sans-Serif;
+    padding: 30px;
+    background-color: #f6f6f6;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover {
+    color: #222222;
+}
+
+/* Dropdown */
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dd-button {
+    display: inline-block;
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding: 10px 30px 10px 20px;
+    background-color: #ffffff;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.dd-button:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black;
+}
+
+.dd-button:hover {
+    background-color: #eeeeee;
+}
+
+.dd-input {
+    display: none;
+}
+
+.dd-menu {
+    position: absolute;
+    top: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0;
+    margin: 2px 0 0 0;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    list-style-type: none;
+}
+
+.dd-input + .dd-menu {
+    display: none;
+}
+
+.dd-input:checked + .dd-menu {
+    display: block;
+}
+
+.dd-menu li {
+    padding: 10px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.dd-menu li:hover {
+    background-color: #f6f6f6;
+}
+
+.dd-menu li a {
+    display: block;
+    margin: -10px -20px;
+    padding: 10px 20px;
+}
+
+.dd-menu li.divider {
+    padding: 0;
+    border-bottom: 1px solid #cccccc;
+}
+
+@media screen and (max-width: 800px) {
+    .a {
+        display: none;
+    }
+}
+.sidebar {
+    background-color: rgba(128, 128, 128, 0.219);
+    margin-top: 2em;
+    height: 60em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.11), 0 10px 10px rgba(0, 0, 0, 0.22);
+    padding: 10px;
+}
+
+.list-group-item {
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    font-family: Mulish;
+    padding: 2px;
+}
+.mul {
+    font-family: Mulish;
+}
+.list-group-item:hover {
+    border-left: 5px solid rgb(14, 11, 11);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2;
+    background-color: rgba(255, 255, 255, 0.247);
+}
+.label {
+    padding-left: 3px;
+}
+
+.allprods {
+    position: relative;
+    padding: 5px;
+    background-color: rgba(224, 204, 204, 0.082);
+}
+.prodcard {
+    z-index: 10;
+}
+.prodimg {
+    width: 100%;
+    position: relative;
+}
+.lalpatiadjust {
+    position: relative;
+}
+.lalpati {
+    position: absolute;
+    z-index: 100;
+    width: 30%;
+    height: 98%;
+    right: 3.2px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    top: 1px;
+    background-color: rgba(255, 0, 0, 0.664);
+}
 
 
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
