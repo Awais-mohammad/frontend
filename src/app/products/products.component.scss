@@ -80,13 +80,15 @@ a:hover {
 .sidebar {
     background-color: white;
     height: 60em;
-    border-right: 0.1px solid rgba(0, 0, 0, 0.281);
-    border-bottom: 0.1px solid rgba(0, 0, 0, 0.281);
+    border-right: 0.1px solid rgba(0, 0, 0, 0.137);
+    border-bottom: 0.1px solid rgba(0, 0, 0, 0.137);
     padding: 10px;
     position: relative;
     top: -19px;
 }
-
+.osh {
+    font-size: 27px;
+}
 .list-group-item {
     background-color: transparent;
     border-radius: 0;
