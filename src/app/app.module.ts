@@ -11,6 +11,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { CartComponent } from './cart/cart.component';
+import { TrackingComponent } from './tracking/tracking.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +23,11 @@ import { ProductsComponent } from './products/products.component';
     routingComps,
     FooterComponent,
     HomeComponent,
+    AboutComponent,
+    ContactComponent,
+    CheckoutComponent,
+    CartComponent,
+    TrackingComponent,
   ],
   imports: [
     BrowserModule,

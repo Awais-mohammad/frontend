@@ -1,0 +1,145 @@
+.redBar {
+    background-color: #cc050569;
+    width: 100%;
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    left: 0;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    text-align: center;
+    border-style: none;
+    font-family: Oswald;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+}
+
+.cards {
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    padding: 40px;
+    grid-gap: 3rem;
+}
+
+.guyIMG {
+    display: inline-block;
+    margin-top: -3%;
+    width: 400px;
+    max-width: 100%;
+    margin-left: 4%;
+    box-shadow: -6px 10px 5px 0px rgba(105, 105, 105, 0.527);
+}
+
+.guyIMG2 {
+    max-height: 400px;
+    max-width: 100%;
+    float:right;
+    box-shadow: -6px 10px 5px 0px rgba(105, 105, 105, 0.527);
+}
+
+#guid_99befb4a_ed0e_43a2_b864_755283a1dde8 {
+    font-family: Muli;
+    font-size: 40px;
+    line-height: 45px;
+    color: #000;
+    font-weight: 700;
+    margin-top: 100px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+
+#guid_99befb4a_ed0e_43a2_b864_755283a1dde82 {
+    font-family: Muli;
+    font-size: 40px;
+    line-height: 45px;
+    color: #000;
+    font-weight: 700;
+    margin-top: 100px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+#guid_0b1905a6_9d82_4dca_a9f7_1e465d211ece {
+    font-family: Muli;
+    font-size: 22px;
+    
+    line-height: 25px;
+    color: #000;
+    display: inline-block;
+    font-weight: 300;
+    text-align: left;
+    width: 600px;
+    max-width: 100%;
+    padding-bottom: 100px;
+}
+
+
+#guid_0b1905a6_9d82_4dca_a9f7_1e465d211ece2 {
+    font-family: Muli;
+    font-size: 22px;
+    line-height: 25px;
+    color: #000;
+    display: inline-block;
+    font-weight: 300;
+    text-align: left;
+    width: 500px;
+    max-width: 100%;
+    margin-left: 2vw;
+}
+
+
+#guid_317f1009_1100_4f5a_9edd_a120dc479993 {
+    width: 1064px;
+    font-family: Oswald;
+    font-size: 5vh;
+    max-width: 100%;
+    line-height: 8vh;
+    padding: 7vw;
+    color: #fff;
+    font-weight: 300;
+}
+
+.custName{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0px 0px 4px 1px rgba(73, 73, 73, 0.274);
+  font-family: Muli;
+  font-size: 33px;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+
+}
+
+/* Screen larger than 600px? 2 column */
+
+@media (max-width: 1500px) {
+    #fashion{
+        margin-bottom: 350px;
+    }
+    #experts{
+        margin-bottom:400px;
+    }
+}
+
+@media (min-width: 600px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
