@@ -21,17 +21,21 @@ html {
   right: 20px;
 }
 
-
 @media screen and (max-width: 500px) {
   .slick-prev:before,
-.slick-next:before {
-  color: rgb(236, 51, 4);
-  font-size: 30px;
-}
-.slick-prev:before {
-  position: relative;
-  left: -9px;
+  .slick-next:before {
+    color: rgb(236, 51, 4);
+    font-size: 30px;
+  }
+  .slick-prev:before {
+    position: relative;
+    left: -9px;
+  }
+
 }
 
 
+mat-dialog-container {
+  background: white !important;
 }
+

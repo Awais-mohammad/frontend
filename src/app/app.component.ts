@@ -1,6 +1,9 @@
+import { AuthComponent } from './auth/auth.component';
 import { Component } from '@angular/core';
 import { HttpClient, HttpRequest, HttpEvent, HttpResponse, HttpEventType } from '@angular/common/http';
 import { Observable } from 'rxjs';
+
+import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 
 @Component({
   selector: 'app-root',
@@ -13,6 +16,7 @@ export class AppComponent {
 
   constructor(
     private http: HttpClient,
+    public dialog: MatDialog
 
   ) {
     setTimeout(() => {
@@ -126,4 +130,22 @@ export class AppComponent {
     }
   }
 
+  openDialogue(dTyp: string) {
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.height = '600px';
+    dialogConfig.width = '800px';
+    dialogConfig.data = {
+      user: dTyp,
+    };
+    this.dialog.open(AuthComponent, dialogConfig);
+  }
+
+  ngOnInit(): void {
+
+    this.openDialogue('dTyp')
+
+  }
 }

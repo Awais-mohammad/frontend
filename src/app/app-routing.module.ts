@@ -1,3 +1,5 @@
+import { AuthComponent } from './auth/auth.component';
+import { ContactComponent } from './contact/contact.component';
 import { ProductsComponent } from './products/products.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
@@ -19,16 +21,16 @@ const routes: Routes = [
   }, {
     path: "products",
     component: ProductsComponent
-  },  {
+  }, {
     path: "about",
     component: AboutComponent
-  },  {
+  }, {
     path: "cart",
     component: CartComponent
-  },  {
+  }, {
     path: "checkout",
     component: CheckoutComponent
-  },  {
+  }, {
     path: "tracking",
     component: TrackingComponent
   }
@@ -43,5 +45,10 @@ export class AppRoutingModule { }
 export const routingComps = [
   HomeComponent,
   ProductsComponent,
-  
+  AboutComponent,
+  ContactComponent,
+  CheckoutComponent,
+  CartComponent,
+  TrackingComponent,
+  AuthComponent,
 ]

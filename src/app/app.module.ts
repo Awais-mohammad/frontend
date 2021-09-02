@@ -1,3 +1,5 @@
+import { AuthComponent } from './auth/auth.component';
+import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -11,11 +13,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
+
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { CartComponent } from './cart/cart.component';
 import { TrackingComponent } from './tracking/tracking.component';
+
 
 @NgModule({
   declarations: [
@@ -28,6 +32,7 @@ import { TrackingComponent } from './tracking/tracking.component';
     CheckoutComponent,
     CartComponent,
     TrackingComponent,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +41,7 @@ import { TrackingComponent } from './tracking/tracking.component';
     BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
