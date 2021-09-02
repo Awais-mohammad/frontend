@@ -1,6 +1,6 @@
 .banner {
     background: url("../../assets/headerImages/prodheader.jpg");
-    height: 400px;
+    height: 600px;
     width: 100%;
     /* Center and scale the image nicely */
     background-position: top !important;
@@ -48,63 +48,6 @@ a:hover {
     color: #222222;
 }
 
-/* Dropdown */
-
-.dropdown {
-    display: inline-block;
-    position: relative;
-}
-
-.dd-button {
-    display: inline-block;
-    border: 1px solid gray;
-    border-radius: 4px;
-    padding: 10px 30px 10px 20px;
-    background-color: #ffffff;
-    cursor: pointer;
-    white-space: nowrap;
-}
-
-.dd-button:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid black;
-}
-
-.dd-button:hover {
-    background-color: #eeeeee;
-}
-
-.dd-input {
-    display: none;
-}
-
-.dd-menu {
-    position: absolute;
-    top: 100%;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 0;
-    margin: 2px 0 0 0;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
-    list-style-type: none;
-}
-
-.dd-input + .dd-menu {
-    display: none;
-}
-
-.dd-input:checked + .dd-menu {
-    display: block;
-}
 .wid-50 {
     width: 50%;
 }
@@ -135,11 +78,13 @@ a:hover {
     }
 }
 .sidebar {
-    background-color: rgba(128, 128, 128, 0.219);
-    margin-top: 2em;
+    background-color: white;
     height: 60em;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.11), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-right: 0.1px solid rgba(0, 0, 0, 0.281);
+    border-bottom: 0.1px solid rgba(0, 0, 0, 0.281);
     padding: 10px;
+    position: relative;
+    top: -19px;
 }
 
 .list-group-item {
@@ -148,22 +93,29 @@ a:hover {
     border: none;
     font-family: Mulish;
     padding: 5px;
+    padding-left: 50px;
     font-size: 16px;
+    color: rgba(0, 0, 0, 0.616);
+}
+.light-black {
+    color: rgba(0, 0, 0, 0.616);
+}
+.pad-50 {
+    padding-left: 50px;
 }
 .mul {
     font-family: Mulish;
 }
 .list-group-item:hover {
-    border-left: 5px solid rgb(14, 11, 11);
     font-weight: bold;
     cursor: pointer;
-    transition: 0.2;
-    background-color: rgba(255, 255, 255, 0.247);
+    color: rgba(255, 0, 0, 0.726);
 }
 .label {
     padding-left: 3px;
     position: relative;
     top: -2px;
+    padding-top: 4px;
 }
 
 .allprods {
@@ -198,7 +150,6 @@ a:hover {
     transition: 0.3s;
     border-radius: 12px;
 }
-
 
 /*=-=-=-=-=-=-Mobile=-==-=-==-=-*/
 @media screen and (max-width: 600px) {
@@ -241,10 +192,9 @@ a:hover {
 
 /*=-=-=-=-=-=-Tabs and big mobiles etc=-==-=-==-=-*/
 @media only screen and (min-width: 600px) {
-  
-.oof{
-    padding-left: 45px;
-}
+    .oof {
+        padding-left: 45px;
+    }
     .prodimg {
         width: 100%;
         position: relative;
@@ -281,8 +231,7 @@ a:hover {
 /*=-=-=-=-=-LAPTOPS=-=-=-=-=-=-=-*/
 
 @media only screen and (min-width: 992px) {
-
-    .oof{
+    .oof {
         padding-left: 90px;
     }
     .prodimg {
