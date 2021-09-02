@@ -349,6 +349,145 @@
     }
     .height-30 {
         font-size: 12px;
+        position: relative;
+        top: -9px;
+    }
+    .height-28 {
+        padding-top: 25px;
+    }
+    .text {
+        padding: 2px;
+        h2 {
+            padding: 0;
+        }
+    }
+
+    .catimg {
+        position: relative;
+        width: 100%;
+        z-index: 10;
+    }
+    .catcard {
+        position: relative;
+    }
+    .cattext {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 25%;
+        background-color: rgba(255, 0, 0, 0.486);
+        z-index: 2000;
+        border-bottom-left-radius: 12px;
+        text-align: center;
+        border-bottom-right-radius: 12px;
+        h3 {
+            font-size: 12px;
+            position: relative;
+            top: 5px;
+        }
+    }
+}
+
+/*=-=-=-=-=-=-Tabs and big mobiles etc=-==-=-==-=-*/
+@media only screen and (min-width: 600px) {
+    .form-control {
+        padding: 10px;
+        font-size: 15px;
+        position: relative;
+        z-index: 100;
+    }
+    .input {
+        height: 50px;
+    }
+    .btns {
+        position: absolute;
+        top: 24px;
+        right: -2.9px;
+        width: 50px;
+        z-index: 2000;
+        height: 50px;
+        text-align: center;
+    }
+    .txtwrapper {
+        position: relative;
+        top: 2em;
+        background: rgba(255, 0, 0, 0.212);
+        padding: 30px;
+        min-height: 20em;
+        border-top-left-radius: 73px;
+        border-top-right-radius: 73px;
+        border-bottom-right-radius: 133px;
+        border-bottom-left-radius: 73px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .headin {
+        font-family: "Mulish", sans-serif;
+        color: white;
+        line-height: 50px;
+        font-size: 32px;
+    }
+    .mediaIcons {
+        position: relative;
+        height: 2em;
+        top: 18px;
+    }
+    .icons {
+        font-size: 20px;
+    }
+
+    .box .card {
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        border-radius: 12px;
+        min-height: 100px;
+        box-shadow: 5px 3px 1px 0px #13121248;
+        height: auto;
+        position: relative;
+    }
+
+    .sinppets {
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        height: 50px;
+        object-fit: contain;
+    }
+    .sniptxt {
+        position: relative;
+        left: 10%;
+        width: 100%;
+        text-align: center;
+        padding-left: 1em;
+    }
+    .head {
+        font-size: 16px;
+    }
+
+    .prodimg {
+        width: 100%;
+        position: relative;
+    }
+    .lalpatiadjust {
+        position: relative;
+    }
+    .lalpati {
+        position: absolute;
+        z-index: 100;
+        width: 25%;
+        height: 98%;
+        right: 2px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        top: 1px;
+        background-color: rgba(255, 0, 0, 0.664);
+    }
+    .height-30 {
+        font-size: 12px;
     }
     .height-28 {
         padding-top: 20px;
@@ -358,6 +497,378 @@
         h2 {
             padding: 0;
         }
+    }
+
+    .catimg {
+        position: relative;
+        width: 100%;
+        z-index: 10;
+    }
+    .catcard {
+        position: relative;
+    }
+    .cattext {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 25%;
+        background-color: rgba(255, 0, 0, 0.486);
+        z-index: 2000;
+        border-bottom-left-radius: 12px;
+        text-align: center;
+        border-bottom-right-radius: 12px;
+        h3 {
+            font-size: 16px;
+            position: relative;
+            top: 8px;
+        }
+    }
+}
+
+/*=-=-=-=-=-LAPTOPS=-=-=-=-=-=-=-*/
+
+@media only screen and (min-width: 992px) {
+    .form-control {
+        padding: 10px;
+        font-size: 20px;
+        position: relative;
+        z-index: 100;
+    }
+    .input {
+        height: 70px;
+    }
+    .btns {
+        position: absolute;
+        top: 24px;
+        right: -2.9px;
+        width: 50px;
+        z-index: 2000;
+        height: 70px;
+        text-align: center;
+    }
+    .txtwrapper {
+        position: relative;
+        top: 6em;
+        background: rgba(255, 0, 0, 0.212);
+        padding: 30px;
+        min-height: 20em;
+        border-top-left-radius: 73px;
+        border-top-right-radius: 73px;
+        border-bottom-right-radius: 133px;
+        border-bottom-left-radius: 73px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .headin {
+        font-family: "Mulish", sans-serif;
+        color: white;
+        line-height: 50px;
+        font-size: 42px;
+    }
+    .mediaIcons {
+        position: relative;
+        height: 2.5em;
+        top: 18px;
+    }
+    .icons {
+        font-size: 24px;
+    }
+    .img {
+        height: 750px;
+    }
+
+    .prodimg {
+        width: 100%;
+        position: relative;
+    }
+    .lalpatiadjust {
+        position: relative;
+    }
+    .lalpati {
+        position: absolute;
+        z-index: 100;
+        width: 30%;
+        height: 98%;
+        right: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        top: 1px;
+        background-color: rgba(255, 0, 0, 0.664);
+    }
+    .height-30 {
+        font-size: 12px;
+    }
+    .height-28 {
+        padding-top: 50px;
+    }
+    .text {
+        padding: 2px;
+        h2 {
+            padding: 0;
+        }
+    }
+
+    .catcard {
+        position: relative;
+    }
+
+    .cattext {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 20%;
+        background-color: rgba(255, 0, 0, 0.486);
+        z-index: 2000;
+        border-bottom-left-radius: 12px;
+        text-align: center;
+        border-bottom-right-radius: 12px;
+        h3 {
+            font-size: 14px;
+            position: relative;
+            top: 0;
+        }
+    }
+}
+
+/* big screens */
+@media only screen and (min-width: 1200px) {
+    .form-control {
+        padding: 10px;
+        font-size: 20px;
+        position: relative;
+        z-index: 100;
+    }
+    .input {
+        height: 70px;
+    }
+    .btns {
+        position: absolute;
+        top: 24px;
+        right: -2.9px;
+        width: 50px;
+        z-index: 2000;
+        height: 70px;
+        text-align: center;
+    }
+    .txtwrapper {
+        position: relative;
+        top: 6em;
+        background: rgba(255, 0, 0, 0.212);
+        padding: 30px;
+        min-height: 20em;
+        border-top-left-radius: 73px;
+        border-top-right-radius: 73px;
+        border-bottom-right-radius: 133px;
+        border-bottom-left-radius: 73px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .headin {
+        font-family: "Mulish", sans-serif;
+        color: white;
+        line-height: 50px;
+        font-size: 42px;
+    }
+    .mediaIcons {
+        position: relative;
+        height: 2.5em;
+        top: 18px;
+    }
+    .icons {
+        font-size: 24px;
+    }
+    .img {
+        height: 750px;
+    }
+
+    .prodimg {
+        width: 100%;
+        position: relative;
+    }
+    .lalpatiadjust {
+        position: relative;
+    }
+    .lalpati {
+        position: absolute;
+        z-index: 100;
+        width: 30%;
+        height: 98%;
+        right: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        top: 1px;
+        background-color: rgba(255, 0, 0, 0.664);
+    }
+    .height-30 {
+        font-size: 12px;
+    }
+    .height-28 {
+        padding-top: 50px;
+    }
+    .text {
+        padding: 2px;
+        h2 {
+            padding: 0;
+        }
+    }
+
+    .catcard {
+        position: relative;
+    }
+
+    .cattext {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 20%;
+        background-color: rgba(255, 0, 0, 0.486);
+        z-index: 2000;
+        border-bottom-left-radius: 12px;
+        text-align: center;
+        border-bottom-right-radius: 12px;
+        h3 {
+            font-size: 16px;
+            position: relative;
+            top: 8px;
+        }
+    }
+}
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    .cattext {
+        position: absolute;
+        bottom: -1px;
+        right: 0;
+        width: 100%;
+        height: 25%;
+        background-color: rgba(255, 0, 0, 0.486);
+        z-index: 2000;
+        border-bottom-left-radius: 10px;
+        text-align: center;
+        border-bottom-right-radius: 10px;
+        h3 {
+            font-size: 10px;
+            position: relative;
+            top: -5px;
+        }
+    }
+
+    .lalpati {
+        position: absolute;
+        z-index: 100;
+        width: 30%;
+        height: 98%;
+        right: 3px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        top: 1px;
+        background-color: rgba(255, 0, 0, 0.664);
+    }
+    .height-30 {
+        font-size: 8px;
+        position: relative;
+        top: -6px;
+    }
+    .height-28 {
+        padding-top: 10px;
+    }
+    .text {
+        padding: 2px;
+        h2 {
+            padding: 0;
+        }
+    }
+    mat-icon {
+        font-size: 14px;
+    }
+
+    .lmbtn {
+        background-color: red;
+        font-family: Mulish;
+        padding: 5px;
+        width: 9em;
+        font-size: 12px;
+    }
+    .btninsta {
+        background-color: red;
+        font-family: Mulish;
+        padding: 5px;
+        width: 9em;
+        font-size: 12px;
+    }
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    .box .card {
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 12px;
+        min-height: 80px;
+        box-shadow: 5px 3px 1px 0px #13121248;
+        height: auto;
+        position: relative;
+    }
+
+    .sinppets {
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        height: 50px;
+        object-fit: contain;
+    }
+    .sniptxt {
+        position: relative;
+        left: 27%;
+        width: 70%;
+        font-size: 10px;
+        text-align: center;
+        padding-left: 1em;
+        position: relative;
+        top: -8px;
+    }
+    .head {
+        font-size: 12px;
+        position: relative;
+        top: 8px;
+    }
+
+    .cattext {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 30%;
+        background-color: rgba(255, 0, 0, 0.486);
+        z-index: 2000;
+        border-bottom-left-radius: 8px;
+        text-align: center;
+        border-bottom-right-radius: 8px;
+        h3 {
+            font-size: 8px;
+        }
+    }
+
+    .height-30 {
+        font-size: 8px;
+        position: relative;
+        top: -14px;
+    }
+    .height-28 {
+        padding-top: 5px;
     }
 }
 
