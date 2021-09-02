@@ -152,6 +152,12 @@ a:hover {
     transition: 0.3s;
     border-radius: 12px;
 }
+.label {
+    cursor: pointer;
+}
+#customCheck2:hover {
+    cursor: pointer;
+}
 
 /*=-=-=-=-=-=-Mobile=-==-=-==-=-*/
 @media screen and (max-width: 600px) {
@@ -189,6 +195,13 @@ a:hover {
     }
     mat-icon {
         font-size: 16px;
+    }
+
+    .pad-50 {
+        padding-left: 8px;
+    }
+    .list-group-item {
+        padding-left: 8px;
     }
 }
 
