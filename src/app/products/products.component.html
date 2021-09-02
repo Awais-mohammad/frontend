@@ -6,7 +6,7 @@
     <div class="container-fluid  pt-2">
 
         <div class="row">
-            <div class="col-4 a pt-3" style="position: relative;left: 8em;">
+            <div class="col-4 a p-4">
 
                 <h1 style="font-size: 30px;" class="oswald">Filtered By:</h1>
 
@@ -16,7 +16,7 @@
 
                 <div class="row">
 
-                    <div class="col-8">
+                    <div class="col-12 col-lg-8 col-xl-8 col-md-8 col-sm-12">
                         <div class="input-group pt-4">
                             <input type="text" class="form-control input" placeholder="Search!!">
                             <div class="input-group-append">
@@ -31,7 +31,7 @@
 
                     </div>
 
-                    <div class="col-4 pt-4">
+                    <div class="col-4 pt-4 ddd">
                         <label class="dropdown">
 
                             <div class="dd-button">
@@ -90,62 +90,58 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-md-7 col-lg-8 col-xl-8 col-sm-12">
+                <div class="col-12 col-md-7 col-lg-8 col-xl-8 col-sm-12 oof">
                     <div class="allprods">
 
                         <div>
                             <div class="row p-1 d-flex justify-content-center">
 
                                 <div *ngFor="let item of [].constructor(10)"
-                                    class="col-10 col-sm-8 col-md-8 col-lg-6 col-xl-4  p-3">
-                                    <div class="prodcard">
+                                   class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                                   <div class="prodcard">
 
-                                        <div class="lalpatiadjust">
-                                            <img class="prodimg" src="../../assets/icons/product3.png" alt="">
-
-                                            <div class="lalpati d-flex flex-column text-center align-items-center">
-
-                                                <mat-icon class="pt-3" style="color: white;height: 28%;">
-                                                    favorite_border
-                                                </mat-icon>
-
-                                                <img style="width: 50%;" src="../../assets/icons/lalpati/Line 11.png"
-                                                    alt="">
-
-                                                <h3 style="color: white;height: 30%;" class="pt-4 mt-4 mul">
-                                                    VIEW</h3>
-
-
-                                                <img style="width: 50%;" src="../../assets/icons/lalpati/Line 11.png"
-                                                    alt="">
-
-                                                <mat-icon class="pt-5" style="color: white;height: 28%;"
-                                                    style="color: white;">
-                                                    add_shopping_cart
-                                                </mat-icon>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="text">
-                                            <h2 class="text-center " style="font-family: Oswald;">
-                                                <b>
-                                                    Shark Brixton
-                                                </b>
-                                            </h2>
-
-                                            <p class="mul text-center">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
-                                                voluptatem!
-                                            </p>
-                                            <h2 class="text-center " style="font-family: Oswald;">
-                                                <b>
-                                                    $30
-                                                </b>
-                                            </h2>
-
+                                    <div class="lalpatiadjust">
+                                        <img class="prodimg" src="../../assets/icons/product3.png" alt="">
+            
+                                        <div class="lalpati d-flex flex-column text-center align-items-center">
+            
+                                            <mat-icon class="pt-3" style="color: white;height: 28%;">
+                                                favorite_border
+                                            </mat-icon>
+            
+                                            <img class="wid-50" src="../../assets/icons/lalpati/Line 11.png" alt="">
+            
+                                            <h3 style="color: white;height: 30%;font-size: 12px;" class="pt-4 mt-4 mul">
+                                                VIEW</h3>
+            
+            
+                                            <img class="wid-50" src="../../assets/icons/lalpati/Line 11.png" alt="">
+            
+                                            <mat-icon class="pt-4" style="color: white;height: 28%;">
+                                                add_shopping_cart
+                                            </mat-icon>
+            
                                         </div>
                                     </div>
+            
+                                    <div class="text">
+                                        <h2 class="text-center " style="font-family: Oswald;">
+                                            <b>
+                                                Shark Brixton
+                                            </b>
+                                        </h2>
+            
+                                        <p class="mul text-center">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, voluptatem!
+                                        </p>
+                                        <h2 class="text-center " style="font-family: Oswald;">
+                                            <b>
+                                                $30
+                                            </b>
+                                        </h2>
+            
+                                    </div>
+                                </div>
                                 </div>
 
                             </div>

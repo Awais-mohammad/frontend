@@ -18,7 +18,6 @@ import { ProductsComponent } from './products/products.component';
     routingComps,
     FooterComponent,
     HomeComponent,
-    ProductsComponent,
   ],
   imports: [
     BrowserModule,
