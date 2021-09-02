@@ -215,14 +215,14 @@
 }
 
 .carousel {
-    width: 85%;
+    width: 80%;
     margin: 10px auto;
 }
 .slick-slide {
     margin: 4px;
 }
 .slick-slide img {
-    width: 100%;
+    width: 99%;
     border-radius: 12px;
     height: 20em;
     object-fit: cover;
@@ -233,12 +233,131 @@
     color: white;
     padding: 15px;
 }
-@media screen and (max-width: 900px) {
-    .slick-slide img {
-        width: 100%;
-        height: 12em;
-        object-fit: cover;
+.wid-50 {
+    width: 50%;
+}
+.height-30 {
+    height: 30%;
+}
+.height-28 {
+    height: 28%;
+}
+
+.prodcard:hover {
+    cursor: pointer;
+    border-top: 4px solid rgba(209, 12, 12, 0.623);
+    transition: 0.3s;
+    border-radius: 12px;
+}
+
+/*=-=-=-=-=-=-Mobile=-==-=-==-=-*/
+@media screen and (max-width: 600px) {
+    .form-control {
+        padding: 10px;
+        font-size: 15px;
+        position: relative;
+        z-index: 100;
+    }
+    .input {
+        height: 50px;
+    }
+    .btns {
+        position: absolute;
+        top: 24px;
+        right: -2.9px;
+        width: 50px;
+        z-index: 2000;
+        height: 50px;
+        text-align: center;
+    }
+    .txtwrapper {
+        position: relative;
+        top: 2em;
+        background: rgba(255, 0, 0, 0.212);
+        padding: 30px;
+        min-height: 20em;
+        border-top-left-radius: 73px;
+        border-top-right-radius: 73px;
+        border-bottom-right-radius: 133px;
+        border-bottom-left-radius: 73px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .headin {
+        font-family: "Mulish", sans-serif;
+        color: white;
+        line-height: 50px;
+        font-size: 32px;
+    }
+    .mediaIcons {
+        position: relative;
+        height: 2em;
+        top: 18px;
+    }
+    .icons {
+        font-size: 20px;
+    }
+
+    .box .card {
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
         border-radius: 12px;
+        min-height: 100px;
+        box-shadow: 5px 3px 1px 0px #13121248;
+        height: auto;
+        position: relative;
+    }
+
+    .sinppets {
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        height: 50px;
+        object-fit: contain;
+    }
+    .sniptxt {
+        position: relative;
+        left: 10%;
+        width: 100%;
+        text-align: center;
+        padding-left: 1em;
+    }
+    .head {
+        font-size: 16px;
+    }
+
+    .prodimg {
+        width: 100%;
+        position: relative;
+    }
+    .lalpatiadjust {
+        position: relative;
+    }
+    .lalpati {
+        position: absolute;
+        z-index: 100;
+        width: 25%;
+        height: 98%;
+        right: 2px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        top: 1px;
+        background-color: rgba(255, 0, 0, 0.664);
+    }
+    .height-30 {
+        font-size: 12px;
+    }
+    .height-28 {
+        padding-top: 20px;
+    }
+    .text {
+        padding: 2px;
+        h2 {
+            padding: 0;
+        }
     }
 }
 
