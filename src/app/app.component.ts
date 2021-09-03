@@ -145,7 +145,7 @@ export class AppComponent {
 
   ngOnInit(): void {
 
-    this.openDialogue('dTyp')
+    //this.openDialogue('dTyp')
 
   }
 }
