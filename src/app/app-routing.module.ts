@@ -33,6 +33,9 @@ const routes: Routes = [
   }, {
     path: "tracking",
     component: TrackingComponent
+  }, {
+    path: "contact",
+    component: ContactComponent
   }
 ];
 
