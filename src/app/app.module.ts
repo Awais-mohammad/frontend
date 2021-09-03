@@ -12,14 +12,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from './home/home.component';
-import { ProductsComponent } from './products/products.component';
 
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { CheckoutComponent } from './checkout/checkout.component';
-import { CartComponent } from './cart/cart.component';
-import { TrackingComponent } from './tracking/tracking.component';
-
+import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTableModule } from '@angular/material/table';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSelectModule } from '@angular/material/select';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,12 +32,6 @@ import { TrackingComponent } from './tracking/tracking.component';
     routingComps,
     FooterComponent,
     HomeComponent,
-    AboutComponent,
-    ContactComponent,
-    CheckoutComponent,
-    CartComponent,
-    TrackingComponent,
-    AuthComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +41,18 @@ import { TrackingComponent } from './tracking/tracking.component';
     MatIconModule,
     MatButtonModule,
     MatDialogModule,
+    FormsModule,
+    MatCardModule,
+    ReactiveFormsModule,
+    MatListModule,
+    MatFormFieldModule,
+    MatInputModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatTableModule,
+    MatSnackBarModule,
+    MatProgressSpinnerModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

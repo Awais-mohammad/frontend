@@ -1,20 +1,69 @@
-<div *ngIf = "true">
-    <div class="icon">
-        <i class="fas fa-times-circle"></i>
-    </div>
-    <div class="text-center ">
-        <img class="logo" src="../../assets/logos/logored.png" alt="">
+<div class="icon">
+    <i class="fas fa-times-circle"></i>
+</div>
+<div class="text-center ">
+    <img class="logo" src="../../assets/logos/logored.png" alt="">
 
-        <div class="d-flex justify-content-center align-items-center flex-column">
-            <h1 class="text-dark oswald headingmain pt-4">WELCOME</h1>
-            <h3 class="text-dark oswald subheading pt-2">Enter Your Credentials To Login</h3>
+    <div class="d-flex justify-content-center align-items-center flex-column">
+        <h1 class="text-dark oswald headingmain pt-4">WELCOME</h1>
+        <h3 class="text-dark oswald subheading pt-2">Enter Your Credentials To Login</h3>
 
-            <div class="col-8">
-                <div class="input-group pt-4">
-                    <input type="text" class="form-control input" placeholder="Enter Your Email">
-                    <i class="fas fa-times-circle mailpass"></i>
-                </div>
+
+
+
+        <div class="col-8">
+           
+            <div class="input-group pt-4">
+
+                <input type="text" class="form-control input" placeholder="Enter Your Email">
+
             </div>
+
+            <div class="input-group pt-4">
+                <input type="text" class="form-control input" placeholder="Enter Your Password">
+
+            </div>
+
+
+            <div class="btnn pt-4">
+                <button class="block" mat-flat-button color="danger">LOGIN</button>
+            </div>
+
+            <div class="pt-3 d-flex">
+
+                <button class="fb" mat-flat-button color="none">
+                    <i class="fab fa-facebook-f facebook-bg fbicon"></i>
+                    Login with facebook
+                </button>
+                <div class="col-1">
+
+                </div>
+                <button class="google" mat-flat-button color="none">
+                    <i class="fab fa-google-plus-g google-bg fbicon"></i>
+                    Login with Google
+                </button>
+
+
+            </div>
+
+            <div class="pt-4">
+                <p class="text-dark roboto" style="font-size: 16px;">Don't Have An Account?<span class=" text-danger"
+                        style="padding-left: 4px;letter-spacing: 1px;"><u>
+                            <b>
+                                SIGNUP
+                            </b>
+                        </u></span></p>
+            </div>
+
+            <div class="pt-1">
+                <p class="text-dark roboto" style="font-size: 16px;">Don't Remember Password?<span class=" text-danger"
+                        style="padding-left: 4px;letter-spacing: 1px;"><u>
+                            <b>
+                                RESET
+                            </b>
+                        </u></span></p>
+            </div>
+
         </div>
 
     </div>

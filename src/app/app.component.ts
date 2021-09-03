@@ -135,7 +135,7 @@ export class AppComponent {
 
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
-    dialogConfig.height = '600px';
+    dialogConfig.height = '610px';
     dialogConfig.width = '800px';
     dialogConfig.data = {
       user: dTyp,
@@ -145,7 +145,7 @@ export class AppComponent {
 
   ngOnInit(): void {
 
-    //this.openDialogue('dTyp')
+    this.openDialogue('dTyp')
 
   }
 }
