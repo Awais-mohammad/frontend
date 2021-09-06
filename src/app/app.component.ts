@@ -4,6 +4,7 @@ import { HttpClient, HttpRequest, HttpEvent, HttpResponse, HttpEventType } from 
 import { Observable } from 'rxjs';
 
 import { MatDialog, MatDialogConfig, MatDialogRef } from "@angular/material/dialog";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -13,13 +14,13 @@ import { MatDialog, MatDialogConfig, MatDialogRef } from "@angular/material/dial
 export class AppComponent {
 
   desktop: boolean;
-
-
-
+  route = window.location.pathname;
+  prevRoute: string;
 
   constructor(
     private http: HttpClient,
     public dialog: MatDialog,
+    private router: Router,
     private dialogRef: MatDialogRef<AuthComponent>
 
   ) {
@@ -34,18 +35,32 @@ export class AppComponent {
             let nav = document.getElementById("navMob");
             nav.style.animation = "navShort2 0.3s linear";
             nav.style.padding = "10px";
-            nav.style.background = "rgba(255, 255, 255, 0.726)";
+            nav.style.background = "rgba(255, 255, 255)";
             nav.style.boxShadow = "0px 0px 5px 1px rgba(0, 0, 0, 0.438)";
           } else if (window.scrollY < 150) {
             let nav = document.getElementById("navMob");
             nav.style.animation = "navBig2 0.3s linear";
             nav.style.padding = "30px";
-            nav.style.background = "rgba(255, 255, 255)";
+            nav.style.background = "rgba(255, 255, 255,0)";
             nav.style.boxShadow = "0px 0px 0px 0px rgba(0, 0, 0, 0.438)";
           }
         }
       }, 100)
     }, 1000);
+    setInterval(() => {
+      this.route = window.location.pathname;
+      if (this.prevRoute != this.route) {
+        setTimeout(() => {
+        }, 500);
+      }
+      this.prevRoute = this.route;
+    }, 10)
+  }
+
+  goToPage(page:string){
+    this.router.navigate([page]);
+    let mylinks = document.getElementById("myLinks");
+    mylinks.style.display = "none";
   }
 
 
@@ -59,7 +74,7 @@ export class AppComponent {
       let navBar = document.getElementById("navBar");
       navBar.style.animation = "navShort 0.3s linear";
       navBar.style.height = "90px";
-      navBar.style.background = "rgba(255, 255, 255, 0.726)";
+      navBar.style.background = "rgba(255, 255, 255)";
       navBar.style.boxShadow = "0px 0px 5px 1px rgba(0, 0, 0, 0.438)";
 
       let home = document.getElementById("guid_d9c80f04_d190_44b6_ac8d_3c0811afc983");
@@ -101,7 +116,7 @@ export class AppComponent {
       let navBar = document.getElementById("navBar");
       navBar.style.animation = "navBig 0.3s linear";
       navBar.style.height = "120px";
-      navBar.style.background = "rgba(255, 255, 255)";
+      navBar.style.background = "rgba(255, 255, 255,0)";
       navBar.style.boxShadow = "0px 0px 0px 0px rgba(0, 0, 0, 0.438)";
 
       let home = document.getElementById("guid_d9c80f04_d190_44b6_ac8d_3c0811afc983");

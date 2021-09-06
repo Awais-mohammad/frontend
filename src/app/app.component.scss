@@ -24,6 +24,11 @@
   font-weight: 700;
   transform-origin: 50% 50%;
   transform: matrix(1, 0, 0, 1, 71.12582397460938, 92.55709838867188);
+  cursor: pointer;
+}
+
+#guid_d9c80f04_d190_44b6_ac8d_3c0811afc983:hover{
+  text-decoration: underline;
 }
 
 #guid_2a2d8652_a83f_4d33_8333_d4c14d3e03e8 {
@@ -34,6 +39,11 @@
   font-weight: 700;
   transform-origin: 50% 50%;
   transform: matrix(1, 0, 0, 1, 243.12582397460938, 92.55709838867188);
+  cursor: pointer;
+}
+
+#guid_2a2d8652_a83f_4d33_8333_d4c14d3e03e8:hover{
+  text-decoration: underline;
 }
 
 #guid_bcded2ac_ad52_4d03_a1ca_28affe2a32ff {
@@ -44,6 +54,11 @@
   font-weight: 700;
   transform-origin: 50% 50%;
   transform: matrix(1, 0, 0, 1, 312.1258239746094, 92.55709838867188);
+  cursor: pointer;
+}
+
+#guid_bcded2ac_ad52_4d03_a1ca_28affe2a32ff:hover{
+  text-decoration: underline;
 }
 
 #guid_91f5347f_baa6_4846_9d1e_ddf339e4cbae {
@@ -54,6 +69,11 @@
   font-weight: 700;
   transform-origin: 50% 50%;
   transform: matrix(1, 0, 0, 1, 133.12582397460938, 92.55709838867188);
+  cursor: pointer;
+}
+
+#guid_91f5347f_baa6_4846_9d1e_ddf339e4cbae:hover{
+  text-decoration: underline;
 }
 
 #guid_befab96e_2aef_427e_bb34_abb4070b8240 {
@@ -129,7 +149,7 @@
 }
 
 .navBar {
-  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0);
   height: 120px;
   width: 100%;
   position: fixed;
@@ -161,12 +181,12 @@
 @keyframes navShort {
   from {
       height: 120px;
-      background: white;
+      background: rgba(255, 255, 255, 0);
       box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.438);
   }
   to {
       height: 90px;
-      background: rgba(255, 255, 255, 0.726);
+      background: rgb(255, 255, 255);
       box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.438);
   }
 }
@@ -174,12 +194,12 @@
 @keyframes navBig {
   from {
       height: 90px;
-      background: rgba(255, 255, 255, 0.726);
+      background: rgb(255, 255, 255);
       box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.438);
   }
   to {
       height: 120px;
-      background: white;
+      background: rgba(255, 255, 255, 0);
       box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.438);
   }
 }
@@ -343,7 +363,7 @@
   z-index: 9999;
   width:100vw;
   margin: auto;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0);
   color: white;padding: 30px;
 }
 
