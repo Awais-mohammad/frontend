@@ -1,9 +1,9 @@
 import { AuthComponent } from './auth/auth.component';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { HttpClient, HttpRequest, HttpEvent, HttpResponse, HttpEventType } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
+import { MatDialog, MatDialogConfig, MatDialogRef } from "@angular/material/dialog";
 
 @Component({
   selector: 'app-root',
@@ -14,9 +14,13 @@ export class AppComponent {
 
   desktop: boolean;
 
+
+
+
   constructor(
     private http: HttpClient,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private dialogRef: MatDialogRef<AuthComponent>
 
   ) {
     setTimeout(() => {
@@ -43,6 +47,7 @@ export class AppComponent {
       }, 100)
     }, 1000);
   }
+
 
   scrollNav() {
     if (window.scrollY >= 150) {
@@ -137,15 +142,35 @@ export class AppComponent {
     dialogConfig.autoFocus = true;
     dialogConfig.height = '610px';
     dialogConfig.width = '800px';
-    dialogConfig.data = {
-      user: dTyp,
-    };
-    this.dialog.open(AuthComponent, dialogConfig);
+
+    const dialogRef = this.dialog.open(AuthComponent, dialogConfig);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result.data);
+
+      if (result.data == 'signup') {
+        let configs = this.openSignup()
+        const dialogRef = this.dialog.open(AuthComponent, configs);
+      }
+    })
+
+  }
+
+  openSignup() {
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.height = '700px';
+    dialogConfig.width = '800px';
+
+    return dialogConfig;
+
   }
 
   ngOnInit(): void {
 
-    //this.openDialogue('dTyp')
+    // this.openDialogue('dTyp')
 
   }
 }

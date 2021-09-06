@@ -1,5 +1,5 @@
 <div class="icon">
-    <i class="fas fa-times-circle"></i>
+    <i (click)="close()" class="fas fa-times-circle"></i>
 </div>
 <div class="text-center ">
     <img class="logo" src="../../assets/logos/logored.png" alt="">
@@ -11,7 +11,7 @@
 
 
 
-        <div class="col-8">
+        <div class="col-12 col-sm-12 col-lg-8 col-md-8 col-xl-8">
 
             <div class="input-group pt-4">
 
@@ -29,19 +29,22 @@
                 <button class="block" mat-flat-button color="danger">LOGIN</button>
             </div>
 
-            <div class="pt-3 d-flex">
+            <div class="pt-3 row">
+                <div class="col-6">
 
-                <button class="fb" mat-flat-button color="none">
-                    <i class="fab fa-facebook-f facebook-bg fbicon"></i>
-                    Login with facebook
-                </button>
-                <div class="col-1">
-
+                    <button class="fb" mat-flat-button color="none">
+                        <i class="fab fa-facebook-f facebook-bg fbicon"></i>
+                        Facebook
+                    </button>
                 </div>
-                <button class="google" mat-flat-button color="none">
-                    <i class="fab fa-google-plus-g google-bg fbicon"></i>
-                    Login with Google
-                </button>
+
+
+                <div class="col-6">
+                    <button class="google" mat-flat-button color="none">
+                        <i class="fab fa-google-plus-g google-bg gicon"></i>
+                        Google
+                    </button>
+                </div>
 
 
             </div>

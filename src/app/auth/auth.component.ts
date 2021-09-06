@@ -1,3 +1,4 @@
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public dialog: MatDialog,
+    private dialogRef: MatDialogRef<AuthComponent>
+  ) { }
+
+  close() {
+    this.dialogRef.close({ data: 'signup' })
+  }
+
+
 
   ngOnInit(): void {
   }

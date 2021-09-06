@@ -4,6 +4,7 @@
 
 @import "~bootstrap/dist/css/bootstrap.css";
 
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 *,
 body,
 html {
@@ -31,12 +32,8 @@ html {
     position: relative;
     left: -9px;
   }
-
 }
-
 
 mat-dialog-container {
   background: white !important;
 }
-
-

@@ -55,7 +55,7 @@
     font-family: "Noto Sans JP", sans-serif;
 }
 .fb {
-    width: 48%;
+    width: 100%;
     height: 3em;
     background: blue;
     font-size: 16px;
@@ -64,7 +64,7 @@
 }
 
 .google {
-    width: 48%;
+    width: 100%;
     height: 3em;
     background: #fd1810bd;
     font-size: 16px;
@@ -72,11 +72,15 @@
     font-family: "Barlow", sans-serif;
 }
 .fbicon {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    margin-right: 20px;
+    position: relative;
+    margin-right: 2px;
+    font-size: 20px;
+}
+.gicon{
+    position: relative;
+    margin-right: 2px;
     font-size: 25px;
+
 }
 .roboto{
     font-family: 'Roboto', sans-serif;
