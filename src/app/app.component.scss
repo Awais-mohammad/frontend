@@ -10,7 +10,10 @@
   background-color: #f00;
   border-radius: 0px 0px 25px 0px;
 }
-
+a {
+  color: black;
+  text-decoration: none;
+}
 #guid_6c610700_d23c_46e6_8267_df76d7c2356b {
   transform-origin: 50% 50%;
   transform: matrix(1, 0, 0, 1, 23.874176025390625, -25.557098388671875);
@@ -27,7 +30,7 @@
   cursor: pointer;
 }
 
-#guid_d9c80f04_d190_44b6_ac8d_3c0811afc983:hover{
+#guid_d9c80f04_d190_44b6_ac8d_3c0811afc983:hover {
   text-decoration: underline;
 }
 
@@ -42,7 +45,7 @@
   cursor: pointer;
 }
 
-#guid_2a2d8652_a83f_4d33_8333_d4c14d3e03e8:hover{
+#guid_2a2d8652_a83f_4d33_8333_d4c14d3e03e8:hover {
   text-decoration: underline;
 }
 
@@ -57,7 +60,7 @@
   cursor: pointer;
 }
 
-#guid_bcded2ac_ad52_4d03_a1ca_28affe2a32ff:hover{
+#guid_bcded2ac_ad52_4d03_a1ca_28affe2a32ff:hover {
   text-decoration: underline;
 }
 
@@ -72,7 +75,7 @@
   cursor: pointer;
 }
 
-#guid_91f5347f_baa6_4846_9d1e_ddf339e4cbae:hover{
+#guid_91f5347f_baa6_4846_9d1e_ddf339e4cbae:hover {
   text-decoration: underline;
 }
 
@@ -84,7 +87,8 @@
 }
 
 #guid_1138e213_0fb2_4e7b_8a67_f4fbf0df25ba {
-  float: right;margin-top: 50px;
+  float: right;
+  margin-top: 50px;
 }
 
 #guid_47210845_f481_4e21_ac82_5721761fdb01 {
@@ -158,213 +162,212 @@
 
 @keyframes logoShort {
   from {
-      height: 68px;
-      top: 45px;
+    height: 68px;
+    top: 45px;
   }
   to {
-      height: 45px;
-      top: 30px;
+    height: 45px;
+    top: 30px;
   }
 }
 
 @keyframes logoBig {
   from {
-      height: 45px;
-      top: 30px;
+    height: 45px;
+    top: 30px;
   }
   to {
-      height: 68px;
-      top: 45px;
+    height: 68px;
+    top: 45px;
   }
 }
 
 @keyframes navShort {
   from {
-      height: 120px;
-      background: rgba(255, 255, 255, 0);
-      box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.438);
+    height: 120px;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.438);
   }
   to {
-      height: 90px;
-      background: rgb(255, 255, 255);
-      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.438);
+    height: 90px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.438);
   }
 }
 
 @keyframes navBig {
   from {
-      height: 90px;
-      background: rgb(255, 255, 255);
-      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.438);
+    height: 90px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.438);
   }
   to {
-      height: 120px;
-      background: rgba(255, 255, 255, 0);
-      box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.438);
+    height: 120px;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.438);
   }
 }
 
 @keyframes pageShort {
   from {
-      transform: matrix(1, 0, 0, 1, 71.12582397460938, 92.55709838867188);
+    transform: matrix(1, 0, 0, 1, 71.12582397460938, 92.55709838867188);
   }
   to {
-      transform: matrix(1, 0, 0, 1, 71.12582397460938, 75.55709838867188);
+    transform: matrix(1, 0, 0, 1, 71.12582397460938, 75.55709838867188);
   }
 }
 
 @keyframes pageBig {
   from {
-      transform: matrix(1, 0, 0, 1, 71.12582397460938, 75.55709838867188);
+    transform: matrix(1, 0, 0, 1, 71.12582397460938, 75.55709838867188);
   }
   to {
-      transform: matrix(1, 0, 0, 1, 71.12582397460938, 92.55709838867188);
+    transform: matrix(1, 0, 0, 1, 71.12582397460938, 92.55709838867188);
   }
 }
 
 @keyframes aboutShort {
   from {
-      transform: matrix(1, 0, 0, 1, 243.12582397460938, 92.55709838867188);
+    transform: matrix(1, 0, 0, 1, 243.12582397460938, 92.55709838867188);
   }
   to {
-      transform: matrix(1, 0, 0, 1, 243.12582397460938, 75.55709838867188);
+    transform: matrix(1, 0, 0, 1, 243.12582397460938, 75.55709838867188);
   }
 }
 
 @keyframes aboutBig {
   from {
-      transform: matrix(1, 0, 0, 1, 243.12582397460938, 75.55709838867188);
+    transform: matrix(1, 0, 0, 1, 243.12582397460938, 75.55709838867188);
   }
   to {
-      transform: matrix(1, 0, 0, 1, 243.12582397460938, 92.55709838867188);
+    transform: matrix(1, 0, 0, 1, 243.12582397460938, 92.55709838867188);
   }
 }
 
 @keyframes proShort {
   from {
-      transform: matrix(1, 0, 0, 1, 133.12582397460938, 92.55709838867188);
+    transform: matrix(1, 0, 0, 1, 133.12582397460938, 92.55709838867188);
   }
   to {
-      transform: matrix(1, 0, 0, 1, 133.12582397460938, 75.55709838867188);
+    transform: matrix(1, 0, 0, 1, 133.12582397460938, 75.55709838867188);
   }
 }
 
 @keyframes proBig {
   from {
-      transform: matrix(1, 0, 0, 1, 133.12582397460938, 75.55709838867188);
+    transform: matrix(1, 0, 0, 1, 133.12582397460938, 75.55709838867188);
   }
   to {
-      transform: matrix(1, 0, 0, 1, 133.12582397460938, 92.55709838867188);
+    transform: matrix(1, 0, 0, 1, 133.12582397460938, 92.55709838867188);
   }
 }
 
 @keyframes arrow1Short {
   from {
-      transform: matrix(0, 1, -1, 0, 212.12579345703125, 101.5571060180664);
+    transform: matrix(0, 1, -1, 0, 212.12579345703125, 101.5571060180664);
   }
   to {
-      transform: matrix(0, 1, -1, 0, 212.12579345703125, 80.5571060180664);
+    transform: matrix(0, 1, -1, 0, 212.12579345703125, 80.5571060180664);
   }
 }
 
 @keyframes arrow1Big {
   from {
-      transform: matrix(0, 1, -1, 0, 212.12579345703125, 80.5571060180664);
+    transform: matrix(0, 1, -1, 0, 212.12579345703125, 80.5571060180664);
   }
   to {
-      transform: matrix(0, 1, -1, 0, 212.12579345703125, 101.5571060180664);
+    transform: matrix(0, 1, -1, 0, 212.12579345703125, 101.5571060180664);
   }
 }
 
 @keyframes contactShort {
   from {
-      transform: matrix(1, 0, 0, 1, 312.1258239746094, 92.55709838867188);
+    transform: matrix(1, 0, 0, 1, 312.1258239746094, 92.55709838867188);
   }
   to {
-      transform: matrix(1, 0, 0, 1, 312.1258239746094, 75.55709838867188);
+    transform: matrix(1, 0, 0, 1, 312.1258239746094, 75.55709838867188);
   }
 }
 
 @keyframes contactBig {
   from {
-      transform: matrix(1, 0, 0, 1, 312.1258239746094, 75.55709838867188);
+    transform: matrix(1, 0, 0, 1, 312.1258239746094, 75.55709838867188);
   }
   to {
-      transform: matrix(1, 0, 0, 1, 312.1258239746094, 92.55709838867188);
+    transform: matrix(1, 0, 0, 1, 312.1258239746094, 92.55709838867188);
   }
 }
 
-
 @keyframes iconShort {
   from {
-      margin-top:50px;
+    margin-top: 50px;
   }
   to {
-      margin-top: 37px;
+    margin-top: 37px;
   }
 }
 
 @keyframes iconBig {
   from {
-      margin-top: 37px;
+    margin-top: 37px;
   }
   to {
-      margin-top:50px;
+    margin-top: 50px;
   }
 }
 
-
 @keyframes redShort {
   from {
-      height: 100px;
+    height: 100px;
   }
   to {
-      height: 80px;
+    height: 80px;
   }
 }
 
 @keyframes redBig {
   from {
-      height: 80px;
+    height: 80px;
   }
   to {
-      height: 100px;
+    height: 100px;
   }
 }
 
 @keyframes navShort2 {
   from {
-      padding: 30px;
-      background: white;
-      box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.438);
+    padding: 30px;
+    background: white;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.438);
   }
   to {
-      padding: 10px;
-      background: rgba(255, 255, 255, 0.726);
-      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.438);
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.726);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.438);
   }
 }
 
 @keyframes navBig2 {
   from {
-      padding: 10px;
-      background: rgba(255, 255, 255, 0.726);
-      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.438);
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.726);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.438);
   }
   to {
-      padding: 30px;
-      background: white;
-      box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.438);
+    padding: 30px;
+    background: white;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.438);
   }
 }
 
 .mobile-container {
   position: fixed;
   z-index: 9999;
-  width:100vw;
+  width: 100vw;
   margin: auto;
   background-color: rgba(255, 255, 255, 0);
-  color: white;padding: 30px;
+  color: white;
+  padding: 30px;
 }
 
 .topnav {
@@ -398,6 +401,6 @@
 }
 
 .active {
-  background-color: #04AA6D;
+  background-color: #04aa6d;
   color: white;
 }

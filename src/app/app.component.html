@@ -12,40 +12,51 @@
     </div>
 
     <div id="guid_6c610700_d23c_46e6_8267_df76d7c2356b" class="hero-element">
-        <div id="guid_d9c80f04_d190_44b6_ac8d_3c0811afc983" class="hero-element" *ngIf="route == '/home'">HOME
+        <div id="guid_d9c80f04_d190_44b6_ac8d_3c0811afc983" class="hero-element" *ngIf="route == '/home'"> <a
+                href="/home">Home</a>
         </div>
 
-        <div id="guid_d9c80f04_d190_44b6_ac8d_3c0811afc983" (click) = "goToPage('home')" class="hero-element" style="color:black;"
-            *ngIf="route != '/home'">HOME
+        <div id="guid_d9c80f04_d190_44b6_ac8d_3c0811afc983" class="hero-element" style="color:black;"
+            *ngIf="route != '/home'">
+            <a href="/home">Home</a>
         </div>
-        <div id="guid_2a2d8652_a83f_4d33_8333_d4c14d3e03e8" (click) = "goToPage('about')" class="hero-element" *ngIf="route != '/about'">ABOUT
+        <div id="guid_2a2d8652_a83f_4d33_8333_d4c14d3e03e8" class="hero-element" *ngIf="route != '/about'">
+            <a href="/about">ABOUT</a>
         </div>
         <div id="guid_2a2d8652_a83f_4d33_8333_d4c14d3e03e8" class="hero-element" style="color:white;"
-            *ngIf="route == '/about'">ABOUT
+            *ngIf="route == '/about'">
+            <a href="/home">About</a>
         </div>
-        <div id="guid_bcded2ac_ad52_4d03_a1ca_28affe2a32ff" style ="color:white;" class="hero-element" *ngIf="route == '/contact'">CONTACT
+        <div id="guid_bcded2ac_ad52_4d03_a1ca_28affe2a32ff" style="color:white;" class="hero-element"
+            *ngIf="route == '/contact'">
+            <a href="/contact">Contact</a>
         </div>
-        <div id="guid_bcded2ac_ad52_4d03_a1ca_28affe2a32ff" (click) = "goToPage('contact')" class="hero-element" *ngIf="route != '/contact'">CONTACT
+        <div id="guid_bcded2ac_ad52_4d03_a1ca_28affe2a32ff" class="hero-element" *ngIf="route != '/contact'">
+            <a href="/contact">Contact</a>
         </div>
         <div id="guid_91f5347f_baa6_4846_9d1e_ddf339e4cbae" class="hero-element" style="color:white;"
-            *ngIf="route == '/products'">PRODUCTS
+            *ngIf="route == '/products'">
+            <a href="/products">Products</a>
         </div>
-        <div id="guid_91f5347f_baa6_4846_9d1e_ddf339e4cbae" (click) = "goToPage('products')" class="hero-element" *ngIf="route != '/products'">PRODUCTS
+        <div id="guid_91f5347f_baa6_4846_9d1e_ddf339e4cbae" class="hero-element" *ngIf="route != '/products'">
+            <a href="/products">Products</a>
         </div>
-        <img id="guid_befab96e_2aef_427e_bb34_abb4070b8240" class="hero-element" style="margin-right:10px;cursor: pointer;"
+        <img id="guid_befab96e_2aef_427e_bb34_abb4070b8240" class="hero-element"
+            style="margin-right:10px;cursor: pointer;"
             src="../assets/icons/guid_befab96e_2aef_427e_bb34_abb4070b8240.png">
 
     </div>
     <div id="guid_1138e213_0fb2_4e7b_8a67_f4fbf0df25ba">
         <div id="guid_47210845_f481_4e21_ac82_5721761fdb01" style="float: right; margin-right: 70px;margin-top: 10px;">
-            <div id="guid_8f62f788_f2cf_42b3_9167_15b32417c40e" style="display: inline-block;cursor: pointer;padding-top:7px">ENG
+            <div id="guid_8f62f788_f2cf_42b3_9167_15b32417c40e"
+                style="display: inline-block;cursor: pointer;padding-top:7px">ENG
             </div>
             <img id="guid_51bf2e44_1ea1_446c_8df4_0902c9a6edfb"
                 style="display: inline-block;margin-top: -5px;margin-left: 5px; cursor: pointer;"
                 src="../assets/icons/guid_51bf2e44_1ea1_446c_8df4_0902c9a6edfb.png">
         </div>
 
-        <div
+        <div (click)="openDialogue('')"
             style="display: inline-block;font-family: Oswald; font-size:1.2em; margin-right: 10px;background:red;color: white; border-radius: 5px; padding: 14px;">
             Login/Register</div>
         <img id="guid_280c397e_436f_4304_8639_5487f81f83d9" style="cursor: pointer;"
@@ -69,11 +80,11 @@
 
         <img height="40px" src="../assets/icons/guid_682dbfc9_3c61_4d87_8709_2f2f2df57685.png">
         <div id="myLinks" style="background: white;">
-            <a (click) = "goToPage('home')">Home</a>
-            <a (click) = "goToPage('products')">Products</a>
-            <a (click) = "goToPage('about')">About</a>
-            <a (click) = "goToPage('contact')">Contact</a>
-            <a>Login/Register</a>
+            <a href="/home">Home</a>
+            <a href="/products">Products</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a (click)="openDialogue('')">Login/Register</a>
         </div>
         <div style="float: right; padding-right:50px;">
             <img id="guid_280c397e_436f_4304_8639_5487f81f83d9" style="margin-right:0px;cursor: pointer;width:40px;"
