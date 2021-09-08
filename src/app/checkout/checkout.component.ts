@@ -44,8 +44,8 @@ export class CheckoutComponent implements OnInit {
     });
 
     strikeCheckout.open({
-      name: 'RemoteStack',
-      description: 'Payment widgets',
+      name: 'Secure Payment',
+      description: 'The securest way to make your payments',
       amount: amount * 100
     });
   }

@@ -1,4 +1,4 @@
-<div class="navBar" id="navBar" *ngIf="desktop == true">
+<!-- <div class="navBar" id="navBar" *ngIf="desktop == true">
     <div id="guid_c09c97ac_3aa6_4f40_99c7_8131229385f0" class="hero-element" *ngIf="route == '/home'">
     </div>
     <div id="guid_c09c97ac_3aa6_4f40_99c7_8131229385f0" style="
@@ -114,7 +114,80 @@
     </div>
 
 </div>
+-->
 
+
+<nav (scroll)="onWindowScroll();" class="navbar navbar-expand-md navbar-light sticky-top">
+    <a class="navbar-brand d-flex justify-content-center align-items-center mt-2 d-lg-none" href="#">
+        <img src="../assets/logos/logored.png" alt="">
+    </a>
+
+    <div class="d-flex flex-row  d-lg-none">
+        <div class="mr-2em">
+
+            <i class="far fa-heart heart pt-1 mr-1em"></i>
+            <i class="far fa-shopping-cart cart  pt-1"></i>
+
+
+
+        </div>
+        <div>
+            <button class="navbar-toggler text-danger" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+    </div>
+
+    <div class="collapse navbar-collapse center" id="navbarSupportedContent">
+
+        <div class="alignright">
+            <ul class="nav navbar-nav color p-2 width">
+                <li data-toggle="collapse" data-target=".navbar-collapse.show"><a href="#">HOME</a></li>
+                <li data-toggle="collapse" data-target=".navbar-collapse.show"><a href="#">PRODUCTS</a></li>
+                <li data-toggle="collapse" data-target=".navbar-collapse.show"><a href="#">ABOUT</a></li>
+                <li data-toggle="collapse" data-target=".navbar-collapse.show"><a href="#">CONTACT</a></li>
+                <li data-toggle="collapse" data-target=".navbar-collapse.show" class="d-none d-sm-none d-lg-inline"><a
+                        href="#"><img id="logo" src="../assets/logos/logored.png" alt="Brand" width="180" /></a>
+                </li>
+                <li data-toggle="collapse" data-target=".navbar-collapse.show">
+
+                    <button (click)="openDialogue('')" type="button" class="btn loginbtn btn-outline-light">Sign
+                        Up</button>
+                </li>
+
+                <li data-toggle="collapse" data-target=".navbar-collapse.show"
+                    class="pt-sm-2 loginwrap pt-xs-2 pt-md-2 pt-lg-0">
+                    <button style="color: rgba(255, 0, 0, 0.856);" type="button" class="btn loginbtn btn-light">Login
+                    </button>
+                </li>
+
+                <li class="dropdownwrap d-md-none">
+                    <button class="loginbtn  btn btn-light dropdown-toggle" type="button" id="menu1"
+                        data-toggle="dropdown">Language
+                        <span class="caret"></span></button>
+
+                    <ul class="dropdown-menu width" style="list-style: none;" role="menu" aria-labelledby="menu1">
+
+                        <li data-toggle="collapse" data-target=".navbar-collapse.show" class="abc">
+                            <a class="abc" href="#">English</a>
+                        </li>
+
+                        <li data-toggle="collapse" data-target=".navbar-collapse.show" class="abc">
+                            <a class="abc" href="#"> Swedish</a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+</nav>
 <router-outlet>
 
 </router-outlet>
