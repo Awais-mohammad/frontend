@@ -1,3 +1,4 @@
+import { CheckoutComponent } from './checkout/checkout.component';
 import { AuthComponent } from './auth/auth.component';
 import { Component, HostListener } from '@angular/core';
 import { HttpClient, HttpRequest, HttpEvent, HttpResponse, HttpEventType } from '@angular/common/http';
@@ -185,8 +186,19 @@ export class AppComponent {
 
   }
 
-  ngOnInit(): void {
+  opncheckOut() {
+    const dialogConfig = new MatDialogConfig();
 
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.height = '610px';
+    dialogConfig.width = '800px';
+
+    const dialogRef = this.dialog.open(CheckoutComponent, dialogConfig);
+  }
+
+  ngOnInit(): void {
+    this.opncheckOut()
     // this.openDialogue('dTyp')
 
   }
