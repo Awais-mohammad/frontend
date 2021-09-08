@@ -34,13 +34,15 @@ export class AppComponent {
           if (window.scrollY >= 150) {
             let nav = document.getElementById("navMob");
             nav.style.animation = "navShort2 0.3s linear";
-            nav.style.padding = "10px";
+            nav.style.paddingTop = "10px";
+            nav.style.paddingBottom = "10px";
             nav.style.background = "rgba(255, 255, 255)";
             nav.style.boxShadow = "0px 0px 5px 1px rgba(0, 0, 0, 0.438)";
           } else if (window.scrollY < 150) {
             let nav = document.getElementById("navMob");
             nav.style.animation = "navBig2 0.3s linear";
-            nav.style.padding = "30px";
+            nav.style.paddingTop = "30px";
+            nav.style.paddingBottom = "30px";
             nav.style.background = "rgba(255, 255, 255,0)";
             nav.style.boxShadow = "0px 0px 0px 0px rgba(0, 0, 0, 0.438)";
           }
@@ -57,7 +59,7 @@ export class AppComponent {
     }, 10)
   }
 
-  goToPage(page:string){
+  goToPage(page: string) {
     this.router.navigate([page]);
     let mylinks = document.getElementById("myLinks");
     mylinks.style.display = "none";
