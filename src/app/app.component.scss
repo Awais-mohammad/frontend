@@ -28,6 +28,7 @@ a {
 
   .padding {
     padding: 6px;
+    padding-left: 10px;
   }
   li {
     text-align: left;
@@ -186,7 +187,7 @@ a {
 
   .loginwrap {
     margin-top: 14px;
-    padding: 0 20px;
+    padding: 0 10px;
   }
   .loginwrap > button {
     width: 6em;
@@ -281,8 +282,9 @@ a {
     padding: 0 20px;
   }
   .loginwrap > button {
-    width: 10em;
+    width: 12em;
     height: 3em;
+    font-size: 16px;
   }
   .signup {
     background-color: red;
