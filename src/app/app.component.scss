@@ -25,6 +25,10 @@ a {
   .relative {
     position: relative;
   }
+
+  .padding {
+    padding: 6px;
+  }
   li {
     text-align: left;
   }
@@ -111,7 +115,99 @@ a {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 766px) {
+  .navbar {
+    padding: 0;
+  }
+  .alignright {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  li > img {
+    padding: 0 20px;
+  }
+  li {
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  li > a {
+    padding: 10px 10px;
+    padding-top: 3em;
+    font-family: Mulish;
+    font-size: 16px;
+    height: 6em;
+    font-weight: bolder;
+  }
+  li > a:hover {
+    background-color: rgba(243, 10, 10, 0.849);
+    color: white;
+    border-bottom-right-radius: 22px;
+  }
+  li > p {
+    padding: 10px 10px;
+    padding-top: 2em;
+    font-family: Mulish;
+    font-size: 18px;
+    height: 5em;
+    font-weight: bolder;
+  }
+
+  li > i {
+    font-size: 20px;
+    padding: 0 20px;
+    margin-top: 1.6em;
+  }
+  ul > p > a:hover {
+    color: rgba(255, 0, 0, 0.658);
+  }
+  li > img {
+    padding: 10px 20px;
+    margin-top: 1.2em;
+    height: 4em;
+    width: 100%;
+    object-fit: fill;
+  }
+  .dropdown-menu {
+    width: 10px !important;
+  }
+
+  .loginwrap {
+    margin-top: 14px;
+    padding: 0 20px;
+  }
+  .loginwrap > button {
+    width: 6em;
+    height: 3em;
+    font-size: 12px;
+  }
+  .signup {
+    background-color: red;
+    color: white;
+    font-family: Mulish;
+    border: 1px solid red;
+  }
+  .lgb {
+    background-color: transparent;
+    color: rgb(255, 0, 34);
+    font-family: Mulish;
+    border: 1px solid rgb(255, 0, 34);
+  }
+}
+
+@media screen and (min-width: 1610px) {
   .navbar {
     padding: 0;
   }
@@ -194,11 +290,11 @@ a {
     font-family: Mulish;
     border: 1px solid red;
   }
-  .lgb{
+  .lgb {
     background-color: transparent;
     color: rgb(255, 0, 34);
     font-family: Mulish;
-    border: 1px solid  rgb(255, 0, 34);
+    border: 1px solid rgb(255, 0, 34);
   }
 }
 
