@@ -29,7 +29,7 @@ export class AppComponent {
   constructor(
     private http: HttpClient,
     public dialog: MatDialog,
-    private router: Router,
+    public router: Router,
     private dialogRef: MatDialogRef<AuthComponent>
 
   ) {

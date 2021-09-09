@@ -117,6 +117,12 @@ a {
 }
 
 @media screen and (min-width: 766px) {
+  .active {
+    background-color: rgba(243, 10, 10, 0.849);
+    color: white;
+    border-bottom-right-radius: 22px;
+  }
+
   .navbar {
     padding: 0;
   }
@@ -298,6 +304,12 @@ a {
     color: rgb(255, 0, 34);
     font-family: Mulish;
     border: 1px solid rgb(255, 0, 34);
+  }
+
+  .active {
+    background-color: rgba(243, 10, 10, 0.849);
+    color: white;
+    border-bottom-right-radius: 22px;
   }
 }
 
