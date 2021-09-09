@@ -118,11 +118,11 @@
 
 
 <nav (scroll)="onWindowScroll();" class="navbar navbar-expand-md navbar-light sticky-top">
-    <a class="navbar-brand d-flex justify-content-center align-items-center mt-2 d-lg-none" href="#">
+    <a class="navbar-brand d-flex justify-content-center align-items-center mt-2 d-md-none" href="#">
         <img src="../assets/logos/logored.png" alt="">
     </a>
 
-    <div class="d-flex flex-row  d-lg-none">
+    <div class="d-flex flex-row  d-md-none">
         <div class="mr-2em">
 
             <i class="far fa-heart heart pt-1 mr-1em"></i>
@@ -141,26 +141,58 @@
 
     </div>
 
-    <div class="collapse navbar-collapse center" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse center relative" id="navbarSupportedContent">
 
         <div class="alignright">
-            <ul class="nav navbar-nav color p-2 width">
+            <ul class="nav navbar-nav color  p-4 p-md-0 p-md-2 pt-md-0  width center">
                 <li data-toggle="collapse" data-target=".navbar-collapse.show"><a href="#">HOME</a></li>
                 <li data-toggle="collapse" data-target=".navbar-collapse.show"><a href="#">PRODUCTS</a></li>
                 <li data-toggle="collapse" data-target=".navbar-collapse.show"><a href="#">ABOUT</a></li>
                 <li data-toggle="collapse" data-target=".navbar-collapse.show"><a href="#">CONTACT</a></li>
-                <li data-toggle="collapse" data-target=".navbar-collapse.show" class="d-none d-sm-none d-lg-inline"><a
-                        href="#"><img id="logo" src="../assets/logos/logored.png" alt="Brand" width="180" /></a>
+                <li data-toggle="collapse" data-target=".navbar-collapse.show" class="d-none d-sm-none d-md-inline"><img
+                        id="logo" src="../assets/logos/logored.png" alt="Brand" width="180" />
                 </li>
-                <li data-toggle="collapse" data-target=".navbar-collapse.show">
 
-                    <button (click)="openDialogue('')" type="button" class="btn loginbtn btn-outline-light">Sign
+                <li class="d-none d-sm-none d-md-inline" style="position: relative;" data-toggle="collapse"
+                    data-target=".navbar-collapse.show">
+                    <p class="dropdown-toggle" id="menu1" data-toggle="dropdown">Language
+                        <span class="caret"></span>
+                    </p>
+
+                    <ul class="dropdown-menu pt-0" style="list-style: none;position: absolute;top:5em;" role="menu"
+                        aria-labelledby="menu1">
+
+                        <p style="margin:0;padding: 10px;" data-toggle="collapse" data-target=".navbar-collapse.show"
+                            class="abc">
+                            <a class="abc" href="#">English</a>
+                        </p>
+
+                        <p style="margin:0;padding: 10px;" data-toggle="collapse" data-target=".navbar-collapse.show"
+                            class="abc">
+                            <a class="abc" href="#"> Swedish</a>
+                        </p>
+
+                    </ul>
+                </li>
+
+                <li class="d-none d-sm-none d-md-none d-lg-inline" data-toggle="collapse"
+                    data-target=".navbar-collapse.show">
+                    <i class="far fa-heart heart pt-1 mr-1em"></i>
+                </li>
+
+                <li class="d-none d-sm-none d-lg-inline" data-toggle="collapse" data-target=".navbar-collapse.show">
+
+                    <i class="far fa-shopping-cart cart  pt-1"></i>
+                </li>
+
+                <li class="loginwrap  pt-lg-0" data-toggle="collapse" data-target=".navbar-collapse.show">
+
+                    <button type="button" class="btn loginbtn bigscreen signup btn-outline-light">Sign
                         Up</button>
                 </li>
 
-                <li data-toggle="collapse" data-target=".navbar-collapse.show"
-                    class="pt-sm-2 loginwrap pt-xs-2 pt-md-2 pt-lg-0">
-                    <button style="color: rgba(255, 0, 0, 0.856);" type="button" class="btn loginbtn btn-light">Login
+                <li data-toggle="collapse" data-target=".navbar-collapse.show" class="loginwrap  pt-lg-0">
+                    <button type="button" class="btn bigscreenlgn loginbtn lgb btn-light">Login
                     </button>
                 </li>
 
@@ -185,9 +217,13 @@
 
             </ul>
         </div>
+
+
     </div>
 
 </nav>
+
+
 <router-outlet>
 
 </router-outlet>

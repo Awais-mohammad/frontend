@@ -6,9 +6,9 @@
   background: transparent;
 }
 .navbar-inverse {
-  background-color: rgba(255, 255, 255, 0.911);
+  background-color: rgba(255, 255, 255, 0.973);
   transition: 0.2s;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 a {
   color: black;
@@ -21,7 +21,10 @@ a {
   align-items: center;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 766px) {
+  .relative {
+    position: relative;
+  }
   li {
     text-align: left;
   }
@@ -96,7 +99,7 @@ a {
     width: 150px !important;
     position: absolute;
     background-color: rgba(250, 7, 7, 0.842);
-    z-index: 200;
+    z-index: 2000000;
   }
   .dropdown-menu li a {
     color: white;
@@ -108,44 +111,97 @@ a {
   }
 }
 
-@media screen and (min-width: 992px) {
-  .width {
+@media screen and (min-width: 1200px) {
+  .navbar {
+    padding: 0;
+  }
+  .alignright {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
-  li > a {
-    text-decoration: none;
-    color: black;
-    font-family: "Mulish", sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 30px;
+  ul {
+    padding: 0;
+    margin: 0;
   }
-
-  li > a {
-    text-decoration: none;
-    color: black;
-    font-family: "Mulish", sans-serif;
-    font-weight: bold;
-    font-size: 28px;
-    padding: 0 10px;
-    line-height: 30px;
+  li > img {
+    padding: 0 20px;
   }
-
-  .loginbtn {
-    width: 6em;
-    height: 2em;
+  li {
+    height: 5em;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+  }
+
+  li > a {
+    padding: 10px 20px;
+    padding-top: 3em;
     font-family: Mulish;
     font-size: 22px;
+    height: 5em;
+    font-weight: bolder;
   }
-  .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  li > a:hover {
+    background-color: rgba(243, 10, 10, 0.849);
+    color: white;
+    border-bottom-right-radius: 22px;
+  }
+  li > p {
+    padding: 10px 20px;
+    padding-top: 1.9em;
+    font-family: Mulish;
+    font-size: 24px;
+    height: 5em;
+    font-weight: bolder;
+  }
+
+  li > i {
+    font-size: 25px;
+    padding: 0 20px;
+    margin-top: 1.6em;
+  }
+  ul > p > a:hover {
+    color: rgba(255, 0, 0, 0.658);
+  }
+  li > img {
+    padding: 10px 50px;
+    margin-top: 1.3em;
+    height: 5em;
+    width: 100%;
+    object-fit: fill;
+  }
+  .dropdown-menu {
+    width: 10px !important;
+  }
+
+  .loginwrap {
+    margin-top: 22px;
+    padding: 0 20px;
+  }
+  .loginwrap > button {
+    width: 10em;
+    height: 3em;
+  }
+  .signup {
+    background-color: red;
+    color: white;
+    font-family: Mulish;
+    border: 1px solid red;
+  }
+  .lgb{
+    background-color: transparent;
+    color: rgb(255, 0, 34);
+    font-family: Mulish;
+    border: 1px solid  rgb(255, 0, 34);
   }
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap");
