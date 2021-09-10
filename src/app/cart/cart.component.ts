@@ -1,3 +1,4 @@
+import { MatDialog } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private dialogue: MatDialog
+  ) { }
 
+  close() {
+    this.dialogue.closeAll()
+  }
   ngOnInit(): void {
   }
 

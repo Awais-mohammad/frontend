@@ -13,7 +13,7 @@ import { TrackingComponent } from './tracking/tracking.component';
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "products",
+    redirectTo: "home",
     pathMatch: "full"
   }, {
     path: "home",

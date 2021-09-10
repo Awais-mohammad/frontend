@@ -145,14 +145,16 @@
 
         <div class="alignright">
             <ul class="nav navbar-nav color  padding  width center">
-                <li data-toggle="collapse" data-target=".navbar-collapse.show"><a [class.active]="router.url==='/home'" [routerLink]="['home']"
-                        href="/home">HOME</a></li>
-                <li data-toggle="collapse" data-target=".navbar-collapse.show"><a [class.active]="router.url==='/products'" [routerLink]="['products']"
+                <li data-toggle="collapse" data-target=".navbar-collapse.show"><a [class.active]="router.url==='/home'"
+                        [routerLink]="['home']" href="/home">HOME</a></li>
+                <li data-toggle="collapse" data-target=".navbar-collapse.show"><a
+                        [class.active]="router.url==='/products'" [routerLink]="['products']"
                         href="/products">PRODUCTS</a></li>
-                <li data-toggle="collapse" data-target=".navbar-collapse.show"><a [class.active]="router.url==='/about'" [routerLink]="['about']"
-                        href="/about">ABOUT</a></li>
-                <li data-toggle="collapse" data-target=".navbar-collapse.show"><a [class.active]="router.url==='/contact'" [routerLink]="['contact']"
-                        href="/contact">CONTACT</a></li>
+                <li data-toggle="collapse" data-target=".navbar-collapse.show"><a [class.active]="router.url==='/about'"
+                        [routerLink]="['about']" href="/about">ABOUT</a></li>
+                <li data-toggle="collapse" data-target=".navbar-collapse.show"><a
+                        [class.active]="router.url==='/contact'" [routerLink]="['contact']" href="/contact">CONTACT</a>
+                </li>
                 <li data-toggle="collapse" data-target=".navbar-collapse.show" class="d-none d-sm-none d-md-inline"><img
                         id="logo" src="../assets/logos/logored.png" alt="Brand" width="180" />
                 </li>
@@ -186,12 +188,13 @@
 
                 <li class="d-none d-sm-none d-lg-inline" data-toggle="collapse" data-target=".navbar-collapse.show">
 
-                    <i class="far fa-shopping-cart cart  pt-1"></i>
+                    <i (click)="openCart()" class="far fa-shopping-cart cart  pt-1"></i>
                 </li>
 
                 <li class="loginwrap  pt-lg-0" data-toggle="collapse" data-target=".navbar-collapse.show">
 
-                    <button type="button" class="btn loginbtn bigscreen signup btn-outline-light">Sign
+                    <button (click)="openSignup()" type="button"
+                        class="btn loginbtn bigscreen signup btn-outline-light">Sign
                         Up</button>
                 </li>
 

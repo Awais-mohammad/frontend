@@ -1,4 +1,6 @@
-<section class="cart_wrapper">
+<section style="padding: 0;margin: 0;" class="cart_wrapper">
+
+
     <div class="cart_lists">
         <div class="cart_title">
             <span class="material-icons-outlined">local_mall</span>
@@ -7,7 +9,8 @@
 
         <div class="cart_list_wrap">
             <div class="cart_responsive">
-                <div class="tr_item"> <!--PLACE NGFOR HERE-->
+                <div class="tr_item">
+                    <!--PLACE NGFOR HERE-->
                     <div class="td_item item_img">
                         <img src="https://i.ibb.co/vQHXcYb/b68912b3426baa0b1f4c410a02174879.jpg" />
                     </div>
@@ -126,7 +129,7 @@
             </div>
             <div class="footer">
                 <div class="back_cart">
-                    <a href="#back">
+                    <a (click)="close()" href="#back">
                         <span class="material-icons-outlined">west</span>
                         Back to Shop
                     </a>
@@ -136,6 +139,14 @@
                     <strong>$2451.00</strong>
                 </div>
             </div>
+
+        </div>
+
+        <div class="d-flex justify-content-center text-center align-center">
+
+            <button type="button" class="btn btn-danger btn-lg">Checkout
+            </button>
+
         </div>
     </div>
 </section>

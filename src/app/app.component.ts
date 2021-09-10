@@ -1,3 +1,4 @@
+import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { AuthComponent } from './auth/auth.component';
 import { Component, HostListener } from '@angular/core';
@@ -100,13 +101,14 @@ export class AppComponent {
   }
 
   openSignup() {
+    
     const dialogConfig = new MatDialogConfig();
 
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
     dialogConfig.height = '700px';
     dialogConfig.width = '800px';
-
+    const dialogRef = this.dialog.open(AuthComponent, dialogConfig);
     return dialogConfig;
 
   }
@@ -122,9 +124,24 @@ export class AppComponent {
     const dialogRef = this.dialog.open(CheckoutComponent, dialogConfig);
   }
 
+  openCart() {
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.height = '700x';
+    dialogConfig.width = '800px';
+
+    const dialogRef = this.dialog.open(CartComponent, dialogConfig);
+  }
+
+
+
   ngOnInit(): void {
     // this.opncheckOut()
     // this.openDialogue('dTyp')
+
+  
 
   }
 }
