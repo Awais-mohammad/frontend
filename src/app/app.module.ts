@@ -25,6 +25,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FavComponent } from './fav/fav.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { ProdDetailComponent } from './prod-detail/prod-detail.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     routingComps,
     FooterComponent,
     HomeComponent,
+    FavComponent,
+    NotfoundComponent,
+    ProdDetailComponent,
   ],
   imports: [
     BrowserModule,

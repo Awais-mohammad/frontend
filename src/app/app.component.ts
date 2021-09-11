@@ -1,3 +1,4 @@
+import { FavComponent } from './fav/fav.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { AuthComponent } from './auth/auth.component';
@@ -7,6 +8,7 @@ import { Observable } from 'rxjs';
 
 import { MatDialog, MatDialogConfig, MatDialogRef } from "@angular/material/dialog";
 import { Router } from '@angular/router';
+import { ProdDetailComponent } from './prod-detail/prod-detail.component';
 
 @Component({
   selector: 'app-root',
@@ -79,37 +81,56 @@ export class AppComponent {
 
   route: any;
 
-  openDialogue(dTyp: string) {
+  openLogin(dTyp: string) {
+
     const dialogConfig = new MatDialogConfig();
 
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
-    dialogConfig.height = '610px';
+    dialogConfig.height = '640px';
     dialogConfig.width = '800px';
-
+    dialogConfig.data = {
+      open: dTyp,
+    };
     const dialogRef = this.dialog.open(AuthComponent, dialogConfig);
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(result.data);
 
       if (result.data == 'signup') {
-        let configs = this.openSignup()
-        const dialogRef = this.dialog.open(AuthComponent, configs);
+        this.openSignup('signup')
+      }
+      else if (result.data == 'login') {
+        this.openLogin('login')
       }
     })
 
   }
 
-  openSignup() {
-    
+  openSignup(dTyp) {
+
+
     const dialogConfig = new MatDialogConfig();
 
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
-    dialogConfig.height = '700px';
+    dialogConfig.height = '690px';
     dialogConfig.width = '800px';
+    dialogConfig.data = {
+      open: dTyp,
+    };
     const dialogRef = this.dialog.open(AuthComponent, dialogConfig);
-    return dialogConfig;
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result.data);
+      if (result.data == 'signup') {
+        this.openSignup('signup')
+      }
+      else if (result.data == 'login') {
+        this.openLogin('login')
+      }
+
+    })
 
   }
 
@@ -135,13 +156,31 @@ export class AppComponent {
     const dialogRef = this.dialog.open(CartComponent, dialogConfig);
   }
 
+  viewFav() {
+    const dialog = new MatDialogConfig();
+    dialog.disableClose = true;
+    dialog.autoFocus = true;
+    dialog.height = '700x';
+    dialog.width = '800px';
 
+    const dialogRef = this.dialog.open(FavComponent, dialog);
+  }
+
+  viewdetail() {
+    const dialog = new MatDialogConfig();
+    dialog.disableClose = true;
+    dialog.autoFocus = true;
+    dialog.height = '700x';
+    dialog.width = '800px';
+
+    const dialogRef = this.dialog.open(ProdDetailComponent, dialog);
+  }
 
   ngOnInit(): void {
     // this.opncheckOut()
-    // this.openDialogue('dTyp')
+    //   this.openLogin('login')
 
-  
-
+    // this.openCart()
+    this.viewdetail
   }
 }

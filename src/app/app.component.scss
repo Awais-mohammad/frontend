@@ -2,7 +2,7 @@
   position: fixed;
   width: 100%;
   padding: 10px;
-  z-index: 9999;
+  z-index: 888;
   background: transparent;
 }
 .navbar-inverse {
@@ -10,6 +10,45 @@
   transition: 0.2s;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
+
+
+.zero {
+  background-color: red;
+  color: white;
+  border-radius: 100%;
+  padding: 1px;
+  position: absolute;
+  top: 3.1em;
+  right: 5px;
+  font-size: 10px;
+  width: 20px;
+  height: 20px;
+}
+.one {
+  background-color: red;
+  color: white;
+  border-radius: 100%;
+  padding: 1px;
+  position: absolute;
+  top: 0;
+  right: 3.7em;
+  font-size: 10px;
+  width: 20px;
+  height: 20px;
+}
+.two {
+  background-color: red;
+  color: white;
+  border-radius: 100%;
+  padding: 1px;
+  position: absolute;
+  top: 0;
+  right: -10px;
+  font-size: 10px;
+  width: 20px;
+  height: 20px;
+}
+
 a {
   color: black;
   text-decoration: none;
@@ -104,7 +143,7 @@ a {
     width: 150px !important;
     position: absolute;
     background-color: rgba(250, 7, 7, 0.842);
-    z-index: 2000000;
+    z-index: 9999;
   }
   .dropdown-menu li a {
     color: white;
@@ -143,6 +182,7 @@ a {
     padding: 0 20px;
   }
   li {
+    padding: 0 3px;
     height: 5em;
     display: flex;
     justify-content: center;
@@ -235,6 +275,7 @@ a {
     padding: 0 20px;
   }
   li {
+    padding: 0 3px;
     height: 5em;
     display: flex;
     justify-content: center;

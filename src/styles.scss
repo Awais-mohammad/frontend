@@ -39,3 +39,7 @@ mat-dialog-container {
   padding: 0;
   margin: 0;
 }
+
+.cdk-overlay-container::ng-deep {
+  z-index: 999999999999999999999999999999999 !important;
+}

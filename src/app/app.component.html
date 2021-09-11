@@ -1,134 +1,21 @@
-<!-- <div class="navBar" id="navBar" *ngIf="desktop == true">
-    <div id="guid_c09c97ac_3aa6_4f40_99c7_8131229385f0" class="hero-element" *ngIf="route == '/home'">
-    </div>
-    <div id="guid_c09c97ac_3aa6_4f40_99c7_8131229385f0" style="
-    transform: matrix(1, 0, 0, 1, 155, 0); width:100px;" class="hero-element" *ngIf="route == '/products'">
-    </div>
-    <div id="guid_c09c97ac_3aa6_4f40_99c7_8131229385f0" style="
-    transform: matrix(1, 0, 0, 1, 260, 0);" class="hero-element" *ngIf="route == '/about'">
-    </div>
-    <div id="guid_c09c97ac_3aa6_4f40_99c7_8131229385f0" style="
-    transform: matrix(1, 0, 0, 1, 330, 0); width:70px;" class="hero-element" *ngIf="route == '/contact'">
-    </div>
-
-    <div id="guid_6c610700_d23c_46e6_8267_df76d7c2356b" class="hero-element">
-        <div id="guid_d9c80f04_d190_44b6_ac8d_3c0811afc983" class="hero-element" *ngIf="route == '/home'"> <a
-                href="/home">Home</a>
-        </div>
-
-        <div id="guid_d9c80f04_d190_44b6_ac8d_3c0811afc983" class="hero-element" style="color:black;"
-            *ngIf="route != '/home'">
-            <a href="/home">Home</a>
-        </div>
-        <div id="guid_2a2d8652_a83f_4d33_8333_d4c14d3e03e8" class="hero-element" *ngIf="route != '/about'">
-            <a href="/about">About</a>
-        </div>
-        <div id="guid_2a2d8652_a83f_4d33_8333_d4c14d3e03e8" class="hero-element" style="color:white;"
-            *ngIf="route == '/about'">
-            <a href="/home">About</a>
-        </div>
-        <div id="guid_bcded2ac_ad52_4d03_a1ca_28affe2a32ff" style="color:white;" class="hero-element"
-            *ngIf="route == '/contact'">
-            <a href="/contact">Contact</a>
-        </div>
-        <div id="guid_bcded2ac_ad52_4d03_a1ca_28affe2a32ff" class="hero-element" *ngIf="route != '/contact'">
-            <a href="/contact">Contact</a>
-        </div>
-        <div id="guid_91f5347f_baa6_4846_9d1e_ddf339e4cbae" class="hero-element" style="color:white;"
-            *ngIf="route == '/products'">
-            <a href="/products">Products</a>
-        </div>
-        <div id="guid_91f5347f_baa6_4846_9d1e_ddf339e4cbae" class="hero-element" *ngIf="route != '/products'">
-            <a href="/products">Products</a>
-        </div>
-        <img id="guid_befab96e_2aef_427e_bb34_abb4070b8240" class="hero-element"
-            style="margin-right:10px;cursor: pointer;"
-            src="../assets/icons/guid_befab96e_2aef_427e_bb34_abb4070b8240.png">
-
-    </div>
-    <div id="guid_1138e213_0fb2_4e7b_8a67_f4fbf0df25ba">
-        <div id="guid_47210845_f481_4e21_ac82_5721761fdb01" style="float: right; margin-right: 70px;margin-top: 10px;">
-            <div id="guid_8f62f788_f2cf_42b3_9167_15b32417c40e"
-                style="display: inline-block;cursor: pointer;padding-top:7px">ENG
-            </div>
-            <img id="guid_51bf2e44_1ea1_446c_8df4_0902c9a6edfb"
-                style="display: inline-block;margin-top: -5px;margin-left: 5px; cursor: pointer;"
-                src="../assets/icons/guid_51bf2e44_1ea1_446c_8df4_0902c9a6edfb.png">
-        </div>
-
-        <div (click)="openDialogue('')"
-            style="display: inline-block;font-family: Oswald; font-size:1.2em; margin-right: 10px;background:red;color: white; border-radius: 5px; padding: 14px;">
-            Login/Register</div>
-        <img id="guid_280c397e_436f_4304_8639_5487f81f83d9" style="cursor: pointer;"
-            src="../assets/icons/guid_280c397e_436f_4304_8639_5487f81f83d9.png">
-
-        <img id="guid_afd5b5c1_e915_4ec9_a66c_06a8c6d84905" style="margin-right:10px;cursor: pointer;"
-            src="../assets/icons/guid_afd5b5c1_e915_4ec9_a66c_06a8c6d84905.png">
-
-        <img id="guid_0b34fb81_c4f2_4b9d_98fc_fb00d17e4aae" style="margin-right:10px;cursor: pointer;"
-            src="../assets/icons/guid_0b34fb81_c4f2_4b9d_98fc_fb00d17e4aae.png">
-
-    </div>
-    <img id="guid_682dbfc9_3c61_4d87_8709_2f2f2df57685" class="hero-element"
-        src="../assets/icons/guid_682dbfc9_3c61_4d87_8709_2f2f2df57685.png">
-</div>
-
-
-<div class="mobile-container" *ngIf="desktop == false" id="navMob">
-
-    <div class="topnav">
-
-        <img height="25px" style="padding-left:10px"
-            src="../assets/icons/guid_682dbfc9_3c61_4d87_8709_2f2f2df57685.png">
-        <div id="myLinks" style="background: rgba(255, 255, 255, 0.801);">
-            <a href="/home" style="
-            border-bottom: 1px rgba(238, 238, 238, 0.096) groove;"><i class="far fa-home"
-                    style="padding-right:7px;"></i>Home<i class="far fa-chevron-right"
-                    style="float:right;padding-right:10px;"></i></a>
-            <a href="/products" style="
-            border-bottom: 1px rgba(238, 238, 238, 0.096) groove;"><i class="far fa-tshirt" style="padding-right:7px;"></i>Products<i
-                    class="far fa-chevron-right" style="float:right;padding-right:10px;"></i></a>
-            <a href="/about" style="
-            border-bottom: 1px rgba(238, 238, 238, 0.096) groove;"><i class="far fa-info-circle" style="padding-right:7px;"></i>About<i
-                    class="far fa-chevron-right" style="float:right;padding-right:10px;"></i></a>
-            <a href="/contact" style="
-            border-bottom: 1px rgba(238, 238, 238, 0.096) groove;"><i class="far fa-envelope" style="padding-right:7px;"></i>Contact<i
-                    class="far fa-chevron-right" style="float:right;padding-right:10px;"></i></a>
-            <a (click)="openDialogue('')"> <i class="far fa-sign-in-alt" style="padding-right:7px;"></i>Login/Register<i
-                    class="far fa-chevron-right" style="float:right;padding-right:10px;"></i></a>
-        </div>
-        <div style="float: right; padding-right:40px;padding-top: 5px;">
-            <i id="guid_0b34fb81_c4f2_4b9d_98fc_fb00d17e4aae" class="far fa-heart"
-                style="margin-right:0px;cursor: pointer; font-size:20px;color:black;"> </i>
-
-            <i id="guid_0b34fb81_c4f2_4b9d_98fc_fb00d17e4aae" class="far fa-shopping-cart"
-                style="margin-right:5px;cursor: pointer; font-size:20px;color:black;"> </i>
-
-            <i id="guid_0b34fb81_c4f2_4b9d_98fc_fb00d17e4aae" class="far fa-user-circle"
-                style="margin-right:5px;cursor: pointer; font-size:20px;color:black;"> </i>
-        </div>
-        <a href="javascript:void(0);" class="icon" style="font-size:30px;padding:0px;padding-right:10px;"
-            onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
-
-</div>
--->
-
-
-<nav (scroll)="onWindowScroll();" class="navbar navbar-expand-md navbar-light sticky-top">
+<nav *ngIf="router.url!='/404'" (scroll)="onWindowScroll();" class="navbar navbar-expand-md navbar-light sticky-top">
     <a class="navbar-brand d-flex justify-content-center align-items-center mt-2 d-md-none" href="#">
         <img src="../assets/logos/logored.png" alt="">
     </a>
 
     <div class="d-flex flex-row  d-md-none">
-        <div class="mr-2em">
+        <div style="position:relative" class="mr-2em">
 
-            <i class="far fa-heart heart pt-1 mr-1em"></i>
-            <i class="far fa-shopping-cart cart  pt-1"></i>
+            <i style="position: relative;" class="far fa-heart heart pt-1 mr-1em"></i>
 
+            <span class="one text-center">
+                0
+            </span>
 
+            <i (click)="openCart()" style="position: relative;" class="far fa-shopping-cart cart  pt-1"></i>
+            <span class="two text-center">
+                0
+            </span>
 
         </div>
         <div>
@@ -181,25 +68,36 @@
                     </ul>
                 </li>
 
-                <li class="d-none d-sm-none d-md-none d-lg-inline" data-toggle="collapse"
+                <li style="position: relative;" class="d-none d-sm-none d-md-none d-lg-inline" data-toggle="collapse"
                     data-target=".navbar-collapse.show">
-                    <i class="far fa-heart heart pt-1 mr-1em"></i>
+                    <i style="position: relative;" class="far fa-heart heart pt-1 mr-1em"></i>
+
+                    <span class="zero">
+                        0
+                    </span>
+
+
                 </li>
 
-                <li class="d-none d-sm-none d-lg-inline" data-toggle="collapse" data-target=".navbar-collapse.show">
+                <li style="position: relative;" class="d-none d-sm-none d-lg-inline" data-toggle="collapse"
+                    data-target=".navbar-collapse.show">
 
-                    <i (click)="openCart()" class="far fa-shopping-cart cart  pt-1"></i>
+                    <i style="position: relative;" (click)="openCart()" class="far fa-shopping-cart cart  pt-1"></i>
+                    <span class="zero">
+                        0
+                    </span>
                 </li>
 
                 <li class="loginwrap  pt-lg-0" data-toggle="collapse" data-target=".navbar-collapse.show">
 
-                    <button (click)="openSignup()" type="button"
+                    <button (click)="openSignup('signup')" type="button"
                         class="btn loginbtn bigscreen signup btn-outline-light">Sign
                         Up</button>
                 </li>
 
                 <li data-toggle="collapse" data-target=".navbar-collapse.show" class="loginwrap  pt-lg-0">
-                    <button type="button" class="btn bigscreenlgn loginbtn lgb btn-light">Login
+                    <button (click)="openLogin('login')" type="button"
+                        class="btn bigscreenlgn loginbtn lgb btn-light">Login
                     </button>
                 </li>
 

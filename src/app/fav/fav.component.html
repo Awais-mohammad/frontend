@@ -1,0 +1,60 @@
+<section style="padding: 0;margin: 0;" class="cart_wrapper">
+
+
+    <div class="cart_lists">
+        <div class="cart_title">
+            <span style="color: red;" class="material-icons-outlined">
+                favorite_border
+            </span>
+            Your Favourites
+        </div>
+
+        <div class="cart_list_wrap">
+            <div class="cart_responsive">
+                <div *ngFor="let item of [].constructor(10)" class="tr_item">
+                    <!--PLACE NGFOR HERE-->
+                    <div class="td_item item_img">
+                        <img src="https://i.ibb.co/vQHXcYb/b68912b3426baa0b1f4c410a02174879.jpg" />
+                    </div>
+                    <div class="td_item item_name">
+                        <label class="main">Denim Jacket</label>
+                        <label class="sub">category</label>
+                    </div>
+                    <div class="td_item item_color">
+                        <label>Blue</label>
+                    </div>
+
+                    <div class="td_item item_qty">
+                        <button color="light" mat-mini-fab>
+                            <mat-icon>visibility</mat-icon>
+                        </button>
+                    </div>
+
+                    <div class="td_item item_price">
+                        <label>$ 260.00</label>
+                    </div>
+
+
+
+                    <div class="td_item item_remove">
+                        <span class="material-icons-outlined">close</span>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="footer">
+                <div class="back_cart">
+                    <a href="#back">
+                        <span class="material-icons-outlined">west</span>
+                        Back to Shop
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</section>

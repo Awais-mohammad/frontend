@@ -1,12 +1,12 @@
 .bannerimg {
-    background-image: url("https://cdn.pixabay.com/photo/2019/05/10/13/28/contact-us-4193523__340.jpg");
+    background-image: url("../../assets/headerImages/contact.png");
     /* Required Height */
     height: 750px;
     width: 100%;
     /* Center and scale the image nicely */
     background-repeat: no-repeat !important;
     background-size: cover !important;
-    background-position: center !important;
+    background-position: bottom !important;
 }
 .headinsub {
     color: white;

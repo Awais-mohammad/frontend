@@ -1,3 +1,4 @@
+import { NotfoundComponent } from './notfound/notfound.component';
 import { AuthComponent } from './auth/auth.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductsComponent } from './products/products.component';
@@ -36,7 +37,10 @@ const routes: Routes = [
   }, {
     path: "contact",
     component: ContactComponent
-  }
+  },
+
+  { path: '404', component: NotfoundComponent },
+  { path: '**', redirectTo: '/404' }
 ];
 
 @NgModule({

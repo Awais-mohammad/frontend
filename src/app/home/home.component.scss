@@ -41,7 +41,7 @@
     top: 24px;
     right: -2px;
     width: 70px;
-    z-index: 20;
+    z-index: 60;
     height: 70px;
 }
 .txtwrapper {
@@ -305,7 +305,6 @@
         display: flex;
         flex-direction: column;
         border-radius: 12px;
-        min-height: 100px;
         box-shadow: 5px 3px 1px 0px #13121248;
         height: auto;
         position: relative;
@@ -379,7 +378,7 @@
         h3 {
             font-size: 12px;
             position: relative;
-            top: 5px;
+            padding-bottom: 10px;
         }
     }
 }
@@ -746,5 +745,3 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
 /*EOP*/
-
-
