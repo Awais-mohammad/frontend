@@ -1,3 +1,4 @@
+import { MatDialog } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,8 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProdDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public dialog: MatDialog,
+  ) { }
 
+  qty: number[] = [1, 2, 3, 4, 5]
+  s_color: string;
+  size: string = 's'
+
+  close() {
+    this.dialog.closeAll()
+  }
+
+  chosedColor(color: string) {
+    this.s_color = color
+  }
   ngOnInit(): void {
   }
 

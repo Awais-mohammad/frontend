@@ -8,6 +8,10 @@
     background-size: cover !important;
     background-position: bottom !important;
 }
+
+.p-5 {
+    padding-top: 50px;
+}
 .headinsub {
     color: white;
     font-family: "Raleway", sans-serif;
@@ -68,6 +72,15 @@ ul {
 }
 .font {
     padding-top: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    mat-form-field {
+        width: 300px;
+    }
+    .abc {
+        width: 98%;
+    }
 }
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");

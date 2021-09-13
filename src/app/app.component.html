@@ -6,7 +6,7 @@
     <div class="d-flex flex-row  d-md-none">
         <div style="position:relative" class="mr-2em">
 
-            <i style="position: relative;" class="far fa-heart heart pt-1 mr-1em"></i>
+            <i (click)="viewFav()" style="position: relative;" class="far fa-heart heart pt-1 mr-1em"></i>
 
             <span class="one text-center">
                 0
@@ -70,7 +70,7 @@
 
                 <li style="position: relative;" class="d-none d-sm-none d-md-none d-lg-inline" data-toggle="collapse"
                     data-target=".navbar-collapse.show">
-                    <i style="position: relative;" class="far fa-heart heart pt-1 mr-1em"></i>
+                    <i (click)="viewFav()" style="position: relative;" class="far fa-heart heart pt-1 mr-1em"></i>
 
                     <span class="zero">
                         0

@@ -170,8 +170,8 @@ export class AppComponent {
     const dialog = new MatDialogConfig();
     dialog.disableClose = true;
     dialog.autoFocus = true;
-    dialog.height = '700x';
-    dialog.width = '800px';
+    dialog.height = '700px';
+    dialog.width = '920px';
 
     const dialogRef = this.dialog.open(ProdDetailComponent, dialog);
   }
@@ -181,6 +181,6 @@ export class AppComponent {
     //   this.openLogin('login')
 
     // this.openCart()
-    this.viewdetail
+    this.viewdetail()
   }
 }
