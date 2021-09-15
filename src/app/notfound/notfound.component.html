@@ -1,9 +1,125 @@
-<div id='oopss'>
-    <div id='error-text'>
-        <img src="https://cdn.rawgit.com/ahmedhosna95/upload/1731955f/sad404.svg" alt="404">
-        <span>): Error 404 PAGE NOT FOUND </span>
-        <p class="p-a">!!!Sorry the URL you are looking for donnot exist</p>
-        <p class="p-b">Go Back To Home Page</p>
-        <a href='#' class="back">HOME</a>
-    </div>
+<div class="p-4">
+    <mat-card class="d-flex flex-column">
+        <mat-card-header>
+            <h1 class="text-center">
+                Enter products
+            </h1>
+
+
+        </mat-card-header>
+
+        <mat-card-content>
+
+            <div class="d-flex flex-column">
+                <mat-form-field appearance="fill">
+                    <mat-label>Name</mat-label>
+                    <input [(ngModel)]="name" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>description</mat-label>
+                    <input [(ngModel)]="desc" matInput>
+                </mat-form-field>
+
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Quantity</mat-label>
+                    <input [(ngModel)]="quantity" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Price</mat-label>
+                    <input [(ngModel)]="price" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="pt-1" appearance="fill">
+                    <mat-label>Colors</mat-label>
+                    <mat-select (selectionChange)="oncolorchange($event)">
+                        <mat-option *ngFor="let food of colors" [value]="food">
+                            {{food}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-chip-list aria-label="Fish selection">
+                    <mat-chip *ngFor="let item of choosedcolors let i=index">
+                        {{item}}
+                        <mat-icon matChipRemove (click)="remove(i)">cancel</mat-icon>
+                    </mat-chip>
+
+
+                </mat-chip-list>
+
+                <mat-form-field class="pt-1" appearance="fill">
+                    <mat-label>Category</mat-label>
+                    <mat-select (selectionChange)="selectcat($event)">
+                        <mat-option *ngFor="let food of cats" [value]="food">
+                            {{food}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+
+
+
+                <div class="d-flex flex-row">
+
+
+
+                    <div class="pt-2">
+                        <label>Image 1</label>
+                        <input (change)="attachimage($event)" type="file">
+                    </div>
+
+                    <div class="pt-2">
+                        <label>banner Image</label>
+                        <input (change)="attachFile($event)" type="file">
+                    </div>
+
+                    <div class="pt-2">
+                        <label>Image 2</label>
+                        <input (change)="attachimage($event)" type="file">
+                    </div>
+
+                </div>
+
+                <div style="height: 8em;" class="container pt-5">
+
+                    <div class="d-flex flex-column">
+                        <label>
+                            <h1>
+                                Banner image
+                            </h1>
+                        </label>
+                        <img style="height: 5em;width: 12em;object-fit: contain;" *ngIf="bannerimageURL"
+                            src="{{bannerimageURL}}" alt="">
+                    </div>
+
+                    <div *ngIf="imageURLS" class="pl-5 d-flex flex-column">
+                        <label>
+                            <h1>
+                                Other images
+                            </h1>
+                        </label>
+                        <img style="height: 3em;width: 8em;object-fit: contain;" (click)="removeimg(i)"
+                            *ngFor="let item of imageURLS let i=index" src="{{item}}" alt="">
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </mat-card-content>
+
+    </mat-card>
+
+
+
 </div>
+
+<footer style="position: absolute;bottom: 0;left: 0;width: 100%;">
+    <button (click)="addData()" style="width: 100%;" mat-flat-button color="warn">SAVE</button>
+
+</footer>

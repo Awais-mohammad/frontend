@@ -8,8 +8,9 @@ import { AppRoutingModule, routingComps } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from './home/home.component';
@@ -29,6 +30,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FavComponent } from './fav/fav.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ProdDetailComponent } from './prod-detail/prod-detail.component';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
   declarations: [
@@ -53,6 +55,7 @@ import { ProdDetailComponent } from './prod-detail/prod-detail.component';
     ReactiveFormsModule,
     MatListModule,
     MatFormFieldModule,
+    MatMenuModule,
     MatInputModule,
     LayoutModule,
     MatToolbarModule,
@@ -60,6 +63,7 @@ import { ProdDetailComponent } from './prod-detail/prod-detail.component';
     MatSnackBarModule,
     MatProgressSpinnerModule,
     MatSelectModule,
+    MatChipsModule,
     MatTabsModule,
     MatProgressBarModule,
   ],

@@ -9,10 +9,12 @@
             <h1 class="oswald osh text-dark pad-50 pt-5">CATEGORIES:</h1>
 
             <ul class="list-group">
-                <li *ngFor="let item of [].constructor(15)" class="list-group-item">David Copperfield</li>
+                <li [ngClass]="{
+                    'l-active': c_cat==cat
+                  }" (click)="changeCat(cat)" *ngFor="let cat of cats" class="list-group-item">{{cat}}</li>
 
             </ul>
-
+            <!-- 
             <div class="row pad-50">
                 <div class="col-6">
                     <h1 class="oswald osh text-dark pt-3">COLOUR:</h1>
@@ -33,7 +35,7 @@
                     </div>
 
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <div class="col-12 col-md-7 col-lg-8 col-xl-8 col-sm-12 oof">
@@ -42,19 +44,19 @@
                 <div style="width: 100%;background-color: rgba(255, 0, 0, 0.658);" class="p-2">
                     <h1 class="oswald text-light" style="position: relative;top: 5px;">
                         <b>
-                            DAVID COPERFIELD
+                            {{c_cat | uppercase}}
                         </b>
                     </h1>
                 </div>
 
                 <div class="pt-2">
-                    <div class="row p-1 d-flex justify-content-center">
+                    <div *ngIf="prods" class="row p-1 d-flex justify-content-center">
 
-                        <div *ngFor="let item of [].constructor(10)" class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                        <div *ngFor="let prod of prods" class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-3">
                             <div class="prodcard">
 
                                 <div class="lalpatiadjust">
-                                    <img class="prodimg" src="../../assets/icons/product3.png" alt="">
+                                    <img class="prodimg" src="{{prod.bannerImageURL}}" alt="">
 
                                     <div class="lalpati d-flex flex-column text-center align-items-center">
 
@@ -80,17 +82,16 @@
                                 <div class="text">
                                     <h2 class="text-center " style="font-family: Oswald;">
                                         <b>
-                                            Shark Brixton
+                                            {{prod.name}}
                                         </b>
                                     </h2>
 
-                                    <p class="mul text-center">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
-                                        voluptatem!
+                                    <p class="mul description text-center">
+                                        {{prod.description}}
                                     </p>
                                     <h2 class="text-center " style="font-family: Oswald;">
                                         <b>
-                                            $30
+                                            {{prod.price}}
                                         </b>
                                     </h2>
 
@@ -101,7 +102,9 @@
                     </div>
 
 
-
+                    <div *ngIf="prods == undefined" class="row p-1 d-flex justify-content-center align-center">
+                        <img style="height: 10em;object-fit: contain;" src="../../assets/icons/empty.jpg" alt="">
+                    </div>
                 </div>
 
 

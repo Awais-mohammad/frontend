@@ -1,3 +1,4 @@
+import { ProdsService } from './prods.service';
 import { FavComponent } from './fav/fav.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
@@ -33,43 +34,13 @@ export class AppComponent {
     private http: HttpClient,
     public dialog: MatDialog,
     public router: Router,
-    private dialogRef: MatDialogRef<AuthComponent>
+    private dialogRef: MatDialogRef<AuthComponent>,
+
 
   ) {
-    // setTimeout(() => {
-    //   setInterval(() => {
-    //     if (window.innerWidth > 1200) {
-    //       this.desktop = true;
-    //       this.scrollNav();
-    //     } else {
-    //       this.desktop = false;
-    //       if (window.scrollY >= 150) {
-    //         let nav = document.getElementById("navMob");
-    //         nav.style.animation = "navShort2 0.3s linear";
-    //         nav.style.paddingTop = "10px";
-    //         nav.style.paddingBottom = "10px";
-    //         nav.style.background = "rgba(255, 255, 255)";
-    //         nav.style.boxShadow = "0px 0px 5px 1px rgba(0, 0, 0, 0.438)";
-    //       } else if (window.scrollY < 150) {
-    //         let nav = document.getElementById("navMob");
-    //         nav.style.animation = "navBig2 0.3s linear";
-    //         nav.style.paddingTop = "30px";
-    //         nav.style.paddingBottom = "30px";
-    //         nav.style.background = "rgba(255, 255, 255,0)";
-    //         nav.style.boxShadow = "0px 0px 0px 0px rgba(0, 0, 0, 0.438)";
-    //       }
-    //     }
-    //   }, 100)
-    // }, 1000);
-    // setInterval(() => {
-    //   this.route = window.location.pathname;
-    //   if (this.prevRoute != this.route) {
-    //     setTimeout(() => {
-    //     }, 500);
-    //   }
-    //   this.prevRoute = this.route;
-    // }, 10)
+
   }
+  loggedIn: boolean;
 
   goToPage(page: string) {
     this.router.navigate([page]);
@@ -96,12 +67,14 @@ export class AppComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(result.data);
+      if (result.data) {
 
-      if (result.data == 'signup') {
-        this.openSignup('signup')
-      }
-      else if (result.data == 'login') {
-        this.openLogin('login')
+        if (result.data == 'signup') {
+          this.openSignup('signup')
+        }
+        else if (result.data == 'login') {
+          this.openLogin('login')
+        }
       }
     })
 
@@ -123,11 +96,13 @@ export class AppComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(result.data);
-      if (result.data == 'signup') {
-        this.openSignup('signup')
-      }
-      else if (result.data == 'login') {
-        this.openLogin('login')
+      if (result.data) {
+        if (result.data == 'signup') {
+          this.openSignup('signup')
+        }
+        else if (result.data == 'login') {
+          this.openLogin('login')
+        }
       }
 
     })
@@ -167,20 +142,34 @@ export class AppComponent {
   }
 
   viewdetail() {
-    const dialog = new MatDialogConfig();
-    dialog.disableClose = true;
-    dialog.autoFocus = true;
-    dialog.height = '700px';
-    dialog.width = '920px';
+   
+  }
 
-    const dialogRef = this.dialog.open(ProdDetailComponent, dialog);
+  logout() {
+    localStorage.removeItem('jwt')
+    location.reload()
+
   }
 
   ngOnInit(): void {
+
+
     // this.opncheckOut()
     //   this.openLogin('login')
 
     // this.openCart()
-    this.viewdetail()
+    // this.viewdetail()
+
+    const jwt = localStorage.getItem('jwt')
+
+    if (!jwt) {
+      console.log('user not logged in!!');
+      this.loggedIn = false;
+    }
+    else {
+      console.log('user is logged in!!!');
+      this.loggedIn = true
+    }
+
   }
 }

@@ -11,7 +11,6 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-
 .zero {
   background-color: red;
   color: white;
@@ -61,6 +60,19 @@ a {
 }
 
 @media screen and (max-width: 766px) {
+  .avatar {
+    margin: 0;
+    padding: 10px 0 0 0;
+    color: white;
+  }
+  ::ng-deep.mat-menu-panel {
+    background-color: rgba(255, 0, 0, 0.884);
+    position: relative;
+    top: -5px;
+    button {
+      color: white;
+    }
+  }
   .relative {
     position: relative;
   }
@@ -156,6 +168,41 @@ a {
 }
 
 @media screen and (min-width: 766px) {
+  ::ng-deep.mat-menu-panel {
+    width: 12em !important;
+    position: relative;
+    top: 0.4em;
+    button {
+      font-size: 12px;
+      width: 5px;
+      height: 3em;
+    }
+  }
+  .avatar:hover {
+    cursor: pointer;
+  }
+
+  .avatar {
+    margin-top: 10px;
+    padding: 0 0 0 20px;
+    .avimg {
+      .icon {
+        font-size: 35px;
+      }
+      .icon2 {
+        font-size: 42px;
+        position: relative;
+        left: 7px;
+        top: -4px;
+      }
+      p {
+        font-size: 18px;
+        position: relative;
+        top: 0.4em;
+        left: 0.7em;
+      }
+    }
+  }
   .active {
     background-color: rgba(243, 10, 10, 0.849);
     color: white;
@@ -255,6 +302,41 @@ a {
 }
 
 @media screen and (min-width: 1610px) {
+  ::ng-deep.mat-menu-panel {
+    width: 13em !important;
+    position: relative;
+    top: 1em;
+    button {
+      font-size: 12px;
+      width: 5px;
+      height: 3em;
+    }
+  }
+
+  .avatar {
+    margin-top: 15px;
+    padding: 0 0 0 20px;
+    .avimg {
+      .icon {
+        font-size: 42px;
+      }
+      .icon2 {
+        font-size: 42px;
+        position: relative;
+        left: 10px;
+        top: 3px;
+      }
+      p {
+        font-size: 18px;
+        position: relative;
+        top: 0.7em;
+        left: 1em;
+      }
+    }
+  }
+  .avatar:hover {
+    cursor: pointer;
+  }
   .navbar {
     padding: 0;
   }

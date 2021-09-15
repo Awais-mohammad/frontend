@@ -9,15 +9,15 @@
         <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 ">
 
             <div class="d-flex justify-content-center">
-                <img class="bg-img" src="../../assets/icons/product3.png" alt="">
+                <img class="bg-img bannerimag" src="{{prodData.bannerImageURL}}" alt="">
             </div>
 
             <div class="row">
 
-                <div class="col-12 d-flex justify-content-center">
+                <div class="col-12 pt-1 d-flex justify-content-center">
 
-                    <img class="sm-img" src="../../assets/icons/product3.png" alt="">
-                    <img class="sm-img" src="../../assets/icons/product3.png" alt="">
+                    <img *ngFor="let item of prodData.prodImageURLS" class="sm-img" src="{{item}}" alt="">
+
 
                 </div>
 
@@ -25,23 +25,26 @@
 
         </div>
 
-        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 ">
+        <div *ngIf="prodData" class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 ">
 
             <div class="d-flex">
 
                 <section style="width: 6em;height: 2px;background: rgba(230, 11, 11, 0.795);"></section>
                 <section style="position: relative;top: -8px;left: 7px;">
                     <p>
-                        0465
+                        {{prodData._id | slice:0:6}}
                     </p>
                 </section>
 
             </div>
 
-            <h1>Shark Brixton</h1>
+            <h1>{{prodData.name | uppercase}}</h1>
 
             <p class="price" style="color: rgba(0, 0, 0, 0.603);">
-                128 SEK
+
+                <b>
+                    {{prodData.price}} SEK
+                </b>
             </p>
 
             <h1>Colors</h1>
@@ -55,13 +58,20 @@
                     </mat-icon>
                 </span>
 
-                <span class="pl-2" style="background:  gray;border-radius: 50%;padding: 20px;">
-
+                <span class="pl-2" (click)="chosedColor('grey')"
+                    style="background:  grey;border-radius: 50%;padding: 20px;position: relative;">
+                    <mat-icon *ngIf="s_color=='grey'" style="color: white;position: absolute;top: 7px;right: 8px;">
+                        check_circle
+                    </mat-icon>
                 </span>
 
-                <span class="pl-2" style="background:  blue;border-radius: 50%;padding: 20px;">
-
+                <span class="pl-2" (click)="chosedColor('brown')"
+                    style="background:  brown;border-radius: 50%;padding: 20px;position: relative;">
+                    <mat-icon *ngIf="s_color=='brown'" style="color: white;position: absolute;top: 7px;right: 8px;">
+                        check_circle
+                    </mat-icon>
                 </span>
+
 
 
             </div>
@@ -71,7 +81,7 @@
 
                 <div class="d-flex">
 
-                    <span [ngClass]="{
+                    <span (click)="choosesize('s')" [ngClass]="{
                         'size-cont': size!='s',
                         'size-cont-active': size=='s'
                       }">
@@ -80,7 +90,7 @@
                         </p>
                     </span>
 
-                    <span class="pl-2" [ngClass]="{
+                    <span (click)="choosesize('m')" class="pl-2" [ngClass]="{
                         'size-cont': size!='m',
                         'size-cont-active': size=='m'
                       }">
@@ -90,7 +100,7 @@
                     </span>
 
 
-                    <span class="pl-2" [ngClass]="{
+                    <span (click)="choosesize('l')" class="pl-2" [ngClass]="{
                         'size-cont': size!='l',
                         'size-cont-active': size=='l'
                       }">
@@ -99,7 +109,7 @@
                         </p>
                     </span>
 
-                    <span class="pl-2" [ngClass]="{
+                    <span (click)="choosesize('xl')" class="pl-2" [ngClass]="{
                         'size-cont': size!='xl',
                         'size-cont-active': size=='xl'
                       }">
@@ -134,7 +144,7 @@
 
             <span class="d-flex pt-1">
                 <h2>Category:</h2>
-                <h3 class="pl-2 pt-1">Women Clothing</h3>
+                <h3 class="pl-2 pt-1">{{prodData.category}}</h3>
             </span>
 
             <hr>
@@ -156,9 +166,7 @@
         <mat-tab label="Description">
 
             <p class="text-center pt-3">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, ratione amet hic, natus nulla debitis
-                eius temporibus ut similique vitae consequatur corrupti cumque. Cumque repudiandae dolore fugit
-                praesentium, hic voluptate?
+                {{prodData.description}}
 
             </p>
         </mat-tab>

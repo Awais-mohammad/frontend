@@ -7,6 +7,13 @@
     background-repeat: no-repeat !important;
     background-size: cover !important;
 }
+
+.description {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .container-fluid {
     padding: 20px;
 }
@@ -79,7 +86,7 @@ a:hover {
 }
 .sidebar {
     background-color: white;
-    height: 60em;
+    height: auto;
     border-right: 0.1px solid rgba(0, 0, 0, 0.137);
     border-bottom: 0.1px solid rgba(0, 0, 0, 0.137);
     padding: 10px;
@@ -113,6 +120,11 @@ a:hover {
     cursor: pointer;
     color: rgba(255, 0, 0, 0.726);
 }
+.l-active {
+    font-weight: bold;
+    cursor: pointer;
+    color: rgba(255, 0, 0, 0.726);
+}
 .label {
     padding-left: 3px;
     position: relative;
@@ -129,6 +141,8 @@ a:hover {
 }
 .prodimg {
     width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.151);
     position: relative;
 }
 .lalpatiadjust {
@@ -138,11 +152,11 @@ a:hover {
     position: absolute;
     z-index: 100;
     width: 30%;
-    height: 98%;
-    right: 3.2px;
+    height: 100%;
+    right: 0;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    top: 1px;
+    top: 0;
     background-color: rgba(255, 0, 0, 0.664);
 }
 
@@ -167,10 +181,7 @@ a:hover {
     .prodcard {
         margin-top: 10px;
     }
-    .prodimg {
-        width: 100%;
-        position: relative;
-    }
+
     .lalpatiadjust {
         position: relative;
     }
@@ -178,11 +189,11 @@ a:hover {
         position: absolute;
         z-index: 100;
         width: 25%;
-        height: 98%;
-        right: 2px;
+        height: 100%;
+        right: 0;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
-        top: 1px;
+        top: 0;
         background-color: rgba(255, 0, 0, 0.664);
     }
     .height-30 {
@@ -210,10 +221,6 @@ a:hover {
     .oof {
         padding-left: 45px;
     }
-    .prodimg {
-        width: 100%;
-        position: relative;
-    }
     .lalpatiadjust {
         position: relative;
     }
@@ -221,11 +228,11 @@ a:hover {
         position: absolute;
         z-index: 100;
         width: 25%;
-        height: 98%;
-        right: 2px;
+        height: 100%;
+        right: 0;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
-        top: 1px;
+        top: 0;
         background-color: rgba(255, 0, 0, 0.664);
     }
     .height-30 {
@@ -249,10 +256,7 @@ a:hover {
     .oof {
         padding-left: 90px;
     }
-    .prodimg {
-        width: 100%;
-        position: relative;
-    }
+
     .lalpatiadjust {
         position: relative;
     }
@@ -264,11 +268,11 @@ a:hover {
         position: absolute;
         z-index: 100;
         width: 30%;
-        height: 98%;
-        right: 4px;
+        height: 100%;
+        right: 0;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
-        top: 1px;
+        top: 0;
         background-color: rgba(255, 0, 0, 0.664);
     }
     .height-30 {
@@ -289,10 +293,6 @@ a:hover {
 
 /* big screens */
 @media only screen and (min-width: 1650px) {
-    .prodimg {
-        width: 100%;
-        position: relative;
-    }
     .lalpatiadjust {
         position: relative;
     }
@@ -300,11 +300,11 @@ a:hover {
         position: absolute;
         z-index: 100;
         width: 30%;
-        height: 98%;
-        right: 5px;
+        height: 100%;
+        right: 0;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
-        top: 1px;
+        top: 0;
         background-color: rgba(255, 0, 0, 0.664);
     }
     .height-30 {

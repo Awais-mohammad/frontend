@@ -376,13 +376,13 @@
         </div>
 
         <div class="container-fluid p-3">
-            <div class="row p-1 d-flex justify-content-center">
+            <div *ngIf="prods" class="row p-1 d-flex justify-content-center">
 
-                <div *ngFor="let item of [].constructor(10)" class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2  p-3">
+                <div *ngFor="let prod of prods" class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2  p-3">
                     <div class="prodcard">
 
                         <div class="lalpatiadjust">
-                            <img class="prodimg" src="../../assets/icons/product3.png" alt="">
+                            <img class="prodimg" src="{{prod.bannerImageURL}}" alt="">
 
                             <div class="lalpati d-flex flex-column text-center align-items-center">
 
@@ -392,7 +392,7 @@
 
                                 <img class="wid-50" src="../../assets/icons/lalpati/Line 11.png" alt="">
 
-                                <h3 style="color: white;height: 30%;font-size: 12px;" class="pt-4 mt-4 mul">
+                                <h3 (click)="viewProd(prod)" style="color: white;height: 30%;font-size: 12px;" class="pt-4 mt-4 mul">
                                     VIEW</h3>
 
 
@@ -408,17 +408,16 @@
                         <div class="text">
                             <h2 class="text-center " style="font-family: Oswald;">
                                 <b>
-                                    Shark Brixton
+                                    {{prod.name}}
                                 </b>
                             </h2>
 
-                            <p class="mul text-center">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
-                                voluptatem!
+                            <p class="mul description text-center">
+                                {{prod.description}}
                             </p>
                             <h2 class="text-center " style="font-family: Oswald;">
                                 <b>
-                                    $30
+                                    {{prod.price}}
                                 </b>
                             </h2>
 

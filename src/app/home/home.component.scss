@@ -75,7 +75,11 @@
         padding-right: 10px;
     }
 }
-
+.description {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .freeship {
     height: 5em;
     width: 100%;
@@ -168,6 +172,8 @@
 .prodimg {
     width: 100%;
     position: relative;
+    border-radius: 12px;
+    box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.151);
 }
 .lalpatiadjust {
     position: relative;
@@ -176,11 +182,11 @@
     position: absolute;
     z-index: 100;
     width: 30%;
-    height: 98%;
-    right: 3.2px;
+    height: 100%;
+    right: 0;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    top: 1px;
+    top: 0;
     background-color: rgba(255, 0, 0, 0.664);
 }
 .lmbtn {
@@ -250,6 +256,7 @@
     border-top: 4px solid rgba(209, 12, 12, 0.623);
     transition: 0.3s;
     border-radius: 12px;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.075), 0 3px 2px rgba(0, 0, 0, 0.048);
 }
 
 /*=-=-=-=-=-=-Mobile=-==-=-==-=-*/
@@ -336,11 +343,11 @@
         position: absolute;
         z-index: 100;
         width: 25%;
-        height: 98%;
-        right: 2px;
+        height: 100%;
+        right: 0;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
-        top: 1px;
+        top: 0;
         background-color: rgba(255, 0, 0, 0.664);
     }
     .height-30 {
@@ -475,11 +482,11 @@
         position: absolute;
         z-index: 100;
         width: 25%;
-        height: 98%;
-        right: 2px;
+        height: 100%;
+        right: 0;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
-        top: 1px;
+        top: 0;
         background-color: rgba(255, 0, 0, 0.664);
     }
     .height-30 {
@@ -587,11 +594,11 @@
         position: absolute;
         z-index: 100;
         width: 30%;
-        height: 98%;
-        right: 5px;
+        height: 100%;
+        right: 0;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
-        top: 1px;
+        top: 0;
         background-color: rgba(255, 0, 0, 0.664);
     }
     .height-30 {
@@ -700,11 +707,11 @@
         position: absolute;
         z-index: 100;
         width: 30%;
-        height: 98%;
-        right: 5px;
+        height: 100%;
+        right: 0;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
-        top: 1px;
+        top: 0;
         background-color: rgba(255, 0, 0, 0.664);
     }
     .height-30 {

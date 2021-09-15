@@ -88,14 +88,43 @@
                     </span>
                 </li>
 
-                <li class="loginwrap  pt-lg-0" data-toggle="collapse" data-target=".navbar-collapse.show">
+                <li *ngIf="!loggedIn" class="loginwrap  pt-lg-0" data-toggle="collapse"
+                    data-target=".navbar-collapse.show">
 
                     <button (click)="openSignup('signup')" type="button"
                         class="btn loginbtn bigscreen signup btn-outline-light">Sign
                         Up</button>
                 </li>
 
-                <li data-toggle="collapse" data-target=".navbar-collapse.show" class="loginwrap  pt-lg-0">
+
+                <li *ngIf="loggedIn" class="avatar  pt-lg-0">
+
+                    <div [matMenuTriggerFor]="menu" class="d-flex avimg">
+                        <mat-icon class="icon">
+                            account_circle
+                        </mat-icon>
+                        <p>
+                            Muhammad Awais
+                        </p>
+
+                        <mat-icon class="icon2">
+                            arrow_drop_down
+                        </mat-icon>
+                    </div>
+
+                    <div>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item>Edit Profile</button>
+                            <button (click)="logout()" mat-menu-item>Logout</button>
+                        </mat-menu>
+                    </div>
+
+
+                </li>
+
+
+                <li *ngIf="!loggedIn" data-toggle="collapse" data-target=".navbar-collapse.show"
+                    class="loginwrap  pt-lg-0">
                     <button (click)="openLogin('login')" type="button"
                         class="btn bigscreenlgn loginbtn lgb btn-light">Login
                     </button>

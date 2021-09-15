@@ -1,7 +1,7 @@
 <div class="icon">
     <i (click)="close()" class="fas fa-times-circle"></i>
 </div>
-<div class="text-center pt-3">
+<div class="text-center">
     <img class="logo" src="../../assets/logos/logored.png" alt="">
 
     <div class="d-flex justify-content-center align-items-center flex-column pt-4">
@@ -14,25 +14,31 @@
         <div class="col-12 col-sm-12 col-lg-8 col-md-8 col-xl-8">
 
             <div *ngIf="data.open=='signup'" class="input-group pt-4">
-                <input type="text" class="form-control input" placeholder="Enter Your name">
+                <input type="text" [(ngModel)]="name" class="form-control input" placeholder="Enter Your name">
 
             </div>
 
             <div class="input-group pt-4">
 
-                <input type="text" class="form-control input" placeholder="Enter Your Email">
+                <input [(ngModel)]="email" type="text" class="form-control input" placeholder="Enter Your Email">
 
             </div>
 
             <div class="input-group pt-4">
-                <input type="password" class="form-control input" placeholder="Enter Your Password">
+                <input [(ngModel)]="password" type="password" class="form-control input"
+                    placeholder="Enter Your Password">
 
             </div>
 
 
-            <div class="btnn pt-4">
-                <button class="block" mat-flat-button color="danger">LOGIN</button>
+            <div *ngIf="data.open=='login'" class="btnn pt-4">
+                <button (click)="login()" class="block" mat-flat-button color="danger">LOGIN</button>
             </div>
+
+            <div *ngIf="data.open=='signup'" class="btnn pt-4">
+                <button (click)="signUp()" class="block" mat-flat-button color="danger">SIGNUP</button>
+            </div>
+
 
             <div class="pt-3 row">
                 <div class="col-6">
@@ -66,7 +72,7 @@
 
             <div *ngIf="data.open=='signup'" class="pt-4">
                 <p (click)="this.open('login')" class="text-dark roboto" class="font-16">Already Have An
-                Account?<span class=" text-danger" style="padding-left: 4px;letter-spacing: 1px;"><u>
+                    Account?<span class=" text-danger" style="padding-left: 4px;letter-spacing: 1px;"><u>
                             <b>
                                 LOGIN
                             </b>
