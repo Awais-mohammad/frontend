@@ -32,6 +32,13 @@
                 </div>
 
             </div>
+
+
+            <div *ngIf="!items" class="row p-1 d-flex justify-content-center align-center">
+                <img style="height: 10em;object-fit: contain;" src="../../assets/icons/empty.jpg" alt="">
+            </div>
+
+
             <div class="footer">
                 <div class="back_cart">
                     <a (click)="close()">
@@ -39,7 +46,7 @@
                         Back to Shop
                     </a>
                 </div>
-                <div class="subtotal">
+                <div *ngIf="!items" class="subtotal">
                     <label>Subtotal: </label>
                     <strong *ngIf="total">{{total}}</strong>
                 </div>
@@ -47,10 +54,18 @@
 
         </div>
 
+
+
         <div class="d-flex justify-content-center text-center align-center">
 
-            <button type="button" class="btn btn-danger btn-fab">Checkout
+            <button (click)="opncheckOut()" *ngIf="items" type="button" class="btn btn-danger btn-fab">Checkout
             </button>
+
+
+            <button *ngIf="!items" type="button" class="btn btn-danger btn-disabled btn-fab">
+                No Item In Cart
+            </button>
+
 
         </div>
     </div>

@@ -112,16 +112,7 @@ export class AppComponent {
 
   }
 
-  opncheckOut() {
-    const dialogConfig = new MatDialogConfig();
-
-    dialogConfig.disableClose = true;
-    dialogConfig.autoFocus = true;
-    dialogConfig.height = '610px';
-    dialogConfig.width = '800px';
-
-    const dialogRef = this.dialog.open(CheckoutComponent, dialogConfig);
-  }
+ 
 
   openCart() {
     const dialogConfig = new MatDialogConfig();
@@ -158,7 +149,7 @@ export class AppComponent {
   ngOnInit(): void {
 
 
-    this.opncheckOut()
+   
     //   this.openLogin('login')
 
     // this.openCart()

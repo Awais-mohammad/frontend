@@ -9,6 +9,9 @@
     background-position: bottom !important;
 }
 
+* {
+    overflow: hidden;
+}
 .p-5 {
     padding-top: 50px;
 }
@@ -16,7 +19,6 @@
     color: white;
     font-family: "Raleway", sans-serif;
     font-size: 56px;
-    line-height: 50px;
 }
 
 .cardparent {

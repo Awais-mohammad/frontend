@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { MatDialog } from '@angular/material/dialog';
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Component, OnInit, ElementRef, ViewChild, Inject } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { StripeService, StripeCardComponent } from 'ngx-stripe';
 import {
@@ -9,22 +9,86 @@ import {
 } from '@stripe/stripe-js';
 
 
-
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
   styleUrls: ['./checkout.component.scss']
 })
 export class CheckoutComponent implements OnInit {
+  @ViewChild(StripeCardComponent) card: StripeCardComponent;
 
   constructor(
     private _formBuilder: FormBuilder,
     private dialoge: MatDialog,
     private fb: FormBuilder, private stripeService: StripeService,
     private http: HttpClient,
-  ) { }
+    @Inject(MAT_DIALOG_DATA) public data: any,
 
-  @ViewChild(StripeCardComponent) card: StripeCardComponent;
+  ) {
+    this.spin = false;
+
+  }
+  //variables//
+  name: string;
+  email: string;
+  phone: string;
+  gender: string;
+  zip: string;
+  adressOne: string;
+  adressTwo: string;
+  token: string;
+  spin: boolean;
+
+  validate() {
+
+    this.spin = true
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (!this.name) {
+      alert('name empty')
+      this.spin = false;
+    }
+    else if (!this.email) {
+      this.spin = false;
+      alert('email empty')
+    }
+    else if (!this.phone) {
+      this.spin = false;
+      alert('phine empty')
+    }
+
+    else if (!this.zip) {
+      this.spin = false;
+      alert('zip empty')
+    }
+    else if (!this.adressOne) {
+      this.spin = false;
+      alert('ad1 empty')
+    }
+    else if (!this.adressTwo) {
+      this.spin = false;
+      alert('ad2 empty')
+    }
+
+    else if (re.test(this.email) != true) {
+      this.spin = false;
+
+      alert('wrong email format')
+    }
+    else if (!this.data.open) {
+      this.spin = false;
+      alert('product not specified')
+
+    }
+    else {
+
+      this.spin = false;
+
+    }
+
+  }
+
+
 
   cardOptions: StripeCardElementOptions = {
     style: {
@@ -67,17 +131,21 @@ export class CheckoutComponent implements OnInit {
 
           // 
           const token = result.token.id
+          this.token = token
           console.log(token);
           this.http.post('http://localhost:3000/auth/payment', { token: token, amount: amount, description: 'checking!!' }, { responseType: 'text' }).subscribe((resp: any) => {
 
-
+            this.addOrder()
 
 
           })
         } else if (result.error) {
           // Error creating the token
+          this.spin = false;
           console.log(result.error.message);
         }
+
+
       });
   }
 
@@ -85,6 +153,32 @@ export class CheckoutComponent implements OnInit {
     this.dialoge.closeAll()
   }
 
+  addOrder() {
+    let order = {
+      name: this.name,
+      phone: this.phone,
+      gender: this.gender,
+      products: [
+        this.data.open
+      ],
+      adress: this.adressOne + this.adressTwo,
+      zip: this.zip,
+      email: this.email,
+      token: this.token,
+      timestamp: new Date()
+    }
+
+    this.http.post('http://localhost:3000/checkout', order, { responseType: 'json' }).subscribe(resp => {
+      console.log(resp);
+      this.spin = false;
+      this.close()
+      alert('order placed successfully!!!!')
+    }), (err) => {
+      if (err) {
+        alert(err.message)
+      }
+    }
+  }
 
   ngOnInit(): void {
     this.stripeTest = this.fb.group({
@@ -99,6 +193,8 @@ export class CheckoutComponent implements OnInit {
       secondCtrl: ['', Validators.required]
     });
   }
+
+
 
 
 }

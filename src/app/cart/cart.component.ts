@@ -1,4 +1,5 @@
-import { MatDialog } from '@angular/material/dialog';
+import { CheckoutComponent } from './../checkout/checkout.component';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -36,6 +37,20 @@ export class CartComponent implements OnInit {
       }
     }
 
+  }
+
+  opncheckOut() {
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.height = '610px';
+    dialogConfig.width = '800px';
+    dialogConfig.data = {
+      open: this.items,
+    };
+
+    const dialogRef = this.dialogue.open(CheckoutComponent, dialogConfig);
   }
 
   delete(param) {

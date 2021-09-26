@@ -165,7 +165,8 @@ text-center {
   }
   .card {
     box-shadow: none;
-
+    position: relative;
+    top: -1em;
     border: none;
   }
 
@@ -181,3 +182,5 @@ mat-form-field {
 
   font-family: "Be Vietnam Pro", sans-serif;
 }
+
+
