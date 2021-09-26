@@ -8,14 +8,24 @@
 
             <i (click)="viewFav()" style="position: relative;" class="far fa-heart heart pt-1 mr-1em"></i>
 
-            <span class="one text-center">
+
+            <span *ngIf="fav == null" class="one text-center">
                 0
             </span>
 
+            <span *ngIf="fav !=null" class="one text-center">
+                {{fav.length}}
+            </span>
+
             <i (click)="openCart()" style="position: relative;" class="far fa-shopping-cart cart  pt-1"></i>
-            <span class="two text-center">
+            <span *ngIf="cart== null" class="two text-center">
                 0
             </span>
+
+            <span *ngIf="cart != null" class="two text-center">
+                {{cart.length}}
+            </span>
+
 
         </div>
         <div>
@@ -72,10 +82,13 @@
                     data-target=".navbar-collapse.show">
                     <i (click)="viewFav()" style="position: relative;" class="far fa-heart heart pt-1 mr-1em"></i>
 
-                    <span class="zero">
+                    <span *ngIf="fav ==null " class="zero">
                         0
                     </span>
 
+                    <span *ngIf="fav != null" class="zero">
+                        {{fav.length}}
+                    </span>
 
                 </li>
 
@@ -83,9 +96,14 @@
                     data-target=".navbar-collapse.show">
 
                     <i style="position: relative;" (click)="openCart()" class="far fa-shopping-cart cart  pt-1"></i>
-                    <span class="zero">
+                    <span *ngIf="cart == null" class="zero">
                         0
                     </span>
+
+                    <span *ngIf="cart != null" class="zero">
+                        {{cart.length}}
+                    </span>
+
                 </li>
 
                 <li *ngIf="!loggedIn" class="loginwrap  pt-lg-0" data-toggle="collapse"

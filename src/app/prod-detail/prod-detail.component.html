@@ -130,7 +130,7 @@
 
                 <mat-form-field appearance="outline" color="dark">
                     <mat-label>QUANTITY</mat-label>
-                    <mat-select>
+                    <mat-select (selectionChange)="onquantity($event)">
                         <mat-option style="color: black;" *ngFor="let food of qty" [value]="food">
                             {{food}}
                         </mat-option>
@@ -151,7 +151,7 @@
 
             <div class="pt-1 icon">
 
-                <button mat-fab color="warn">
+                <button (click)="check()" mat-fab color="warn">
                     <mat-icon>shopping_cart</mat-icon>
                 </button>
 

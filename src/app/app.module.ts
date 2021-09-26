@@ -31,6 +31,10 @@ import { FavComponent } from './fav/fav.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ProdDetailComponent } from './prod-detail/prod-detail.component';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatStepperModule } from '@angular/material/stepper';
+
+import { NgxStripeModule } from 'ngx-stripe';
+import { CheckComponent } from './check/check.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +45,7 @@ import { MatChipsModule } from '@angular/material/chips';
     FavComponent,
     NotfoundComponent,
     ProdDetailComponent,
+    CheckComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,6 +71,9 @@ import { MatChipsModule } from '@angular/material/chips';
     MatChipsModule,
     MatTabsModule,
     MatProgressBarModule,
+    MatStepperModule,
+    NgxStripeModule.forRoot('pk_test_ND4MPDNKZaqfLcteOBlHE3fU00zLz1x7SM'),
+
   ],
   providers: [
     {

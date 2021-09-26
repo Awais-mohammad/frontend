@@ -40,6 +40,9 @@ export class AppComponent {
   ) {
 
   }
+
+
+
   loggedIn: boolean;
 
   goToPage(page: string) {
@@ -141,9 +144,7 @@ export class AppComponent {
     const dialogRef = this.dialog.open(FavComponent, dialog);
   }
 
-  viewdetail() {
-   
-  }
+
 
   logout() {
     localStorage.removeItem('jwt')
@@ -151,10 +152,13 @@ export class AppComponent {
 
   }
 
+  cart: any[] = []
+  fav: any[] = []
+
   ngOnInit(): void {
 
 
-    // this.opncheckOut()
+    this.opncheckOut()
     //   this.openLogin('login')
 
     // this.openCart()
@@ -171,5 +175,12 @@ export class AppComponent {
       this.loggedIn = true
     }
 
+    this.cart = JSON.parse(localStorage.getItem('cart'))
+
+    this.fav = JSON.parse(localStorage.getItem('fav'))
   }
+
+
+
+
 }

@@ -17,4 +17,8 @@ export class ProdsService {
   getByCat(catname) {
     return this.http.get('http://localhost:3000/products/bycat/' + catname)
   }
+
+  search(prodname) {
+    return this.http.get('http://localhost:3000/products/' + prodname)
+  }
 }

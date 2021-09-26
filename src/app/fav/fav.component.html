@@ -10,34 +10,34 @@
         </div>
 
         <div class="cart_list_wrap">
-            <div class="cart_responsive">
-                <div *ngFor="let item of [].constructor(10)" class="tr_item">
+            <div *ngIf="items" class="cart_responsive">
+                <div *ngFor="let item of items let i=index" class="tr_item">
                     <!--PLACE NGFOR HERE-->
                     <div class="td_item item_img">
-                        <img src="https://i.ibb.co/vQHXcYb/b68912b3426baa0b1f4c410a02174879.jpg" />
+                        <img src="{{item.bannerImageURL}}" />
                     </div>
                     <div class="td_item item_name">
-                        <label class="main">Denim Jacket</label>
-                        <label class="sub">category</label>
+                        <label class="main">{{item.name | uppercase}}</label>
+                        <label class="sub">{{item.category}}</label>
                     </div>
                     <div class="td_item item_color">
-                        <label>Blue</label>
+                        {{item._id | slice:0:6}}
                     </div>
 
                     <div class="td_item item_qty">
-                        <button color="light" mat-mini-fab>
+                        <button (click)="viewProd(item)" color="light" mat-mini-fab>
                             <mat-icon>visibility</mat-icon>
                         </button>
                     </div>
 
                     <div class="td_item item_price">
-                        <label>$ 260.00</label>
+                        <label>{{item.price}}</label>
                     </div>
 
 
 
                     <div class="td_item item_remove">
-                        <span class="material-icons-outlined">close</span>
+                        <span (click)="delete(i)" class="material-icons-outlined">close</span>
                     </div>
                 </div>
 
@@ -45,7 +45,7 @@
             </div>
             <div class="footer">
                 <div class="back_cart">
-                    <a href="#back">
+                    <a (click)="close()">
                         <span class="material-icons-outlined">west</span>
                         Back to Shop
                     </a>

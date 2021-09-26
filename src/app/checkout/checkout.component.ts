@@ -1,4 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { MatDialog } from '@angular/material/dialog';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { StripeService, StripeCardComponent } from 'ngx-stripe';
+import {
+  StripeCardElementOptions,
+  StripeElementsOptions
+} from '@stripe/stripe-js';
+
+
 
 @Component({
   selector: 'app-checkout',
@@ -7,55 +17,88 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _formBuilder: FormBuilder,
+    private dialoge: MatDialog,
+    private fb: FormBuilder, private stripeService: StripeService,
+    private http: HttpClient,
+  ) { }
 
-  strikeCheckout: any = null;
+  @ViewChild(StripeCardComponent) card: StripeCardComponent;
 
-  stripePaymentGateway() {
-    if (!window.document.getElementById('stripe-script')) {
-      const scr = window.document.createElement("script");
-      scr.id = "stripe-script";
-      scr.type = "text/javascript";
-      scr.src = "https://checkout.stripe.com/checkout.js";
+  cardOptions: StripeCardElementOptions = {
+    style: {
 
-      scr.onload = () => {
-        this.strikeCheckout = (<any>window).StripeCheckout.configure({
-          key: 'pk_test_12239293949ksdfksdjkfj1232q3jkjssdfjk',
-          locale: 'auto',
-          token: function (token: any) {
-            console.log(token)
-            alert('Payment via stripe successfull!');
-          }
-        });
+      base: {
+        fontWeight: 500,
+        padding: '5px',
+        fontFamily: 'Roboto, Open Sans, Segoe UI, sans-serif',
+        fontSize: '18px',
+        fontSmoothing: 'antialiased',
+        ':-webkit-autofill': { color: '#01010aaf' },
+        '::placeholder': { color: '#01010aaf' }
+      },
+      invalid: {
+        iconColor: '#ffc7ee',
+        color: '#ffc7ee'
       }
-
-      window.document.body.appendChild(scr);
     }
+  };
+
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
+
+  elementsOptions: StripeElementsOptions = {
+    locale: 'en'
+  };
+
+  stripeTest: FormGroup;
+
+
+
+  createToken(): void {
+    const amount = '2000'
+    this.stripeService
+      .createToken(this.card.element)
+      .subscribe((result) => {
+        if (result.token) {
+          // Use the token
+
+
+          // 
+          const token = result.token.id
+          console.log(token);
+          this.http.post('http://localhost:3000/auth/payment', { token: token, amount: amount, description: 'checking!!' }, { responseType: 'text' }).subscribe((resp: any) => {
+
+
+
+
+          })
+        } else if (result.error) {
+          // Error creating the token
+          console.log(result.error.message);
+        }
+      });
   }
 
-  checkout(amount) {
-    const strikeCheckout = (<any>window).StripeCheckout.configure({
-      key: 'pk_test_12239293949ksdfksdjkfj1232q3jkjssdfjk',
-      locale: 'auto',
-      token: function (stripeToken: any) {
-        console.log(stripeToken)
-        alert('Stripe token generated!');
-      }
-    });
-
-    strikeCheckout.open({
-      name: 'Secure Payment',
-      description: 'The securest way to make your payments',
-      amount: amount * 100
-    });
+  close() {
+    this.dialoge.closeAll()
   }
+
 
   ngOnInit(): void {
-    this.stripePaymentGateway();
+    this.stripeTest = this.fb.group({
+      name: ['', [Validators.required]]
+    });
+    //  const stripe = Stripe('');
 
-    setTimeout(() => {
-      this.checkout(300)
-    }, 4000);
+    this.firstFormGroup = this._formBuilder.group({
+      firstCtrl: ['', Validators.required]
+    });
+    this.secondFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required]
+    });
   }
+
 
 }

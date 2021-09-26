@@ -1,0 +1,147 @@
+<div class="icon">
+    <i (click)="close()" class="fas fa-times-circle"></i>
+</div>
+
+<div class="iconright">
+    <i class="fas fa-shopping-bag"></i>
+    <p>| Checkout</p>
+</div>
+
+<mat-vertical-stepper #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+        <ng-template class="p" matStepLabel>Provide Your Information</ng-template>
+        <form [formGroup]="firstFormGroup">
+            <div class="card p-3">
+                <form>
+                    <ng-template matStepLabel>Fill out your personal details</ng-template>
+
+                    <h1 class="text-center">ADD PERSONAL DETAILS</h1>
+                    <p class="text-center p">Provide Your Personal Details To Pay For Your Order.</p>
+
+                    <div>
+
+                        <mat-form-field color="primary" appearance="legacy">
+                            <input matInput placeholder="Enter your name">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="pt-1">
+
+                        <mat-form-field color="primary" appearance="legacy">
+                            <input matInput placeholder="Enter your mail">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="pt-1">
+
+                        <mat-form-field color="primary" appearance="legacy">
+                            <input matInput placeholder="Enter your mobile number">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="pt-1">
+
+                        <mat-form-field color="primary" appearance="legacy">
+                            <input matInput placeholder="Enter your gender">
+                        </mat-form-field>
+                    </div>
+
+
+
+                    <div class="pt-5 text-center d-flex justify-content-center">
+                        <button matStepperNext class="btn btn-dark nextbtn" type="submit">
+                            Next
+                        </button>
+
+                    </div>
+                </form>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+            <ng-template class="p" matStepLabel>Fill out your shipping details</ng-template>
+
+            <form [formGroup]="firstFormGroup">
+                <div class="card p-3">
+                    <form>
+                        <ng-template matStepLabel>Fill out your personal details</ng-template>
+
+                        <h1 class="text-center">ADD SHIPPING DETAILS</h1>
+                        <p class="text-center p">Provide Your Shipping Details To Pay For Your Order.</p>
+
+                        <div>
+
+                            <mat-form-field color="primary" appearance="legacy">
+                                <input matInput placeholder="Enter your Adress Line 1">
+                            </mat-form-field>
+                        </div>
+
+                        <div class="pt-1">
+
+                            <mat-form-field color="primary" appearance="legacy">
+                                <input matInput placeholder="Enter your Adress Line 2">
+                            </mat-form-field>
+                        </div>
+
+                        <div class="pt-1">
+
+                            <mat-form-field color="primary" appearance="legacy">
+                                <input matInput placeholder="Enter your ZIP code">
+                            </mat-form-field>
+                        </div>
+
+
+
+
+
+
+                        <div class="pt-5 text-center d-flex justify-content-center">
+                            <button matStepperNext class="btn btn-dark nextbtn" type="submit">
+                                Next
+                            </button>
+
+                        </div>
+                    </form>
+                </div>
+            </form>
+
+
+        </form>
+    </mat-step>
+
+    <mat-step>
+        <ng-template class="p" matStepLabel>Payment Via Card</ng-template>
+
+
+        <div class="card">
+            <form>
+                <ng-template matStepLabel>Fill out your personal details</ng-template>
+
+                <h1 class="text-center">Proceed To Payment</h1>
+                <p class="text-center p">Provide Your Card Details To Pay For Your Order.</p>
+
+                <form style="display: flex;flex-direction: column;" novalidate (ngSubmit)="createToken()"
+                    [formGroup]="stripeTest">
+
+                    <ngx-stripe-card [options]="cardOptions" [elementsOptions]="elementsOptions"></ngx-stripe-card>
+
+                    <div class="pt-5">
+                        <button class="btn btn-dark paybtn" type="submit">
+                            Pay
+                        </button>
+
+                    </div>
+                </form>
+
+            </form>
+        </div>
+
+
+    </mat-step>
+
+
+
+
+
+</mat-vertical-stepper>

@@ -8,135 +8,40 @@
         </div>
 
         <div class="cart_list_wrap">
-            <div class="cart_responsive">
-                <div class="tr_item">
+            <div *ngIf="items" class="cart_responsive">
+                <div *ngFor="let item of items let i=index" class="tr_item">
                     <!--PLACE NGFOR HERE-->
                     <div class="td_item item_img">
-                        <img src="https://i.ibb.co/vQHXcYb/b68912b3426baa0b1f4c410a02174879.jpg" />
+                        <img src="{{item.image}}" />
                     </div>
                     <div class="td_item item_name">
-                        <label class="main">Denim Jacket</label>
-                        <label class="sub">Ref. 007891987</label>
+                        <label class="main">{{item.name | uppercase}}</label>
+                        <label class="sub">Ref. {{item.ID | slice:0:6}}</label>
                     </div>
                     <div class="td_item item_color">
-                        <label>Blue</label>
+                        <label>{{item.color}}</label>
                     </div>
                     <div class="td_item item_qty">
-                        <select>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="more">More</option>
-                        </select>
                     </div>
                     <div class="td_item item_price">
-                        <label>$ 260.00</label>
+                        <label>{{item.price}}</label>
                     </div>
                     <div class="td_item item_remove">
-                        <span class="material-icons-outlined">close</span>
-                    </div>
-                </div>
-
-                <div class="tr_item">
-                    <div class="td_item item_img">
-                        <img src="https://i.ibb.co/R6rN96C/b5e11480e047426019842f1ebc019d52.jpg" />
-                    </div>
-                    <div class="td_item item_name">
-                        <label class="main">Denim Pant</label>
-                        <label class="sub">Ref. 007891987</label>
-                    </div>
-                    <div class="td_item item_color">
-                        <label>Blue</label>
-                    </div>
-                    <div class="td_item item_qty">
-                        <select>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="more">More</option>
-                        </select>
-                    </div>
-                    <div class="td_item item_price">
-                        <label>$ 260.00</label>
-                    </div>
-                    <div class="td_item item_remove">
-                        <span class="material-icons-outlined">close</span>
-                    </div>
-                </div>
-
-                <div class="tr_item">
-                    <div class="td_item item_img">
-                        <img src="https://i.ibb.co/XYx3YTH/6cd360618204b6d2fe6e3dc75d3f6f9e.jpg" />
-                    </div>
-                    <div class="td_item item_name">
-                        <label class="main">Denim Jacket Men</label>
-                        <label class="sub">Ref. 007891987</label>
-                    </div>
-                    <div class="td_item item_color">
-                        <label>Blue</label>
-                    </div>
-                    <div class="td_item item_qty">
-                        <select>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="more">More</option>
-                        </select>
-                    </div>
-                    <div class="td_item item_price">
-                        <label>$ 260.00</label>
-                    </div>
-                    <div class="td_item item_remove">
-                        <span class="material-icons-outlined">close</span>
-                    </div>
-                </div>
-
-                <div class="tr_item">
-                    <div class="td_item item_img">
-                        <img src="https://i.ibb.co/R6rN96C/b5e11480e047426019842f1ebc019d52.jpg" />
-                    </div>
-                    <div class="td_item item_name">
-                        <label class="main">Denim Pant</label>
-                        <label class="sub">Ref. 007891987</label>
-                    </div>
-                    <div class="td_item item_color">
-                        <label>Blue</label>
-                    </div>
-                    <div class="td_item item_qty">
-                        <select>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="more">More</option>
-                        </select>
-                    </div>
-                    <div class="td_item item_price">
-                        <label>$ 260.00</label>
-                    </div>
-                    <div class="td_item item_remove">
-                        <span class="material-icons-outlined">close</span>
+                        <span (click)="delete(i)" class="material-icons-outlined">close</span>
                     </div>
                 </div>
 
             </div>
             <div class="footer">
                 <div class="back_cart">
-                    <a (click)="close()" href="#back">
+                    <a (click)="close()">
                         <span class="material-icons-outlined">west</span>
                         Back to Shop
                     </a>
                 </div>
                 <div class="subtotal">
                     <label>Subtotal: </label>
-                    <strong>$2451.00</strong>
+                    <strong *ngIf="total">{{total}}</strong>
                 </div>
             </div>
 
@@ -144,7 +49,7 @@
 
         <div class="d-flex justify-content-center text-center align-center">
 
-            <button type="button" class="btn btn-danger btn-lg">Checkout
+            <button type="button" class="btn btn-danger btn-fab">Checkout
             </button>
 
         </div>
