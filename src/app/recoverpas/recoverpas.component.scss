@@ -1,0 +1,149 @@
+.icon {
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+
+    i {
+        color: red;
+        font-size: 28px;
+    }
+}
+p > span:hover {
+    cursor: pointer;
+}
+.logo {
+    height: 4em;
+}
+@media screen and (max-width: 800px) {
+    .logo {
+        height: 2em;
+    }
+    .headingmain {
+        font-size: 20px;
+    }
+    .subheading {
+        font-size: 16px;
+        font-family: "Noto Sans JP", sans-serif;
+    }
+
+    p > span {
+        font-size: 14px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .fb {
+        width: 100%;
+        height: 3em;
+        background: rgba(0, 0, 255, 0.61);
+        font-size: 14px;
+        border-radius: 12px;
+        font-family: "Barlow", sans-serif;
+
+        color: white;
+    }
+
+    .google {
+        width: 100%;
+        height: 3em;
+        background: #fd1810bd;
+        font-size: 14px;
+        border-radius: 12px;
+        font-family: "Barlow", sans-serif;
+
+        color: white;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .font-16 {
+        font-size: 16px;
+    }
+
+    .fb {
+        width: 100%;
+        height: 3em;
+        background: rgba(0, 0, 255, 0.61);
+        font-size: 16px;
+        border-radius: 12px;
+        font-family: "Barlow", sans-serif;
+
+        color: white;
+    }
+
+    .google {
+        width: 100%;
+        height: 3em;
+        background: #fd1810bd;
+        font-size: 16px;
+        border-radius: 12px;
+        font-family: "Barlow", sans-serif;
+
+        color: white;
+    }
+}
+
+.oswald {
+    font-family: Oswald;
+}
+
+.headingmain {
+    font-size: 32px;
+}
+.subheading {
+    font-size: 22px;
+    font-family: "Noto Sans JP", sans-serif;
+}
+.noto {
+    font-family: "Noto Sans JP", sans-serif;
+}
+.input-group {
+    position: relative;
+}
+
+.input {
+    position: relative;
+    border-radius: 12px;
+}
+.form-control {
+    position: relative;
+    height: 3em;
+}
+.fp {
+    background: none;
+    font-size: 15px;
+    color: black;
+    font-family: oswald;
+}
+.block {
+    width: 100%;
+    height: 3em;
+    background: red;
+    font-size: 16px;
+
+    color: white;
+    border-radius: 12px;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.fbicon {
+    position: relative;
+    margin-right: 2px;
+    font-size: 20px;
+
+    color: white;
+}
+.gicon {
+    position: relative;
+    margin-right: 2px;
+    font-size: 25px;
+    color: white;
+}
+.roboto {
+    font-family: "Roboto", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");

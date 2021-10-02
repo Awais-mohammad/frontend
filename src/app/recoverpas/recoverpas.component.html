@@ -1,0 +1,54 @@
+<div class="icon">
+    <i (click)="close()" class="fas fa-times-circle"></i>
+</div>
+<div class="text-center">
+    <img class="logo" src="../../assets/logos/logored.png" alt="">
+
+    <div class="d-flex justify-content-center align-items-center flex-column pt-4">
+        <h1 class="text-dark oswald headingmain pt-4">Forgot Your Password?</h1>
+        <h3 class="text-dark oswald subheading pt-1">No worries. You can recover it</h3>
+
+
+        <div class="col-12 col-sm-12 col-lg-8 col-md-8 col-xl-8">
+
+            <div *ngIf="view=='one'">
+                <div class="input-group pt-4">
+                    <input type="text" [(ngModel)]="email" class="form-control input" placeholder="Enter Your email">
+
+                </div>
+
+                <div class="btnn pt-4">
+                    <button (click)="valemail()" class="block" mat-flat-button color="danger">GET OTP</button>
+                </div>
+            </div>
+
+            <div *ngIf="view == 'two'">
+                <div class="input-group pt-4">
+                    <input type="text" [(ngModel)]="otp" class="form-control input" placeholder="Enter One time pin">
+
+                </div>
+
+                <div class="btnn pt-4">
+                    <button (click)="valotp()" class="block" mat-flat-button color="danger">Verify</button>
+                </div>
+            </div>
+
+            <div *ngIf="view == 'three'">
+                <div class="input-group pt-4">
+                    <input type="text" [(ngModel)]="email" class="form-control input"
+                        placeholder="Enter Your new password">
+
+                </div>
+
+                <div class="btnn pt-4">
+                    <button (click)="toggle('one')" class="block" mat-flat-button color="danger">Change</button>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>

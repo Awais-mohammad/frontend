@@ -82,7 +82,7 @@
             <div *ngIf="data.open=='login'" class="pt-1">
                 <p class="text-dark roboto" class="font-16">Don't Remember Password?<span class=" text-danger"
                         style="padding-left: 4px;letter-spacing: 1px;"><u>
-                            <b>
+                            <b (click)="open('rp')">
                                 RESET
                             </b>
                         </u></span></p>

@@ -1,3 +1,4 @@
+import { RecoverpasComponent } from './recoverpas/recoverpas.component';
 import { ProdsService } from './prods.service';
 import { FavComponent } from './fav/fav.component';
 import { CartComponent } from './cart/cart.component';
@@ -78,6 +79,9 @@ export class AppComponent {
         else if (result.data == 'login') {
           this.openLogin('login')
         }
+        else if (result.data == 'rp') {
+          this.recoverpas()
+        }
       }
     })
 
@@ -106,13 +110,31 @@ export class AppComponent {
         else if (result.data == 'login') {
           this.openLogin('login')
         }
+        else if (result.data == 'rp') {
+          this.recoverpas()
+        }
       }
 
     })
 
   }
 
- 
+
+
+  recoverpas() {
+
+
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.height = '450px';
+    dialogConfig.width = '800px';
+
+    const dialogRef = this.dialog.open(RecoverpasComponent, dialogConfig);
+
+
+  }
 
   openCart() {
     const dialogConfig = new MatDialogConfig();
@@ -149,7 +171,7 @@ export class AppComponent {
   ngOnInit(): void {
 
 
-   
+
     //   this.openLogin('login')
 
     // this.openCart()

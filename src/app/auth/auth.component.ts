@@ -1,5 +1,6 @@
+import { RecoverpasComponent } from './../recoverpas/recoverpas.component';
 import { HttpClient } from '@angular/common/http';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatDialogConfig } from '@angular/material/dialog';
 import { Component, Inject, OnInit } from '@angular/core';
 
 @Component({
@@ -32,13 +33,12 @@ export class AuthComponent implements OnInit {
       re.test(this.email)
 
       if (re.test(this.email) == true) {
-        alert('email format is good!!')
+
 
         if (this.password.length < 6) {
           alert('password cannot be less than 6')
         }
         else {
-          alert('ALL good ')
 
           let credentials = {
             email: this.email.toLocaleLowerCase(),
@@ -51,7 +51,16 @@ export class AuthComponent implements OnInit {
               alert('User with this email already exists!!!')
             }
             else {
-              alert('created successfully!! login in progress!!')
+
+              let data = {
+                email: this.email.toLocaleLowerCase(),
+                name: this.name,
+                template: 'signup'
+              }
+              this.http.post('http://localhost:3000/mail', data, { responseType: 'text' }), (err => {
+                alert(err)
+              })
+
               this.login()
             }
           })
@@ -93,7 +102,7 @@ export class AuthComponent implements OnInit {
             alert(resp)
           }
           else {
-            alert('login success!!!')
+
 
             localStorage.setItem('jwt', resp)
             const jwt = localStorage.getItem('jwt')
@@ -122,9 +131,10 @@ export class AuthComponent implements OnInit {
     this.dialogRef.close({ data: data })
   }
 
+
   ngOnInit() {
 
-
+  
 
   }
 

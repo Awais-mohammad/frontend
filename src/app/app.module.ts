@@ -35,6 +35,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 
 import { NgxStripeModule } from 'ngx-stripe';
 import { CheckComponent } from './check/check.component';
+import { RecoverpasComponent } from './recoverpas/recoverpas.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { CheckComponent } from './check/check.component';
     NotfoundComponent,
     ProdDetailComponent,
     CheckComponent,
+    RecoverpasComponent,
   ],
   imports: [
     BrowserModule,
