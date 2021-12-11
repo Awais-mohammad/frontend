@@ -75,6 +75,8 @@ import { RecoverpasComponent } from './recoverpas/recoverpas.component';
     MatProgressBarModule,
     MatStepperModule,
     NgxStripeModule.forRoot('pk_test_ND4MPDNKZaqfLcteOBlHE3fU00zLz1x7SM'),
+    // 
+    // pk_live_0M3nFFe2nP2UtSwBbKw4Ht8t00TivPKps0
 
   ],
   providers: [

@@ -170,6 +170,7 @@ export class AppComponent {
 
   ngOnInit(): void {
 
+    const mail = localStorage.getItem('email')
 
 
     //   this.openLogin('login')

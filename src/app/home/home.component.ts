@@ -21,6 +21,8 @@ export class HomeComponent implements OnInit {
   ) {
 
     this.search = false
+    
+    this.getProds()
   }
 
 
@@ -33,11 +35,17 @@ export class HomeComponent implements OnInit {
   }
   getProds() {
     this.prodService.getAll().subscribe((data: any[]) => {
-      this.prods = data.slice(0, 10)
+      this.prods = data.slice(0, 24)
       console.log(this.prods);
 
     })
 
+
+  }
+
+  goOpen(param) {
+
+    this.router.navigate(['products'], { state: { example: param } });
 
   }
 
@@ -46,8 +54,8 @@ export class HomeComponent implements OnInit {
     const dialog = new MatDialogConfig();
     dialog.disableClose = true;
     dialog.autoFocus = true;
-    dialog.height = '700px';
-    dialog.width = '920px';
+    dialog.height = '800px';
+    dialog.width = '1000px';
     dialog.data = {
       prod: prod,
     };
@@ -115,6 +123,7 @@ export class HomeComponent implements OnInit {
 
 
     }
+    location.reload()
 
   }
 
@@ -144,6 +153,8 @@ export class HomeComponent implements OnInit {
 
   }
 
+  favs: any;
+
   ngOnInit(): void {
 
     this.getProds()
@@ -154,6 +165,11 @@ export class HomeComponent implements OnInit {
     this.elementRef.nativeElement.appendChild(s14);
     let data = JSON.parse(localStorage.getItem('cart'))
     console.log(data, 'check');
+
+    //prod type stuff
+    this.favs = JSON.parse(localStorage.getItem('fav'))
+    console.log('favs are', this.favs);
+
 
 
   }

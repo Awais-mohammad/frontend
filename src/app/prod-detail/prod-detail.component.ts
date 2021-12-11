@@ -19,6 +19,7 @@ export class ProdDetailComponent implements OnInit {
 
     this.prodData = data.prod
     this.size = 's'
+    this.s_color = 'default'
   }
 
   prodData: any;
@@ -54,12 +55,14 @@ export class ProdDetailComponent implements OnInit {
     }
 
     else {
+      var res = this.prodData.price / 100 * 25;
+
       let prod = {
         name: this.prodData.name,
         ID: this.prodData._id,
         size: this.size,
         color: this.s_color,
-        price: this.prodData.price,
+        price: this.prodData.price + res,
         quantity: this.quantity,
         image: this.prodData.bannerImageURL
       }
@@ -96,7 +99,9 @@ export class ProdDetailComponent implements OnInit {
 
 
     }
+
     this.close()
+    location.reload()
   }
 
   ngOnInit(): void {

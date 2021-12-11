@@ -1,6 +1,6 @@
 <nav *ngIf="router.url!='/404'" (scroll)="onWindowScroll();" class="navbar navbar-expand-md navbar-light sticky-top">
     <a class="navbar-brand d-flex justify-content-center align-items-center mt-2 d-md-none" href="#">
-        <img src="../assets/logos/logored.png" alt="">
+        <img class="logoo" src="../assets/logos/logored.png" alt="">
     </a>
 
     <div class="d-flex flex-row  d-md-none">
@@ -122,7 +122,7 @@
                             account_circle
                         </mat-icon>
                         <p>
-                            Muhammad Awais
+                            Welcome User,
                         </p>
 
                         <mat-icon class="icon2">
@@ -132,7 +132,7 @@
 
                     <div>
                         <mat-menu #menu="matMenu">
-                            <button mat-menu-item>Edit Profile</button>
+                            <!-- <button mat-menu-item>Edit Profile</button> -->
                             <button (click)="logout()" mat-menu-item>Logout</button>
                         </mat-menu>
                     </div>

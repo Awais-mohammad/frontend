@@ -8,6 +8,9 @@
     background-repeat: no-repeat !important;
     background-size: cover !important;
 }
+.catcard:hover {
+    cursor: pointer;
+}
 .mul {
     font-family: "Mulish", sans-serif;
 }
@@ -123,12 +126,12 @@
 .head {
     font-size: 20px;
 }
-.card:hover {
-    border-left: 5px solid rgb(223, 12, 47);
-    transition: 0.2s;
-    cursor: pointer;
-    box-shadow: 5px 3px 1px 0px rgb(223, 12, 47);
-}
+// .card:hover {
+//     border-left: 5px solid rgb(223, 12, 47);
+//     transition: 0.2s;
+//     cursor: pointer;
+//     box-shadow: 5px 3px 1px 0px rgb(223, 12, 47);
+// }
 .catimg {
     position: relative;
     width: 100%;
@@ -137,6 +140,9 @@
 .catcard {
     position: relative;
 }
+.tap {
+}
+
 .cattext {
     position: absolute;
     bottom: 0;
@@ -154,7 +160,7 @@
 }
 
 .catcard:hover {
-    cursor: pointer;
+    // cursor: pointer;
 }
 .allcats {
     background-color: rgba(59, 58, 58, 0.048);
@@ -250,15 +256,9 @@
 .height-28 {
     height: 28%;
 }
-
-.prodcard:hover {
+.view:hover {
     cursor: pointer;
-    border-top: 4px solid rgba(209, 12, 12, 0.623);
-    transition: 0.3s;
-    border-radius: 12px;
-    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.075), 0 3px 2px rgba(0, 0, 0, 0.048);
 }
-
 /*=-=-=-=-=-=-Mobile=-==-=-==-=-*/
 @media screen and (max-width: 600px) {
     .form-control {
@@ -387,7 +387,7 @@
         h3 {
             font-size: 12px;
             position: relative;
-            padding-bottom: 10px;
+            top: 1px;
         }
     }
 }

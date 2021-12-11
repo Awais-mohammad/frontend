@@ -1,8 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MatChipInputEvent } from '@angular/material/chips';
-
-
+import { HttpClient, HttpRequest, HttpEvent, HttpResponse, HttpEventType } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-notfound',
@@ -45,11 +44,11 @@ export class NotfoundComponent implements OnInit {
         timestamp: new Date(),
         description: this.desc
       }
-      this.http.post('http://localhost:3000/products/', prodData, { responseType: 'text' as 'json' }).subscribe((ret) => {
-        console.log(ret);
+      this.http.post('https://brixback.herokuapp.com/products/', prodData, { responseType: 'text' as 'json' }).subscribe((ret) => {
+        alert(ret);
 
       }), (err => {
-        console.log(err);
+        alert(err);
 
       })
     }
@@ -70,65 +69,69 @@ export class NotfoundComponent implements OnInit {
     this.choosedcolors.splice(param, 1)
   }
 
-  attachFile(e) {
-    if (e.target.files.length == 0) {
-      console.log("No file selected!");
-      return
-    }
-    let file: File = e.target.files[0];
-    this.fileToUpload = file;
-    this.uploadAvatar(file)
-  }
-
-
   bannerimageURL: string;
 
-  uploadAvatar(f) {
-    let formData = new FormData();
-    formData.append('file', this.fileToUpload, this.fileToUpload.name);
 
-    this.http.post('http://localhost:3000/products/avatar', formData, { responseType: 'text' }).subscribe(res => {
-      console.log(res);
-      this.bannerimageURL = 'http://localhost:3000/products/avatar/' + res
-      console.log(this.bannerimageURL);
-
-    })
-
-  }
-
-  attachimage(e) {
-    if (e.target.files.length == 0) {
-      console.log("No file selected!");
-      return
-    }
-    let file: File = e.target.files[0];
-    this.fileToUpload = file;
-    this.uploadother(file)
-  }
-
-  imageURLS: any[] = []
-
-  uploadother(f) {
-    let formData = new FormData();
-    formData.append('file', this.fileToUpload, this.fileToUpload.name);
-
-    this.http.post('http://localhost:3000/products/avatar', formData, { responseType: 'text' }).subscribe(res => {
-      console.log(res);
-      const url = 'http://localhost:3000/products/avatar/' + res
-
-
-      if (this.imageURLS.length > 2) {
-        alert('cannot add more than 2 images click on image to remove!!!')
-      }
-      else {
-        this.imageURLS.push(url)
-      }
-    })
-  }
+  imageURLS: string[]=[]
 
   removeimg(param) {
     this.imageURLS.splice(param, 1)
   }
+
+  selectedFiles: FileList;
+  currentFile: File;
+  msg;
+  uploadFile(file: File): Observable<HttpEvent<{}>> {
+    const formdata: FormData = new FormData();
+    formdata.append('file', file);
+    const req = new HttpRequest('POST', 'https://www.exportportal.site/uploadimage.php', formdata, {
+      reportProgress: true,
+      responseType: 'text'
+    });
+
+    return this.http.request(req);
+  }
+
+  imageURL: string;
+
+  /////////select file/////////////////
+  selectFile(event) {
+
+
+    this.selectedFiles = event.target.files;
+
+    this.bannerimageURL = 'https://www.exportportal.site/vendors/' + this.selectedFiles[0].name
+    this.upload()
+  }
+
+  attachimage(event) {
+
+
+    this.selectedFiles = event.target.files;
+    this.imageURL = 'https://www.exportportal.site/vendors/' + this.selectedFiles[0].name
+    setTimeout(() => {
+
+      this.imageURLS.push(this.imageURL)
+
+      this.upload()
+    }, 2000);
+  }
+
+
+  /////////upload file/////////////////
+  upload() {
+
+    this.currentFile = this.selectedFiles.item(0);
+    this.uploadFile(this.currentFile,).subscribe(response => {
+      if (response instanceof HttpResponse) {
+        alert(response.body);
+
+      }
+    });
+    return;
+  }
+
+
   ngOnInit(): void {
   }
 

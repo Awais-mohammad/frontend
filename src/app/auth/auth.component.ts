@@ -45,7 +45,7 @@ export class AuthComponent implements OnInit {
             password: this.password
           }
 
-          this.http.post('http://localhost:3000/users', credentials, { responseType: 'text' }).subscribe(response => {
+          this.http.post('https://brixback.herokuapp.com/users', credentials, { responseType: 'text' }).subscribe(response => {
             console.log(response);
             if (response.includes('User with this email already exists!!!')) {
               alert('User with this email already exists!!!')
@@ -57,7 +57,7 @@ export class AuthComponent implements OnInit {
                 name: this.name,
                 template: 'signup'
               }
-              this.http.post('http://localhost:3000/mail', data, { responseType: 'text' }), (err => {
+              this.http.post('https://brixback.herokuapp.com/mail', data, { responseType: 'text' }), (err => {
                 alert(err)
               })
 
@@ -93,7 +93,7 @@ export class AuthComponent implements OnInit {
           password: this.password
         }
 
-        this.http.post('http://localhost:3000/auth', credentials, { responseType: 'text' }).subscribe(resp => {
+        this.http.post('https://brixback.herokuapp.com/auth', credentials, { responseType: 'text' }).subscribe(resp => {
 
           if (resp.includes('No records associated with this email')) {
             alert(resp)
@@ -103,7 +103,7 @@ export class AuthComponent implements OnInit {
           }
           else {
 
-
+            localStorage.setItem('email', this.email)
             localStorage.setItem('jwt', resp)
             const jwt = localStorage.getItem('jwt')
 
@@ -134,7 +134,7 @@ export class AuthComponent implements OnInit {
 
   ngOnInit() {
 
-  
+
 
   }
 

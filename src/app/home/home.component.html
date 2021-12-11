@@ -20,7 +20,8 @@
                         <input [ngModel]="searchString" (ngModelChange)="searchMethod($event)" type="text"
                             class="form-control input" placeholder="What are you looking for?">
                         <div class="input-group-append">
-                            <button class="btn btns btn-danger" type="button">
+                            <button class="btn btns btn-danger " style="position: absolute;z-index: 5000000;"
+                                type="button">
                                 <mat-icon style="color: white;position: relative;top: 4px;">
                                     search
                                 </mat-icon>
@@ -30,9 +31,11 @@
 
 
                     <div class="mediaIcons">
-                        <a target="_blank" class="icons" href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                        <a target="_blank" class="icons" href="#"><i class="fab fa-instagram instagram-bg"></i></a>
-                        <a target="_blank" class="icons" href="https://api.whatsapp.com/send?phone=+923168807850"><i
+                        <a target="_blank" class="icons" href="https://www.facebook.com/BrixtonBest-112382737893649/"><i
+                                class="fab fa-facebook-f facebook-bg"></i></a>
+                        <a target="_blank" class="icons" href="https://www.instagram.com/brixtonbest.se/"><i
+                                class="fab fa-instagram instagram-bg"></i></a>
+                        <a target="_blank" class="icons" href="https://api.whatsapp.com/send?phone=+46735449894"><i
                                 class="fab  fa-whatsapp whatsapp-bg"></i></a>
                     </div>
 
@@ -86,7 +89,7 @@
                                 </b>
                             </h2>
 
-                            <p class="mul description text-center">
+                            <p class="mul description text-center text-truncate d-inline-block">
                                 {{prod.description}}
                             </p>
                             <h2 class="text-center " style="font-family: Oswald;">
@@ -161,7 +164,7 @@
 
                         <div class=" sniptxt">
                             <h1 class="mul head">Secure Money</h1>
-                            <p>Lorem ipsum dolor sit amet.</p>
+                            <p>We donnot save your card.</p>
                         </div>
                     </div>
 
@@ -175,7 +178,7 @@
 
                         <div class=" sniptxt">
                             <h1 class="mul head">24/7 Support</h1>
-                            <p>Lorem ipsum dolor sit amet.</p>
+                            <p>24/7 support for your querries.</p>
                         </div>
                     </div>
 
@@ -189,7 +192,7 @@
 
                         <div class=" sniptxt">
                             <h1 class="mul head">Free Shipment</h1>
-                            <p>Lorem ipsum dolor sit amet.</p>
+                            <p>Free shipment this season.</p>
                         </div>
                     </div>
 
@@ -203,7 +206,7 @@
 
                         <div class=" sniptxt">
                             <h1 class="mul head">Easy Returns</h1>
-                            <p>Lorem ipsum dolor sit amet.</p>
+                            <p>Make returns within 7 days.</p>
                         </div>
                     </div>
 
@@ -217,8 +220,8 @@
                         <img class="sinppets" src="../../assets/icons/Group 7.png" alt="">
 
                         <div class=" sniptxt">
-                            <h1 class="mul head">Free Shipment</h1>
-                            <p>Lorem ipsum dolor sit amet.</p>
+                            <h1 class="mul head"><b>Get In Whole Sale</b></h1>
+                            <p>Buy bulk in whole seller rate.</p>
                         </div>
                     </div>
 
@@ -231,8 +234,8 @@
                         <img class="sinppets" src="../../assets/icons/Group 8.png" alt="">
 
                         <div class=" sniptxt">
-                            <h1 class="mul head">Easy Returns</h1>
-                            <p>Lorem ipsum dolor sit amet.</p>
+                            <h1 class="mul head">Buy now pay later</h1>
+                            <p>No money no issue buy now pay later.</p>
                         </div>
                     </div>
 
@@ -256,11 +259,13 @@
 
                 <div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2  p-3">
 
-                    <div class="catcard">
+                    <div (click)="goOpen('Brixton Collection')" class="catcard">
                         <img class="catimg" src="../../assets/icons/Mask Group 29.png" alt="">
 
                         <div class="cattext">
-                            <h3 class="opn text-light">Lorem, ipsum.</h3>
+                            <h3 class="opn text-light"><b>
+                                    Brixton Collection
+                                </b></h3>
                         </div>
                     </div>
 
@@ -268,35 +273,28 @@
 
                 <div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2  p-3">
 
-                    <div class="catcard">
+                    <div (click)="goOpen('Leather Pants')" class="catcard">
                         <img class="catimg" src="../../assets/icons/Mask Group 30.png" alt="">
 
                         <div class="cattext">
-                            <h3 class="opn text-light">Lorem, ipsum.</h3>
+                            <h3 class="opn text-light"><b>
+                                    Leather Pants
+                                </b></h3>
                         </div>
                     </div>
 
                 </div>
 
-                <div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2  p-3">
-
-                    <div class="catcard">
-                        <img class="catimg" src="../../assets/icons/Mask Group 31.png" alt="">
-
-                        <div class="cattext">
-                            <h3 class="opn text-light">Lorem, ipsum.</h3>
-                        </div>
-                    </div>
-
-                </div>
 
                 <div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2  p-3">
 
-                    <div class="catcard">
+                    <div (click)="goOpen('Czechoslavakia Collection')" class="catcard">
                         <img class="catimg" src="../../assets/icons/Mask Group 32.png" alt="">
 
                         <div class="cattext">
-                            <h3 class="opn text-light">Lorem, ipsum.</h3>
+                            <h3 class="opn text-light"><b>
+                                    Czechoslavakia Collection
+                                </b></h3>
                         </div>
                     </div>
 
@@ -304,35 +302,29 @@
 
                 <div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2  p-3">
 
-                    <div class="catcard">
+                    <div (click)="goOpen('Leather Vest')" class="catcard">
                         <img class="catimg" src="../../assets/icons/Mask Group 33.png" alt="">
 
                         <div class="cattext">
-                            <h3 class="opn text-light">Lorem, ipsum.</h3>
+                            <h3 class="opn text-light"><b>
+                                    Leather Vest
+                                </b></h3>
                         </div>
                     </div>
 
                 </div>
 
-                <div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2  p-3">
 
-                    <div class="catcard">
-                        <img class="catimg" src="../../assets/icons/Mask Group 34.png" alt="">
-
-                        <div class="cattext">
-                            <h3 class="opn text-light">Lorem, ipsum.</h3>
-                        </div>
-                    </div>
-
-                </div>
 
                 <div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2  p-3">
 
-                    <div class="catcard">
+                    <div (click)="goOpen('Mens Jackets')" class="catcard">
                         <img class="catimg" src="../../assets/icons/Mask Group 35.png" alt="">
 
                         <div class="cattext">
-                            <h3 class="opn text-light">Lorem, ipsum.</h3>
+                            <h3 class="opn text-light"><b>
+                                    Mens Jackets
+                                </b></h3>
                         </div>
                     </div>
 
@@ -340,11 +332,13 @@
 
                 <div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2  p-3">
 
-                    <div class="catcard">
+                    <div (click)="goOpen('Women Jackets')" class="catcard">
                         <img class="catimg" src="../../assets/icons/Mask Group 36.png" alt="">
 
                         <div class="cattext">
-                            <h3 class="opn text-light">Lorem, ipsum.</h3>
+                            <h3 class="opn text-light"><b>
+                                    Women Jackets
+                                </b></h3>
                         </div>
                     </div>
 
@@ -352,39 +346,20 @@
 
                 <div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2  p-3">
 
-                    <div class="catcard">
+                    <div (click)="goOpen('Leather Items')" class="catcard">
                         <img class="catimg" src="../../assets/icons/Mask Group 37.png" alt="">
 
                         <div class="cattext">
-                            <h3 class="opn text-light">Lorem, ipsum.</h3>
+                            <h3 class="opn text-light"><b>
+                                    Leather Items
+                                </b></h3>
                         </div>
                     </div>
 
                 </div>
 
-                <div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2  p-3">
 
-                    <div class="catcard">
-                        <img class="catimg" src="../../assets/icons/Mask Group 38.png" alt="">
 
-                        <div class="cattext">
-                            <h3 class="opn text-light">Lorem, ipsum.</h3>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2  p-3">
-
-                    <div class="catcard">
-                        <img class="catimg" src="../../assets/icons/Mask Group 39.png" alt="">
-
-                        <div class="cattext">
-                            <h3 class="opn text-light">Lorem, ipsum.</h3>
-                        </div>
-                    </div>
-
-                </div>
 
                 <div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2  p-3">
 
@@ -392,7 +367,9 @@
                         <img class="catimg" src="../../assets/icons/Mask Group 40.png" alt="">
 
                         <div class="cattext">
-                            <h3 class="opn text-light">Lorem, ipsum.</h3>
+                            <h3 class="opn text-light"><b>
+                                    Keivar Shirts
+                                </b></h3>
                         </div>
                     </div>
 
@@ -404,34 +381,15 @@
                         <img class="catimg" src="../../assets/icons/Mask Group 41.png" alt="">
 
                         <div class="cattext">
-                            <h3 class="opn text-light">Lorem, ipsum.</h3>
+                            <h3 class="opn text-light"><b>
+                                    Leather Jackets
+                                </b></h3>
                         </div>
                     </div>
 
                 </div>
 
-                <div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2  p-3">
 
-                    <div class="catcard">
-                        <img class="catimg" src="../../assets/icons/Mask Group 42.png" alt="">
-
-                        <div class="cattext">
-                            <h3 class="opn text-light">Lorem, ipsum.</h3>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2  p-3">
-
-                    <div class="catcard">
-                        <img class="catimg" src="../../assets/icons/Mask Group 43.png" alt="">
-
-                        <div class="cattext">
-                            <h3 class="opn text-light">Lorem, ipsum.</h3>
-                        </div>
-                    </div>
-
-                </div>
 
 
 
@@ -448,31 +406,33 @@
             <h2 class="headin text-dark">OUR PRODUCTS</h2>
         </div>
 
-        <div class="container-fluid p-3">
+        <div class="container p-3">
             <div *ngIf="prods" class="row p-1 d-flex justify-content-center">
 
-                <div *ngFor="let prod of prods" class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2  p-3">
-                    <div class="prodcard">
+                <div *ngFor=" let prod of prods" class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3  p-3">
+                    <div (click)="viewProd(prod)" class="prodcard">
 
                         <div class="lalpatiadjust">
                             <img class="prodimg" src="{{prod.bannerImageURL}}" alt="">
 
                             <div class="lalpati d-flex flex-column text-center align-items-center">
 
-                                <mat-icon (click)="addtofav(prod)" class="pt-3" style="color: white;height: 28%;">
+
+                                <mat-icon (click)="addtofav(prod)" class="pt-3 view" style="color: white;height: 28%;">
                                     favorite_border
                                 </mat-icon>
+
 
                                 <img class="wid-50" src="../../assets/icons/lalpati/Line 11.png" alt="">
 
                                 <h3 (click)="viewProd(prod)" style="color: white;height: 30%;font-size: 12px;"
-                                    class="pt-4 mt-4 mul">
+                                    class="pt-4 mt-4 mul view">
                                     VIEW</h3>
 
 
                                 <img class="wid-50" src="../../assets/icons/lalpati/Line 11.png" alt="">
 
-                                <mat-icon (click)="dummyCart(prod)" class="pt-4" style="color: white;height: 28%;">
+                                <mat-icon (click)="dummyCart(prod)" class="pt-4 view" style="color: white;height: 28%;">
                                     add_shopping_cart
                                 </mat-icon>
 
@@ -486,12 +446,12 @@
                                 </b>
                             </h2>
 
-                            <p class="mul description text-center">
+                            <p class="mul description text-center text-truncate d-inline-block">
                                 {{prod.description}}
                             </p>
                             <h2 class="text-center " style="font-family: Oswald;">
                                 <b>
-                                    {{prod.price}}
+                                    <span style="color: rgba(0, 0, 0, 0.801);">{{prod.price}}</span> SEK
                                 </b>
                             </h2>
 
@@ -529,7 +489,8 @@
 
                     <div class="p-3">
                         <button class="btn btn-danger btn-lg btninsta">
-                            FOLLOW
+                            <a style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;font-weight: bold;text-decoration: none;"
+                                target="_blank" href="https://www.instagram.com/brixtonbest.se/"> FOLLOW</a>
                         </button>
                     </div>
                 </div>

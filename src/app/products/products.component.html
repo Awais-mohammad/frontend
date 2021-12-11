@@ -60,19 +60,22 @@
 
                                     <div class="lalpati d-flex flex-column text-center align-items-center">
 
-                                        <mat-icon class="pt-3" style="color: white;height: 28%;">
+                                        <mat-icon (click)="addtofav(prod)" class="pt-3"
+                                            style="color: white;height: 28%;">
                                             favorite_border
                                         </mat-icon>
 
                                         <img class="wid-50" src="../../assets/icons/lalpati/Line 11.png" alt="">
 
-                                        <h3 style="color: white;height: 30%;font-size: 12px;" class="pt-4 mt-4 mul">
+                                        <h3 (click)="viewProd(prod)" style="color: white;height: 30%;font-size: 12px;"
+                                            class="pt-4 mt-4 mul">
                                             VIEW</h3>
 
 
                                         <img class="wid-50" src="../../assets/icons/lalpati/Line 11.png" alt="">
 
-                                        <mat-icon class="pt-4" style="color: white;height: 28%;">
+                                        <mat-icon (click)="dummyCart(prod)" class="pt-4"
+                                            style="color: white;height: 28%;">
                                             add_shopping_cart
                                         </mat-icon>
 
@@ -86,12 +89,12 @@
                                         </b>
                                     </h2>
 
-                                    <p class="mul description text-center">
+                                    <p class="mul description text-center text-truncate d-inline-block">
                                         {{prod.description}}
                                     </p>
                                     <h2 class="text-center " style="font-family: Oswald;">
                                         <b>
-                                            {{prod.price}}
+                                            <span style="color: rgba(0, 0, 0, 0.801);">{{prod.price}}</span> SEK
                                         </b>
                                     </h2>
 
@@ -104,6 +107,14 @@
 
                     <div *ngIf="prods == undefined" class="row p-1 d-flex justify-content-center align-center">
                         <img style="height: 10em;object-fit: contain;" src="../../assets/icons/empty.jpg" alt="">
+                    </div>
+
+                    <div class="row p-1 d-flex justify-content-center align-center">
+                        <div style="width: 30%;">
+                            <button (click)="viewbrix()" mat-flat-button color="warn">
+                                <h2 class="pt-3" style="font-family: Georgia, 'Times New Roman', Times, serif;">Brixton Collection</h2>
+                            </button>
+                        </div>
                     </div>
                 </div>
 

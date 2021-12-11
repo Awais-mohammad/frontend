@@ -43,15 +43,6 @@
                             </mat-form-field>
                         </div>
 
-                        <div class="pt-1">
-
-                            <mat-form-field color="primary" appearance="legacy">
-                                <input [ngModelOptions]="{standalone: true}" [(ngModel)]="gender" matInput
-                                    placeholder="Enter your gender">
-                            </mat-form-field>
-                        </div>
-
-
 
                         <div class="pt-5 text-center d-flex justify-content-center">
                             <button matStepperNext class="btn btn-dark nextbtn" type="submit">
@@ -136,7 +127,7 @@
 
                         <div class="pt-5">
                             <button class="btn btn-dark paybtn" type="submit">
-                                Pay
+                                Pay {{payment}} SEK
                             </button>
 
                         </div>

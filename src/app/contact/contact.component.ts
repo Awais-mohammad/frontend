@@ -9,6 +9,10 @@ export class ContactComponent implements OnInit {
 
   constructor() { }
 
+  okey() {
+    alert('Thankyou for contacting We will reach back as soon as possible')
+  }
+
   ngOnInit(): void {
   }
 

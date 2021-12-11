@@ -78,10 +78,10 @@ h1 {
 	font-size: 20px;
 	font-weight: light;
 	padding: 5px;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: "Ubuntu", sans-serif;
 }
 .size-cont-active {
-	border: 1px solid black;
+	border: 2px solid rgb(240, 4, 4);
 	border-radius: 1%;
 	width: 3em;
 	height: 3em;
@@ -93,9 +93,18 @@ h1 {
 		color: black;
 	}
 }
-.bannerimag{
-	
-    box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.151);
+.bannerimag {
+	box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.151);
+	transition: 0.2s
+}
+.wrapper{
+	width: 400px;
+	height: 400px;
+	overflow: hidden; 
+}
+.bannerimag:hover {
+	transform: scale(1.9);
+	cursor: pointer;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");

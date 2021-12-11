@@ -11,14 +11,14 @@ export class ProdsService {
   ) { }
 
   getAll() {
-    return this.http.get('http://localhost:3000/products')
+    return this.http.get('https://brixback.herokuapp.com/products')
   }
 
   getByCat(catname) {
-    return this.http.get('http://localhost:3000/products/bycat/' + catname)
+    return this.http.get('https://brixback.herokuapp.com/products/bycat/' + catname)
   }
 
   search(prodname) {
-    return this.http.get('http://localhost:3000/products/' + prodname)
+    return this.http.get('https://brixback.herokuapp.com/products/' + prodname)
   }
 }

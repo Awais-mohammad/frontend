@@ -46,7 +46,7 @@ export class RecoverpasComponent implements OnInit {
         email: this.email.toLocaleLowerCase(),
         code: this.rand
       }
-      this.http.post('http://localhost:3000/users/recoverpass', data, { responseType: 'text' }).subscribe(resp => {
+      this.http.post('https://brixback.herokuapp.com/users/recoverpass', data, { responseType: 'text' }).subscribe(resp => {
         alert(resp)
         this.toggle('two')
       })

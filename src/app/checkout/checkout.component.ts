@@ -20,12 +20,21 @@ export class CheckoutComponent implements OnInit {
   constructor(
     private _formBuilder: FormBuilder,
     private dialoge: MatDialog,
-    private fb: FormBuilder, private stripeService: StripeService,
+    private fb: FormBuilder,
+    private stripeService: StripeService,
     private http: HttpClient,
     @Inject(MAT_DIALOG_DATA) public data: any,
 
   ) {
     this.spin = false;
+    this.gender = 'Male'
+    if (this.data.open) {
+      for (var i = 0; i < this.data.open.length; i++) {
+        console.log(this.data.open[i].price);
+        this.payment = this.data.open[i].price + this.payment
+
+      }
+    }
 
   }
   //variables//
@@ -38,6 +47,7 @@ export class CheckoutComponent implements OnInit {
   adressTwo: string;
   token: string;
   spin: boolean;
+  payment: number = 0;
 
   validate() {
 
@@ -91,6 +101,7 @@ export class CheckoutComponent implements OnInit {
 
 
   cardOptions: StripeCardElementOptions = {
+    hidePostalCode: true,
     style: {
 
       base: {
@@ -121,9 +132,8 @@ export class CheckoutComponent implements OnInit {
 
 
   createToken(): void {
-    const amount = '2000'
-    this.stripeService
-      .createToken(this.card.element)
+    const descp = 'On -->' + new Date() + '--> order was placed by' + this.name
+    this.stripeService.createToken(this.card.element)
       .subscribe((result) => {
         if (result.token) {
           // Use the token
@@ -133,16 +143,15 @@ export class CheckoutComponent implements OnInit {
           const token = result.token.id
           this.token = token
           console.log(token);
-          this.http.post('http://localhost:3000/auth/payment', { token: token, amount: amount, description: 'checking!!' }, { responseType: 'text' }).subscribe((resp: any) => {
+          this.http.post('https://brixback.herokuapp.com/auth/payment', { token: token, amount: this.payment, description: descp }, { responseType: 'text' }).subscribe((resp: any) => {
 
             this.addOrder()
-
 
           })
         } else if (result.error) {
           // Error creating the token
           this.spin = false;
-          console.log(result.error.message);
+          alert(result.error.message);
         }
 
 
@@ -168,17 +177,69 @@ export class CheckoutComponent implements OnInit {
       timestamp: new Date()
     }
 
-    this.http.post('http://localhost:3000/checkout', order, { responseType: 'json' }).subscribe(resp => {
+    this.http.post('https://brixback.herokuapp.com/checkout', order, { responseType: 'json' }).subscribe(resp => {
       console.log(resp);
       this.spin = false;
       this.close()
       alert('order placed successfully!!!!')
+
+      const mail = localStorage.getItem('email')
+      if (mail) {
+
+        let data = {
+          name: this.name,
+          phone: this.phone,
+          adress: this.adressOne + '-' + this.adressTwo,
+          zip: this.zip,
+          gender: this.gender,
+
+
+        }
+
+        this.http.put('https://brixback.herokuapp.com/users/' + mail, data).subscribe(resp => {
+          console.log(resp);
+
+        })
+
+      }
+      else {
+
+      }
+
+      let data = {
+        email: this.email.toLocaleLowerCase(),
+        name: this.name,
+        products: this.data.open,
+        price: this.payment
+      }
+      this.http.post('https://brixback.herokuapp.com/mail/c_order', data, { responseType: 'text' }), (err => {
+        alert(err)
+      })
+
+
+
     }), (err) => {
       if (err) {
         alert(err.message)
       }
     }
+
+    setTimeout(() => {
+      let data = {
+        email: 'contact@brixtonbest.se',
+        name: this.name,
+        products: this.data.open,
+        price: this.payment
+      }
+
+      this.http.post('https://brixback.herokuapp.com/mail/c_order', data, { responseType: 'text' }), (err => {
+        alert(err)
+      })
+    }, 3000);
+
   }
+
+  userdetails: any;
 
   ngOnInit(): void {
     this.stripeTest = this.fb.group({
@@ -192,6 +253,27 @@ export class CheckoutComponent implements OnInit {
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required]
     });
+
+    const mail = localStorage.getItem('email')
+    if (!mail) {
+
+    }
+    else {
+      this.http.get('https://brixback.herokuapp.com/users/' + mail).subscribe((data: any) => {
+        console.log(data);
+        if (data.adress) {
+
+          this.userdetails = data
+
+        }
+        else {
+
+        }
+      })
+    }
+
+
+
   }
 
 

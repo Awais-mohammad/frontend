@@ -8,7 +8,7 @@
 
         <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 ">
 
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center wrapper">
                 <img class="bg-img bannerimag" src="{{prodData.bannerImageURL}}" alt="">
             </div>
 
@@ -43,11 +43,11 @@
             <p class="price" style="color: rgba(0, 0, 0, 0.603);">
 
                 <b>
-                    {{prodData.price}} SEK
+                    {{prodData.price}} SEK + 25% VAT
                 </b>
             </p>
 
-            <h1>Colors</h1>
+            <!-- <h1>Colors</h1>
 
             <div class="d-flex">
 
@@ -74,7 +74,7 @@
 
 
 
-            </div>
+            </div> -->
 
             <div class="pt-4">
                 <h1>Sizes</h1>
@@ -149,6 +149,18 @@
 
             <hr>
 
+
+            <div class="p-1">
+                <h1>Description:</h1>
+                <p class="text-left pt-3">
+                    {{prodData.description}}
+
+                </p>
+
+            </div>
+
+            <!-- Add to cart -->
+
             <div class="pt-1 icon">
 
                 <button (click)="check()" mat-fab color="warn">
@@ -162,7 +174,7 @@
     </div>
 
 
-    <mat-tab-group class="pt-3" color="primary" mat-stretch-tabs>
+    <!-- <mat-tab-group class="pt-3" color="primary" mat-stretch-tabs>
         <mat-tab label="Description">
 
             <p class="text-center pt-3">
@@ -191,6 +203,6 @@
             </div>
 
         </mat-tab>
-    </mat-tab-group>
+    </mat-tab-group> -->
 
 </section>
