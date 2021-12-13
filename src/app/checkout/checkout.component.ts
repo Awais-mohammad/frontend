@@ -7,6 +7,10 @@ import {
   StripeCardElementOptions,
   StripeElementsOptions
 } from '@stripe/stripe-js';
+import {
+  IPayPalConfig,
+  ICreateOrderRequest
+} from 'ngx-paypal';
 
 
 @Component({
@@ -16,6 +20,8 @@ import {
 })
 export class CheckoutComponent implements OnInit {
   @ViewChild(StripeCardComponent) card: StripeCardComponent;
+  public payPalConfig?: IPayPalConfig;
+
 
   constructor(
     private _formBuilder: FormBuilder,
@@ -161,8 +167,15 @@ export class CheckoutComponent implements OnInit {
   close() {
     this.dialoge.closeAll()
   }
+  temp: any;
 
   addOrder() {
+    if (!this.token) {
+      this.temp = this.detail
+    }
+    else {
+      this.temp = this.token
+    }
     let order = {
       name: this.name,
       phone: this.phone,
@@ -173,7 +186,8 @@ export class CheckoutComponent implements OnInit {
       adress: this.adressOne + this.adressTwo,
       zip: this.zip,
       email: this.email,
-      token: this.token,
+
+      token: this.temp,
       timestamp: new Date()
     }
 
@@ -239,9 +253,77 @@ export class CheckoutComponent implements OnInit {
 
   }
 
+  detail: string
+
+  // paypal
+  private initConfig(): void {
+    const payment = this.payment.toString()
+    this.payPalConfig = {
+      currency: 'SEK',
+      clientId: 'AY9OmKWWrHZGHmWU9YYNuHjCvKJwJ7xeL4FmtzoSwGXJ0p6QBBh7ztZTDiMWAbPBhagTlOQb5DHLX2lT',
+      createOrderOnClient: (data) => <ICreateOrderRequest>{
+        intent: 'CAPTURE',
+        purchase_units: [{
+          amount: {
+            currency_code: 'SEK',
+            value: payment,
+            breakdown: {
+              item_total: {
+                currency_code: 'SEK',
+                value: payment
+              }
+            }
+          },
+          items: [{
+            name: 'Brixtonbest online Order',
+            quantity: '1',
+            category: 'DIGITAL_GOODS',
+            unit_amount: {
+              currency_code: 'SEK',
+              value: payment,
+            },
+          }]
+        }]
+      },
+      advanced: {
+        commit: 'true'
+      },
+      style: {
+        label: 'paypal',
+        layout: 'horizontal',
+        size: 'small',
+        color: 'blue',
+        shape: 'rect'
+      },
+      onApprove: (data, actions) => {
+        console.log('onApprove - transaction was approved, but not authorized', data, actions);
+        actions.order.get().then(details => {
+          console.log('onApprove - you can get full order details inside onApprove: ', details);
+          this.detail = details
+        });
+
+      },
+      onClientAuthorization: (data) => {
+        console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
+      },
+      onCancel: (data, actions) => {
+        console.log('OnCancel', data, actions);
+        alert('Payment cancelled')
+      },
+      onError: err => {
+        console.log('OnError', err);
+        alert(err)
+      },
+      onClick: (data, actions) => {
+        console.log('onClick', data, actions);
+      }
+    };
+  }
+
   userdetails: any;
 
   ngOnInit(): void {
+    this.initConfig()
     this.stripeTest = this.fb.group({
       name: ['', [Validators.required]]
     });

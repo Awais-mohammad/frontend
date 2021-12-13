@@ -50,6 +50,11 @@ h1 {
 form {
   width: 480px;
   margin: 20px auto;
+  margin-bottom: 0;
+}
+.paypalSet {
+  width: 480px;
+  margin: 2px auto;
 }
 
 .group {
@@ -175,6 +180,21 @@ text-center {
 
     font-family: "Be Vietnam Pro", sans-serif;
   }
+
+  .paypalSet {
+    width: 220px;
+    margin: 2px auto;
+  }
+  .or::before,
+  .or::after {
+    display: inline-block;
+    content: "";
+    border-top: 0.2em solid rgba(0, 0, 0, 0.89);
+    width: 3rem;
+    margin: 0 1rem;
+    transform: translateY(-2px);
+  }
+  
 }
 
 mat-form-field {
@@ -183,4 +203,16 @@ mat-form-field {
   font-family: "Be Vietnam Pro", sans-serif;
 }
 
-
+.or::before,
+.or::after {
+  display: inline-block;
+  content: "";
+  border-top: 0.2em solid rgba(0, 0, 0, 0.89);
+  width: 11rem;
+  margin: 0 1rem;
+  transform: translateY(-2px);
+}
+.or {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: bold;
+}

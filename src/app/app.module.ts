@@ -32,9 +32,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { ProdDetailComponent } from './prod-detail/prod-detail.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatStepperModule } from '@angular/material/stepper';
-
+import { NgxPayPalModule } from 'ngx-paypal';
 import { NgxStripeModule } from 'ngx-stripe';
-import { CheckComponent } from './check/check.component';
 import { RecoverpasComponent } from './recoverpas/recoverpas.component';
 
 @NgModule({
@@ -46,7 +45,6 @@ import { RecoverpasComponent } from './recoverpas/recoverpas.component';
     FavComponent,
     NotfoundComponent,
     ProdDetailComponent,
-    CheckComponent,
     RecoverpasComponent,
   ],
   imports: [
@@ -74,9 +72,8 @@ import { RecoverpasComponent } from './recoverpas/recoverpas.component';
     MatTabsModule,
     MatProgressBarModule,
     MatStepperModule,
-    NgxStripeModule.forRoot('pk_test_ND4MPDNKZaqfLcteOBlHE3fU00zLz1x7SM'),
-    // 
-    // pk_live_0M3nFFe2nP2UtSwBbKw4Ht8t00TivPKps0
+    NgxStripeModule.forRoot('pk_live_0M3nFFe2nP2UtSwBbKw4Ht8t00TivPKps0'),
+    NgxPayPalModule,
 
   ],
   providers: [

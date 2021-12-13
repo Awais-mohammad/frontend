@@ -1,0 +1,75 @@
+
+{
+    "HomePage": {
+        "headinOne": "VI GER MODE TILL DIG",
+        "h2.1": "Säkra pengar",
+        "p2.1": "Vi sparar inte ditt kort.",
+        "h2.2": "24/7 Support",
+        "p2.2": "24/7 support för dina frågor",
+        "h2.3": "Gratis frakt",
+        "p2.3": "Fri frakt denna säsong.",
+        "h2.4": "Enkla returer",
+        "p2.4": "Gör returer inom 7 dagar.",
+        "h2.5": "Få i helförsäljning",
+        "p2.5": "Köp bulk i hel säljarkurs.",
+        "h2.6": "Köp nu betala senare",
+        "p2.6": "Inga pengar inga problem köp nu betala senare.",
+        "cat1": "Brixton samling",
+        "cat2": "Läderbyxor",
+        "_cat3": "Samling",
+        "cat4": "Leather Vest",
+        "cat5": "Läderväst",
+        "cat6": "Damjackor",
+        "cat7": "Läderartiklar",
+        "cat8": "Keivar skjortor",
+        "cat9": "Läderjackor",
+        "butn1": "Ladda mer",
+        "insta": "KONTAKTA OSS PÅ INSTAGRAM",
+        "butnfollow": "FÖLJ"
+    },
+    "AboutPage": {
+        "h1": "Why Choose Us?",
+        "h2": "Life is short, Make every outfit count The best designs from us to you.",
+        "h2.1": "Best Designs",
+        "p2.1": "We use latest technology for the latest world because we know the demand of peoples.",
+        "h2.2": "Creative Design",
+        "p2.2": "We are always creative and and always lisen our costomers and we mix these two things and make beast design.",
+        "h2.3": "24 x 7 User Support",
+        "p2.3": "If our customer has any problem and any query we are always happy to help then.",
+        "h2.4": "Business Growth",
+        "p2.4": "Everyone wants to live on top of the mountain, but all the happiness and growth occurs while you're climbing it.",
+        "h2.5": "Returns",
+        "p2.5": "If you don't like the product no worries you can easily return it to us there will be no charges on the product cheers!.",
+        "h2.6": "Affordable cost",
+        "p2.6": "Love is a special word, and I use it only when I mean it. You say the word too much and it becomes cheap.",
+        "otp": "Our Top Products"
+    },
+    "ContactPage": {
+        "GIT": "Get In Touch",
+        "h2": "We'd love to hear from you",
+        "p1": "You can always write us an email or contact us at the given phone number to schedule a meeting."
+    },
+    "Navbar": {
+        "L1": "HOME",
+        "L2": "PRODUCTS",
+        "L3": "ABOUT",
+        "L4": "CONTACT",
+        "su": "Sign Up",
+        "li": "Log In"
+    },
+    "Footer": {
+        "h1": "Find Us",
+        "h2": "Call Us",
+        "h3": "Mail Us",
+        "peep": "Life is short, Make every outfit count The best designs from us to you.",
+        "FU": "Follow us",
+        "L1": "HOME",
+        "L2": "PRODUCTS",
+        "L3": "ABOUT",
+        "L4": "CONTACT",
+        "CR": "Copyright © 2021, All Right Reserved",
+        "UL": "Useful Links",
+        "subcrabe": "Subscribe",
+        "dmc": "Don’t miss to subscribe to our new feeds, kindly fill the form below."
+    }
+}
