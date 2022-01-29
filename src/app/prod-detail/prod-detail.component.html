@@ -9,14 +9,27 @@
         <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 ">
 
             <div class="d-flex justify-content-center wrapper">
-                <img class="bg-img bannerimag" src="{{prodData.bannerImageURL}}" alt="">
+
+                <lib-ngx-image-zoom (click)="viewImageOnFullPage(bigImage)" [thumbImage]=bigImage [fullImage]=bigImage
+                    [magnification]="2" [enableScrollZoom]="true" [enableLens]="true" [lensWidth]="100">
+                </lib-ngx-image-zoom>
+                <!-- <img class="bg-img bannerimag" src="{{bannerImage}}" alt=""> -->
             </div>
 
             <div class="row">
 
                 <div class="col-12 pt-1 d-flex justify-content-center">
 
-                    <img *ngFor="let item of prodData.prodImageURLS" class="sm-img" src="{{item}}" alt="">
+                    <img *ngIf="prodData.prodImageURLS[0] && prodData.prodImageURLS[0] != bannerImage && bigImage!=prodData.prodImageURLS[0]"
+                        (click)="makeBig(prodData.prodImageURLS[0])" class="sm-img" src="{{prodData.prodImageURLS[0]}}"
+                        alt="">
+
+                    <img *ngIf="prodData.prodImageURLS[1] && prodData.prodImageURLS[1] != bigImage && prodData.prodImageURLS[1]"
+                        (click)="makeBig(prodData.prodImageURLS[1])" class="sm-img" src="{{prodData.prodImageURLS[1]}}"
+                        alt="">
+
+                    <img *ngIf="bigImage != bannerImage" (click)="makeBig(bannerImage)" class="sm-img"
+                        src="{{bannerImage}}" alt="">
 
 
                 </div>

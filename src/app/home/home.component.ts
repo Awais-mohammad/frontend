@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   ) {
 
     this.search = false
-    
+
     this.getProds()
   }
 
@@ -29,6 +29,7 @@ export class HomeComponent implements OnInit {
   prods: any
   searchString: string;
   search: boolean;
+  params;
 
   goToPage(pname) {
     this.router.navigate([pname])

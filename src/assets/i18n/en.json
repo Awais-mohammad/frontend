@@ -23,7 +23,7 @@
         "cat8": "Keivar Shirts",
         "cat9": "Leather Jackets",
         "butn1": "Load More",
-        "insta": "CONTACT US ON INSTAGRAM",
+        "insta": "CONTACT US ON",
         "butnfollow": "FOLLOW"
     },
     "AboutPage": {
@@ -70,5 +70,15 @@
         "UL": "Useful Links",
         "subcrabe": "Subscribe",
         "dmc": "Don’t miss to subscribe to our new feeds, kindly fill the form below."
+    },
+    "login": {
+        "h1": "WELCOME",
+        "h2": "Enter Your Credentials To Login",
+        "h3": "Don't Have An Account",
+        "h4": "Don't Remember Password",
+        "su": "Sign Up",
+        "li": "Log In",
+        "h5":"Already Have An Account",
+        "h6":"Enter Your Credentials To Register"
     }
 }

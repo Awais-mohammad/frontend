@@ -11,6 +11,7 @@ import { Observable } from 'rxjs';
 import { MatDialog, MatDialogConfig, MatDialogRef } from "@angular/material/dialog";
 import { Router } from '@angular/router';
 import { ProdDetailComponent } from './prod-detail/prod-detail.component';
+import { TranslateConfigService } from './translate-config.service';
 
 @Component({
   selector: 'app-root',
@@ -36,15 +37,25 @@ export class AppComponent {
     public dialog: MatDialog,
     public router: Router,
     private dialogRef: MatDialogRef<AuthComponent>,
-
-
+    private translateService: TranslateConfigService
   ) {
+    const tempLang = this.translateService.getDefaultLanguage()
+    this.c_language = tempLang
+    // this.languageChanged('swedish')
 
   }
 
 
 
+
+  languageChanged(language) {
+    this.translateService.setLanguage(language);
+    this.c_language = language
+
+  }
+
   loggedIn: boolean;
+  c_language: string;
 
   goToPage(page: string) {
     this.router.navigate([page]);
@@ -53,7 +64,7 @@ export class AppComponent {
   }
 
   desktop: boolean;
-
+  params;
   route: any;
 
   openLogin(dTyp: string) {

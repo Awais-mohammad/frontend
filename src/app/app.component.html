@@ -43,14 +43,15 @@
         <div class="alignright">
             <ul class="nav navbar-nav color  padding  width center">
                 <li data-toggle="collapse" data-target=".navbar-collapse.show"><a [class.active]="router.url==='/home'"
-                        [routerLink]="['home']" href="/home">HOME</a></li>
+                        [routerLink]="['home']" href="/home"> {{ 'Navbar.L1' | translate:params }}</a></li>
                 <li data-toggle="collapse" data-target=".navbar-collapse.show"><a
-                        [class.active]="router.url==='/products'" [routerLink]="['products']"
-                        href="/products">PRODUCTS</a></li>
+                        [class.active]="router.url==='/products'" [routerLink]="['products']" href="/products">{{
+                        'Navbar.L2' | translate:params }}</a></li>
                 <li data-toggle="collapse" data-target=".navbar-collapse.show"><a [class.active]="router.url==='/about'"
-                        [routerLink]="['about']" href="/about">ABOUT</a></li>
+                        [routerLink]="['about']" href="/about">{{ 'Navbar.L3' | translate:params }}</a></li>
                 <li data-toggle="collapse" data-target=".navbar-collapse.show"><a
-                        [class.active]="router.url==='/contact'" [routerLink]="['contact']" href="/contact">CONTACT</a>
+                        [class.active]="router.url==='/contact'" [routerLink]="['contact']" href="/contact">{{
+                        'Navbar.L4' | translate:params }}</a>
                 </li>
                 <li data-toggle="collapse" data-target=".navbar-collapse.show" class="d-none d-sm-none d-md-inline"><img
                         id="logo" src="../assets/logos/logored.png" alt="Brand" width="180" />
@@ -58,21 +59,28 @@
 
                 <li class="d-none d-sm-none d-md-inline" style="position: relative;" data-toggle="collapse"
                     data-target=".navbar-collapse.show">
-                    <p class="dropdown-toggle" id="menu1" data-toggle="dropdown">Language
+                    <p *ngIf="c_language != 'en'" class="dropdown-toggle" id="menu1" data-toggle="dropdown">{{c_language
+                        | uppercase}}
                         <span class="caret"></span>
                     </p>
+
+                    <p *ngIf="c_language == 'en'" class="dropdown-toggle" id="menu1" data-toggle="dropdown">{{c_language
+                        | uppercase}}GLISH
+                        <span class="caret"></span>
+                    </p>
+
 
                     <ul class="dropdown-menu pt-0" style="list-style: none;position: absolute;top:5em;" role="menu"
                         aria-labelledby="menu1">
 
                         <p style="margin:0;padding: 10px;" data-toggle="collapse" data-target=".navbar-collapse.show"
                             class="abc">
-                            <a class="abc" href="#">English</a>
+                            <a (click)="languageChanged('en')" class="abc">English</a>
                         </p>
 
                         <p style="margin:0;padding: 10px;" data-toggle="collapse" data-target=".navbar-collapse.show"
                             class="abc">
-                            <a class="abc" href="#"> Swedish</a>
+                            <a class="abc" (click)="languageChanged('swedish')"> Swedish</a>
                         </p>
 
                     </ul>
@@ -110,8 +118,8 @@
                     data-target=".navbar-collapse.show">
 
                     <button (click)="openSignup('signup')" type="button"
-                        class="btn loginbtn bigscreen signup btn-outline-light">Sign
-                        Up</button>
+                        class="btn loginbtn bigscreen signup btn-outline-light">{{ 'Navbar.su' | translate:params
+                        }}</button>
                 </li>
 
 
@@ -144,7 +152,7 @@
                 <li *ngIf="!loggedIn" data-toggle="collapse" data-target=".navbar-collapse.show"
                     class="loginwrap  pt-lg-0">
                     <button (click)="openLogin('login')" type="button"
-                        class="btn bigscreenlgn loginbtn lgb btn-light">Login
+                        class="btn bigscreenlgn loginbtn lgb btn-light">{{ 'Navbar.li' | translate:params }}
                     </button>
                 </li>
 
@@ -156,11 +164,11 @@
                     <ul class="dropdown-menu width" style="list-style: none;" role="menu" aria-labelledby="menu1">
 
                         <li data-toggle="collapse" data-target=".navbar-collapse.show" class="abc">
-                            <a class="abc" href="#">English</a>
+                            <a class="abc" (click)="languageChanged('en')">English</a>
                         </li>
 
                         <li data-toggle="collapse" data-target=".navbar-collapse.show" class="abc">
-                            <a class="abc" href="#"> Swedish</a>
+                            <a class="abc" (click)="languageChanged('swedish')"> Swedish</a>
                         </li>
 
                     </ul>

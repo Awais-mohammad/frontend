@@ -1,6 +1,7 @@
 
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Component, Inject, OnInit } from '@angular/core';
+import { ViewImageComponent } from '../view-image/view-image.component';
 
 @Component({
   selector: 'app-prod-detail',
@@ -20,8 +21,11 @@ export class ProdDetailComponent implements OnInit {
     this.prodData = data.prod
     this.size = 's'
     this.s_color = 'default'
-  }
+    this.bigImage = data.prod.bannerImageURL
+    this.bannerImage = data.prod.bannerImageURL
 
+  }
+  bigImage: string;
   prodData: any;
   qty: number[] = [1, 2, 3, 4, 5]
   s_color: string;
@@ -103,6 +107,27 @@ export class ProdDetailComponent implements OnInit {
     this.close()
     location.reload()
   }
+  bannerImage: string;
+
+  makeBig(img) {
+
+    this.bigImage = img
+  }
+
+
+  viewImageOnFullPage(url: any) {
+    console.log(url);
+    const dialog = new MatDialogConfig();
+    dialog.disableClose = true;
+    dialog.autoFocus = true;
+    dialog.height = '600px';
+    dialog.width = '800px';
+    dialog.data = {
+      prod: url,
+    };
+    const dialogRef = this.dialog.open(ViewImageComponent, dialog);
+  }
+
 
   ngOnInit(): void {
   }

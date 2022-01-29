@@ -18,7 +18,7 @@ export class ProductsComponent implements OnInit {
     private dialog: MatDialog,
     private router: Router,
   ) {
-    this.c_cat = 'Leather Jackets'
+    this.c_cat = 'Men Jackets'
 
     if (this.router.getCurrentNavigation().extras.state) {
       console.log(' this.c_cat = this.router.getCurrentNavigation().extras.state.example', this.router.getCurrentNavigation().extras.state.example);
@@ -30,14 +30,14 @@ export class ProductsComponent implements OnInit {
 
   }
 
-  cats: string[] = ['Leather pants', 'Brixton Collection', 'Leather Jackets', 'Czechoslavakia Collection', 'Leather Vest', 'Keivar Shirts', 'Women Jackets', 'Leather Items'
-  ]
+  cats: string[] = ['Men Jackets', 'Women Jackets', 'Keivar Shirts', 'Leather accessories', 'Motorcycle Leathers', 'Brixton Collection']
+  
   prods: any;
   c_cat: string
 
   changeCat(cname) {
     this.c_cat = cname
-    this.getProds(cname)
+    this.getProds(this.c_cat)
   }
 
   getProds(cat) {
@@ -72,9 +72,6 @@ export class ProductsComponent implements OnInit {
     const dialogRef = this.dialog.open(ProdDetailComponent, dialog);
   }
 
-  viewbrix() {
-    this.c_cat = 'Brixton Collection'
-  }
 
   addtofav(prodID) {
 

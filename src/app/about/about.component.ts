@@ -13,6 +13,8 @@ export class AboutComponent implements OnInit {
     @Inject(DOCUMENT) private doc,
   ) { }
 
+  params;
+
   ngOnInit(): void {
 
 

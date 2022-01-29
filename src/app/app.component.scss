@@ -6,11 +6,13 @@
   background: transparent;
 }
 .navbar-inverse {
-  background-color: rgba(255, 255, 255, 0.973);
+  background-color: white;
   transition: 0.2s;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-
+ul > p:hover {
+  cursor: pointer;
+}
 .zero {
   background-color: red;
   color: white;
@@ -60,7 +62,7 @@ a {
 }
 
 @media screen and (max-width: 766px) {
-  .logoo{
+  .logoo {
     height: 1.5em;
     object-fit: contain;
   }

@@ -1,0 +1,11 @@
+.icon {
+	display: flex;
+	justify-content: right;
+    position: absolute;
+    z-index: 100;
+
+	i {
+		color: red;
+		font-size: 28px;
+	}
+}

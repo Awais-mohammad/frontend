@@ -22,6 +22,7 @@ export class AuthComponent implements OnInit {
   name: string;
   email: string;
   password: string;
+  params;
 
   signUp() {
     if (!this.name || !this.email || !this.password) {

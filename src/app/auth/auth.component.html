@@ -5,9 +5,10 @@
     <img class="logo" src="../../assets/logos/logored.png" alt="">
 
     <div class="d-flex justify-content-center align-items-center flex-column pt-4">
-        <h1 class="text-dark oswald headingmain pt-4">WELCOME</h1>
-        <h3 *ngIf="data.open=='signup'" class="text-dark oswald subheading pt-2">Enter Your Credentials To Register</h3>
-        <h3 *ngIf="data.open=='login'" class="text-dark oswald subheading pt-2">Enter Your Credentials To Login</h3>
+        <h1 class="text-dark oswald headingmain pt-4">{{ 'login.h1' | translate:params }}</h1>
+        <h3 *ngIf="data.open=='signup'" class="text-dark oswald subheading pt-2">{{ 'login.h6' | translate:params }}
+        </h3>
+        <h3 *ngIf="data.open=='login'" class="text-dark oswald subheading pt-2">{{ 'login.h2' | translate:params }}</h3>
 
 
 
@@ -32,11 +33,13 @@
 
 
             <div *ngIf="data.open=='login'" class="btnn pt-4">
-                <button (click)="login()" class="block" mat-flat-button color="danger">LOGIN</button>
+                <button (click)="login()" class="block" mat-flat-button color="danger">{{ 'login.li' | translate:params
+                    }}</button>
             </div>
 
             <div *ngIf="data.open=='signup'" class="btnn pt-4">
-                <button (click)="signUp()" class="block" mat-flat-button color="danger">SIGNUP</button>
+                <button (click)="signUp()" class="block" mat-flat-button color="danger">{{ 'login.su' | translate:params
+                    }}</button>
             </div>
 
 
@@ -61,27 +64,27 @@
             </div>
 
             <div *ngIf="data.open=='login'" class="pt-4">
-                <p (click)="this.open('signup')" class="text-dark roboto" class="font-16">Don't Have An
-                    Account?<span class=" text-danger" style="padding-left: 4px;letter-spacing: 1px;"><u>
+                <p (click)="this.open('signup')" class="text-dark roboto" class="font-16">{{ 'login.h3' |
+                    translate:params }}?<span class=" text-danger" style="padding-left: 4px;letter-spacing: 1px;"><u>
                             <b>
-                                SIGNUP
+                                {{ 'login.su' | translate:params }}
                             </b>
                         </u></span></p>
             </div>
 
 
             <div *ngIf="data.open=='signup'" class="pt-4">
-                <p (click)="this.open('login')" class="text-dark roboto" class="font-16">Already Have An
-                    Account?<span class=" text-danger" style="padding-left: 4px;letter-spacing: 1px;"><u>
+                <p (click)="this.open('login')" class="text-dark roboto" class="font-16"> {{ 'login.h5' |
+                    translate:params }}?<span class=" text-danger" style="padding-left: 4px;letter-spacing: 1px;"><u>
                             <b>
-                                LOGIN
+                                {{ 'login.li' | translate:params }}
                             </b>
                         </u></span></p>
             </div>
 
             <div *ngIf="data.open=='login'" class="pt-1">
-                <p class="text-dark roboto" class="font-16">Don't Remember Password?<span class=" text-danger"
-                        style="padding-left: 4px;letter-spacing: 1px;"><u>
+                <p class="text-dark roboto" class="font-16">{{ 'login.h4' | translate:params }}<span
+                        class=" text-danger" style="padding-left: 4px;letter-spacing: 1px;"><u>
                             <b (click)="open('rp')">
                                 RESET
                             </b>

@@ -13,7 +13,7 @@
                 <div class="txtwrapper">
 
                     <div>
-                        <h2 class="headin">WE BRING FASHION TO YOU</h2>
+                        <h2 class="headin">{{ 'HomePage.headinOne' | translate:params }}</h2>
                     </div>
 
                     <div class="input-group pt-4">
@@ -163,8 +163,8 @@
                         <img class="sinppets" src="../../assets/icons/Group 5.png" alt="">
 
                         <div class=" sniptxt">
-                            <h1 class="mul head">Secure Money</h1>
-                            <p>We donnot save your card.</p>
+                            <h1 class="mul head">{{ 'HomePage.h2.1' | translate:params }}</h1>
+                            <p>{{ 'HomePage.p2.1' | translate:params }}</p>
                         </div>
                     </div>
 
@@ -177,8 +177,8 @@
                         <img class="sinppets" src="../../assets/icons/Group 6.png" alt="">
 
                         <div class=" sniptxt">
-                            <h1 class="mul head">24/7 Support</h1>
-                            <p>24/7 support for your querries.</p>
+                            <h1 class="mul head">{{ 'HomePage.h2.2' | translate:params }}</h1>
+                            <p>{{ 'HomePage.p2.2' | translate:params }}</p>
                         </div>
                     </div>
 
@@ -191,8 +191,8 @@
                         <img class="sinppets" src="../../assets/icons/Group 7.png" alt="">
 
                         <div class=" sniptxt">
-                            <h1 class="mul head">Free Shipment</h1>
-                            <p>Free shipment this season.</p>
+                            <h1 class="mul head">{{ 'HomePage.h2.3' | translate:params }}</h1>
+                            <p>{{ 'HomePage.p2.3' | translate:params }}</p>
                         </div>
                     </div>
 
@@ -205,8 +205,8 @@
                         <img class="sinppets" src="../../assets/icons/Group 8.png" alt="">
 
                         <div class=" sniptxt">
-                            <h1 class="mul head">Easy Returns</h1>
-                            <p>Make returns within 7 days.</p>
+                            <h1 class="mul head">{{ 'HomePage.h2.4' | translate:params }}</h1>
+                            <p>{{ 'HomePage.p2.4' | translate:params }}</p>
                         </div>
                     </div>
 
@@ -220,8 +220,8 @@
                         <img class="sinppets" src="../../assets/icons/Group 7.png" alt="">
 
                         <div class=" sniptxt">
-                            <h1 class="mul head"><b>Get In Whole Sale</b></h1>
-                            <p>Buy bulk in whole seller rate.</p>
+                            <h1 class="mul head"><b>{{ 'HomePage.h2.5' | translate:params }}</b></h1>
+                            <p>{{ 'HomePage.p2.5' | translate:params }}</p>
                         </div>
                     </div>
 
@@ -234,8 +234,8 @@
                         <img class="sinppets" src="../../assets/icons/Group 8.png" alt="">
 
                         <div class=" sniptxt">
-                            <h1 class="mul head">Buy now pay later</h1>
-                            <p>No money no issue buy now pay later.</p>
+                            <h1 class="mul head">{{ 'HomePage.h2.6' | translate:params }}</h1>
+                            <p>{{ 'HomePage.p2.6' | translate:params }}</p>
                         </div>
                     </div>
 
@@ -264,7 +264,7 @@
 
                         <div class="cattext">
                             <h3 class="opn text-light"><b>
-                                    Brixton Collection
+                                    {{ 'HomePage.cat1' | translate:params }}
                                 </b></h3>
                         </div>
                     </div>
@@ -273,27 +273,12 @@
 
                 <div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2  p-3">
 
-                    <div (click)="goOpen('Leather Pants')" class="catcard">
+                    <div (click)="goOpen('Leather accessories')" class="catcard">
                         <img class="catimg" src="../../assets/icons/Mask Group 30.png" alt="">
 
                         <div class="cattext">
                             <h3 class="opn text-light"><b>
-                                    Leather Pants
-                                </b></h3>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2  p-3">
-
-                    <div (click)="goOpen('Czechoslavakia Collection')" class="catcard">
-                        <img class="catimg" src="../../assets/icons/Mask Group 32.png" alt="">
-
-                        <div class="cattext">
-                            <h3 class="opn text-light"><b>
-                                    Czechoslavakia Collection
+                                    {{ 'HomePage.cat2' | translate:params }}
                                 </b></h3>
                         </div>
                     </div>
@@ -302,12 +287,13 @@
 
                 <div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2  p-3">
 
-                    <div (click)="goOpen('Leather Vest')" class="catcard">
+                    <div (click)="goOpen('Motorcycle Leathers')" class="catcard">
                         <img class="catimg" src="../../assets/icons/Mask Group 33.png" alt="">
 
                         <div class="cattext">
                             <h3 class="opn text-light"><b>
-                                    Leather Vest
+                                    {{ 'HomePage.cat4' | translate:params }}
+
                                 </b></h3>
                         </div>
                     </div>
@@ -323,7 +309,7 @@
 
                         <div class="cattext">
                             <h3 class="opn text-light"><b>
-                                    Mens Jackets
+                                    {{ 'HomePage.cat5' | translate:params }}
                                 </b></h3>
                         </div>
                     </div>
@@ -337,7 +323,7 @@
 
                         <div class="cattext">
                             <h3 class="opn text-light"><b>
-                                    Women Jackets
+                                    {{ 'HomePage.cat6' | translate:params }}
                                 </b></h3>
                         </div>
                     </div>
@@ -346,12 +332,12 @@
 
                 <div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2  p-3">
 
-                    <div (click)="goOpen('Leather Items')" class="catcard">
+                    <div (click)="goOpen('Leather accessories')" class="catcard">
                         <img class="catimg" src="../../assets/icons/Mask Group 37.png" alt="">
 
                         <div class="cattext">
                             <h3 class="opn text-light"><b>
-                                    Leather Items
+                                    {{ 'HomePage.cat7' | translate:params }}
                                 </b></h3>
                         </div>
                     </div>
@@ -363,12 +349,12 @@
 
                 <div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2  p-3">
 
-                    <div class="catcard">
+                    <div (click)="goOpen('Keivar Shirts')"  class="catcard">
                         <img class="catimg" src="../../assets/icons/Mask Group 40.png" alt="">
 
                         <div class="cattext">
                             <h3 class="opn text-light"><b>
-                                    Keivar Shirts
+                                    {{ 'HomePage.cat8' | translate:params }}
                                 </b></h3>
                         </div>
                     </div>
@@ -377,12 +363,12 @@
 
                 <div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2  p-3">
 
-                    <div class="catcard">
+                    <div (click)="goOpen('Leather Jackets')"  class="catcard">
                         <img class="catimg" src="../../assets/icons/Mask Group 41.png" alt="">
 
                         <div class="cattext">
                             <h3 class="opn text-light"><b>
-                                    Leather Jackets
+                                    {{ 'HomePage.cat9' | translate:params }}
                                 </b></h3>
                         </div>
                     </div>
@@ -466,7 +452,9 @@
         </div>
 
         <div class="d-flex justify-content-center">
-            <button (click)="goToPage('products')" class="btn btn-lg btn-danger lmbtn">Load More</button>
+            <button (click)="goToPage('products')" class="btn btn-lg btn-danger lmbtn"> {{ 'HomePage.butn1' |
+                translate:params }}
+            </button>
         </div>
     </div>
 
@@ -481,7 +469,7 @@
             <div
                 class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex justify-content-center flex-column text-center pt-5 pl-5">
                 <div style="text-align: center;">
-                    <h1 class="oswald">CONTACT US ON <span style="color: red;">
+                    <h1 class="oswald"> {{ 'HomePage.insta' | translate:params }} <span style="color: red;">
                             INSTAGRAM
                         </span></h1>
                     <img class="pt-5" style="height: 15em;object-fit: contain;width: 50%   ;"

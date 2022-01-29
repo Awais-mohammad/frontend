@@ -52,8 +52,8 @@
                 <div class="pt-2">
                     <div *ngIf="prods" class="row p-1 d-flex justify-content-center">
 
-                        <div *ngFor="let prod of prods" class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-3">
-                            <div class="prodcard">
+                        <div *ngFor="let prod of prods" class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-4">
+                            <div (click)="viewProd(prod)" class="prodcard">
 
                                 <div class="lalpatiadjust">
                                     <img class="prodimg" src="{{prod.bannerImageURL}}" alt="">
@@ -109,13 +109,7 @@
                         <img style="height: 10em;object-fit: contain;" src="../../assets/icons/empty.jpg" alt="">
                     </div>
 
-                    <div class="row p-1 d-flex justify-content-center align-center">
-                        <div style="width: 30%;">
-                            <button (click)="viewbrix()" mat-flat-button color="warn">
-                                <h2 class="pt-3" style="font-family: Georgia, 'Times New Roman', Times, serif;">Brixton Collection</h2>
-                            </button>
-                        </div>
-                    </div>
+
                 </div>
 
 

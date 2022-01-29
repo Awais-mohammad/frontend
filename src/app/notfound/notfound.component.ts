@@ -13,9 +13,7 @@ export class NotfoundComponent implements OnInit {
   constructor(
     private http: HttpClient
   ) { }
-  cats: string[] = ['Leather pants', 'Brixton Collection', 'Leather Jackets', 'Curves', 'Czechoslavakia Collection', 'Impreganation and Cleaning', 'Leather Vest', 'Leather Coats',
-    'Keivar Shirts', 'Sweat Shirts', 'Tshirts', 'Sweat Shirts', 'Women Jackets', 'Mens Jackets', 'Leather Items'
-  ]
+  cats: string[] = ['Men Jackets', 'Women Jackets', 'Keivar Shirts', 'Leather accessories', 'Motorcycle Leathers', 'Brixton Collection']
   colors: any[] = ['Red', 'Black', 'Grey']
   choosedcolors: any[] = []
   fileToUpload: File = null;
@@ -72,7 +70,7 @@ export class NotfoundComponent implements OnInit {
   bannerimageURL: string;
 
 
-  imageURLS: string[]=[]
+  imageURLS: string[] = []
 
   removeimg(param) {
     this.imageURLS.splice(param, 1)
@@ -100,7 +98,7 @@ export class NotfoundComponent implements OnInit {
 
     this.selectedFiles = event.target.files;
 
-    this.bannerimageURL = 'https://www.exportportal.site/vendors/' + this.selectedFiles[0].name
+    this.bannerimageURL = 'https://www.exportportal.site/brixtonImages/' + this.selectedFiles[0].name
     this.upload()
   }
 
@@ -108,7 +106,7 @@ export class NotfoundComponent implements OnInit {
 
 
     this.selectedFiles = event.target.files;
-    this.imageURL = 'https://www.exportportal.site/vendors/' + this.selectedFiles[0].name
+    this.imageURL = 'https://www.exportportal.site/brixtonImages/' + this.selectedFiles[0].name
     setTimeout(() => {
 
       this.imageURLS.push(this.imageURL)

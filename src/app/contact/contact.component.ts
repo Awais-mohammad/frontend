@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ContactComponent implements OnInit {
 
   constructor() { }
+  params;
 
   okey() {
     alert('Thankyou for contacting We will reach back as soon as possible')

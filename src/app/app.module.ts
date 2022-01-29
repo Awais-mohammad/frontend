@@ -3,7 +3,6 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule, routingComps } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
@@ -21,7 +20,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -35,6 +33,18 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { NgxPayPalModule } from 'ngx-paypal';
 import { NgxStripeModule } from 'ngx-stripe';
 import { RecoverpasComponent } from './recoverpas/recoverpas.component';
+import { TranslateConfigService } from './translate-config.service';
+import { NgxImageZoomModule } from 'ngx-image-zoom';
+
+// fucking translation thing!!
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ViewImageComponent } from './view-image/view-image.component';
+
+export function LanguageLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
+}
+
 
 @NgModule({
   declarations: [
@@ -46,6 +56,7 @@ import { RecoverpasComponent } from './recoverpas/recoverpas.component';
     NotfoundComponent,
     ProdDetailComponent,
     RecoverpasComponent,
+    ViewImageComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,15 +85,36 @@ import { RecoverpasComponent } from './recoverpas/recoverpas.component';
     MatStepperModule,
     NgxStripeModule.forRoot('pk_live_0M3nFFe2nP2UtSwBbKw4Ht8t00TivPKps0'),
     NgxPayPalModule,
-
+    // TranslateModule.forRoot({
+    //   loader: {
+    //     provide: TranslateLoader,
+    //     useFactory: httpTranslateLoader,
+    //     deps: [HttpClient]
+    //   }
+    // })
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (LanguageLoader),
+        deps: [HttpClient]
+      }
+    }),
+    NgxImageZoomModule,
   ],
   providers: [
     {
       provide: MatDialogRef,
       useValue: AuthComponent
     },
-    AuthComponent
+    AuthComponent,
+    // TranslateConfigService,
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+// // AOT compilation support
+// export function httpTranslateLoader(http: HttpClient) {
+//   return new TranslateHttpLoader(http);
+// }

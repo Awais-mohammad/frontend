@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrackingComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
+
+  orderID: string;
+
+  trackOrder() {
+    if (!this.orderID) {
+      alert('Unable to track the order with empty ID')
+    }
+    else {
+      let order = {
+        id: this.orderID
+      }
+      this.http.post('https://brixback.herokuapp.com', { order }).subscribe(res => {
+        alert('resp' + res)
+      })
+    }
+  }
 
   ngOnInit(): void {
   }
+
+
 
 }
